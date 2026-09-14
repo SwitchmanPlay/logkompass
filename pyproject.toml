@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logkompass"
+version = "0.1.0"
+description = "SSH authentication log triage with deterministic rules and a local LLM digest"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Danylo" }]
+keywords = ["ssh", "security", "logs", "llm", "systemd", "sqlite"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: System :: Systems Administration",
+  "Topic :: Security",
+]
+dependencies = []
+
+[project.optional-dependencies]
+geoip = ["geoip2>=4.8"]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+logkompass = "logkompass.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/SwitchmanPlay/logkompass"
+
+[tool.setuptools.packages.find]
+include = ["logkompass*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "C4", "SIM"]
+ignore = ["E501"]

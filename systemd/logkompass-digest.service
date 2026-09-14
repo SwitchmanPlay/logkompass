@@ -1,0 +1,23 @@
+[Unit]
+Description=LogKompass daily digest
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=logkompass
+Group=logkompass
+EnvironmentFile=-/etc/logkompass/env
+WorkingDirectory=/opt/logkompass
+# Yesterday, because the day has to be finished before it can be summarised.
+ExecStart=/bin/sh -c '/opt/logkompass/.venv/bin/logkompass --config /etc/logkompass/config.toml digest --day $(date -u -d yesterday +%%F) --notify telegram'
+TimeoutStartSec=600
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/logkompass
+
+[Install]
+WantedBy=multi-user.target

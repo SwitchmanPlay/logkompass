@@ -1,0 +1,59 @@
+# Copy to /etc/logkompass/config.toml and edit.
+# Secrets are never written here: use "env:VARIABLE_NAME" and set the variable in
+# /etc/logkompass/env (chmod 600), which the systemd units load.
+
+host = "canary-01"
+retention_days = 90
+
+[paths]
+db = "/var/lib/logkompass/logkompass.db"
+# Optional MaxMind GeoLite2 files. Without them, country and ASN stay empty and
+# rule R05 simply never fires.
+geoip_country = "/var/lib/logkompass/GeoLite2-Country.mmdb"
+geoip_asn = "/var/lib/logkompass/GeoLite2-ASN.mmdb"
+
+[collect]
+source = "journald"        # journald | authlog
+unit = "ssh"               # Ubuntu calls it ssh.service, not sshd.service
+authlog_path = "/var/log/auth.log"
+max_lines_per_run = 50000
+
+[rules]
+burst_window_minutes = 10
+burst_threshold = 20
+spray_distinct_users = 8
+high_value_users = ["root", "admin", "oracle", "postgres", "jenkins", "git"]
+success_after_failures = 3
+success_lookback_minutes = 60
+protocol_noise_threshold = 5
+# Your own key fingerprints, so R06 does not page you on day one.
+# Get them with: ssh-keygen -lf ~/.ssh/id_ed25519.pub
+known_key_fingerprints = []
+
+# Providers are tried in order. First one that answers wins.
+# 1) local Qwen3 on the workstation, reached over Tailscale or a LAN address
+[[llm.providers]]
+name = "local-qwen3"
+base_url = "http://100.x.y.z:8081/v1"
+model = "qwen3-27b"
+timeout_seconds = 120
+max_tokens = 700
+temperature = 0.0
+# Qwen3 emits <think> blocks by default. llama.cpp and vLLM accept this switch.
+extra_body = { chat_template_kwargs = { enable_thinking = false } }
+
+# 2) free hosted fallback, used only when the local box is off
+[[llm.providers]]
+name = "openrouter-free"
+base_url = "https://openrouter.ai/api/v1"
+model = "meta-llama/llama-3.3-70b-instruct:free"
+api_key = "env:OPENROUTER_API_KEY"
+timeout_seconds = 60
+max_tokens = 700
+temperature = 0.0
+
+[notify]
+telegram_token = "env:LOGKOMPASS_TG_TOKEN"
+chat_id = "env:LOGKOMPASS_TG_CHAT"
+quiet_hours = [23, 7]   # inside this range the message arrives without a sound
+mask_ips = false        # true if you want masked IPs even in your own messages

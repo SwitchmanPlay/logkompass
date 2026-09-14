@@ -1,0 +1,61 @@
+Failed password for root from 198.51.100.7 port 41022 ssh2
+Failed password for root from 198.51.100.7 port 41024 ssh2
+Failed password for root from 198.51.100.7 port 41026 ssh2
+Failed password for root from 198.51.100.7 port 41028 ssh2
+Failed password for root from 198.51.100.7 port 41030 ssh2
+Failed password for invalid user admin from 203.0.113.9 port 54322 ssh2
+Failed password for invalid user ubuntu from 203.0.113.9 port 54324 ssh2
+Failed password for invalid user oracle from 203.0.113.9 port 54326 ssh2
+Failed password for invalid user postgres from 203.0.113.9 port 54328 ssh2
+Failed password for invalid user jenkins from 203.0.113.9 port 54330 ssh2
+Failed password for invalid user git from 203.0.113.9 port 54332 ssh2
+Failed password for invalid user test from 203.0.113.9 port 54334 ssh2
+Failed password for invalid user pi from 203.0.113.9 port 54336 ssh2
+Failed password for invalid user deploy from 203.0.113.9 port 54338 ssh2
+Invalid user admin from 203.0.113.9 port 54322
+Invalid user ubuntu from 203.0.113.9 port 54324
+Invalid user support from 192.0.2.31 port 33001
+Invalid user  from 192.0.2.31 port 33003
+Failed publickey for invalid user backup from 192.0.2.44 port 40100 ssh2: RSA SHA256:Uaxxx
+Failed none for invalid user admin from 192.0.2.44 port 40102 ssh2
+Failed password for danya from 84.112.0.9 port 51010 ssh2
+Failed password for danya from 84.112.0.9 port 51012 ssh2
+Failed password for danya from 84.112.0.9 port 51014 ssh2
+Accepted password for danya from 84.112.0.9 port 51016 ssh2
+Accepted publickey for danya from 84.112.0.9 port 51018 ssh2: ED25519 SHA256:6GEU0m0kCCBLQ7aBQ2sdKZ1pXxwVxoJKX6t5hQq9eXo
+Accepted publickey for danya from 84.112.0.9 port 51020 ssh2: ED25519 SHA256:6GEU0m0kCCBLQ7aBQ2sdKZ1pXxwVxoJKX6t5hQq9eXo
+Accepted publickey for danya from 2001:db8:3333::42 port 51022 ssh2: RSA SHA256:pQ8mW2NewKeyFingerprintExample0000000000000
+error: maximum authentication attempts exceeded for root from 198.51.100.7 port 41032 ssh2 [preauth]
+error: maximum authentication attempts exceeded for invalid user admin from 203.0.113.9 port 54340 ssh2 [preauth]
+Disconnected from authenticating user root 198.51.100.7 port 41022 [preauth]
+Disconnected from invalid user admin 203.0.113.9 port 54322 [preauth]
+Disconnected from 192.0.2.31 port 33001 [preauth]
+Connection closed by 203.0.113.9 port 54342 [preauth]
+Connection closed by authenticating user root 198.51.100.7 port 41034 [preauth]
+Connection closed by invalid user oracle 203.0.113.9 port 54344 [preauth]
+Received disconnect from 198.51.100.7 port 41036:11: Bye Bye [preauth]
+Received disconnect from 203.0.113.9 port 54346:11: disconnected by user
+Unable to negotiate with 192.0.2.5 port 22: no matching key exchange method found. Their offer: diffie-hellman-group14-sha1 [preauth]
+Unable to negotiate with 192.0.2.5 port 23: no matching host key type found. Their offer: ssh-dss [preauth]
+Unable to negotiate with 192.0.2.6 port 44444: no matching cipher found. Their offer: aes128-cbc [preauth]
+Unable to negotiate with 192.0.2.6 port 44446: no matching MAC found. Their offer: hmac-sha1-96 [preauth]
+Unable to negotiate with 192.0.2.7 port 40000: no matching key exchange method found [preauth]
+banner exchange: Connection from 192.0.2.5 port 22: invalid format
+banner exchange: Connection from 192.0.2.8 port 51000: invalid format
+banner exchange: Connection from 192.0.2.9 port 51002: invalid format
+Bad protocol version identification 'GET / HTTP/1.1' from 192.0.2.10 port 51004
+Bad protocol version identification 'quit' from 192.0.2.11 port 51006
+Bad protocol version identification '\x16\x03\x01' from 192.0.2.12 port 51008
+Failed password for invalid user admin user from 203.0.113.50 port 60000 ssh2
+Failed password for invalid user a from 203.0.113.51 port 60002 ssh2
+Failed password for invalid user b from 203.0.113.51 port 60004 ssh2
+Failed password for invalid user c from 203.0.113.51 port 60006 ssh2
+Failed password for invalid user d from 203.0.113.51 port 60008 ssh2
+Failed password for invalid user e from 203.0.113.51 port 60010 ssh2
+Failed password for invalid user f from 203.0.113.51 port 60012 ssh2
+Failed password for invalid user g from 203.0.113.51 port 60014 ssh2
+Failed password for invalid user h from 203.0.113.51 port 60016 ssh2
+Failed password for root from 2001:db8::dead:beef port 40000 ssh2
+Failed password for root from 2001:db8::dead:beef port 40002 ssh2
+Accepted publickey for ansible from 192.0.2.77 port 22000 ssh2: ED25519 SHA256:AnsibleKeyFingerprintExample1111111111111111
+fatal: Timeout before authentication for 192.0.2.13 port 51010

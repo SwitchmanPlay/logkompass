@@ -1,0 +1,10 @@
+[Unit]
+Description=Send the LogKompass digest every morning
+
+[Timer]
+OnCalendar=*-*-* 07:05:00
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

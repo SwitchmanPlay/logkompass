@@ -1,0 +1,10 @@
+LogKompass canary-01, 2026-09-20
+
+[template digest, no model configured]
+4193 auth events from 212 IPs, 18 percent above the 7-day average.
+Loudest source 198.51.100.7, NL, Example Hosting, 890 attempts, first seen 2026-09-14.
+4102 failed attempts, most targeted usernames root, admin, ubuntu; 4 accepted.
+High: R05_new_country_success for 84.112.0.9 (AT, first successful login from this country).
+Check that this login was you; if not, rotate keys and close password auth.
+
+model: none, deterministic template, 2026-09-13T17:06:33Z

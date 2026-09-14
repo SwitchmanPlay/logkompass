@@ -1,0 +1,33 @@
+[Unit]
+Description=LogKompass collect and evaluate SSH auth events
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=logkompass
+Group=logkompass
+SupplementaryGroups=systemd-journal
+EnvironmentFile=-/etc/logkompass/env
+WorkingDirectory=/opt/logkompass
+ExecStart=/opt/logkompass/.venv/bin/logkompass --config /etc/logkompass/config.toml collect
+ExecStartPost=/opt/logkompass/.venv/bin/logkompass --config /etc/logkompass/config.toml rules --since 24h
+Nice=10
+IOSchedulingClass=idle
+TimeoutStartSec=300
+
+# hardening: this unit only needs to read the journal and write one database
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+ReadWritePaths=/var/lib/logkompass
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+MemoryMax=200M
+
+[Install]
+WantedBy=multi-user.target
