@@ -4,11 +4,19 @@ SSH authentication log triage for a single small server. Deterministic rules fin
 signal, a local LLM writes five lines of English, systemd runs it every 15 minutes,
 SQLite keeps 90 days of history. No agent, no cloud log pipeline, no dashboard.
 
-> **🍯 Live honeypot deployment:** LogKompass also runs as the front end of a real
-> SSH honeypot — a public port 22 answered by [Cowrie](https://github.com/cowrie/cowrie),
-> capturing the passwords and commands attackers use. See
-> **[docs/honeypot.md](docs/honeypot.md)** for the architecture and findings from live
-> attack traffic.
+## 🍯 Live SSH honeypot
+
+LogKompass also runs as the front end of a real **SSH honeypot**: a public port 22
+answered by [Cowrie](https://github.com/cowrie/cowrie), capturing the passwords and
+commands attackers use. It geolocates them, writes a daily LLM briefing, and shows
+it all on a self-refreshing dashboard.
+
+**▶ [Live dashboard](https://switchmanplay.github.io/logkompass/)** ·
+**📄 [Architecture & findings](docs/honeypot.md)**
+
+[![LogKompass honeypot dashboard — loudest attacker IPs by country](docs/findings/chart_ips.png)](https://switchmanplay.github.io/logkompass/)
+
+<sub>Live attacker traffic — click the chart for the full dashboard.</sub>
 
 ```
 journald -> parse -> SQLite -> rules -> 24h aggregate (JSON) -> LLM -> 5 lines -> Telegram
