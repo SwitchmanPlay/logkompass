@@ -28,9 +28,25 @@ Line 4: the highest severity finding and what it means, or "no high-severity fin
 Line 5: one concrete recommendation, or "no action needed".
 
 Rules: use only numbers present in the JSON. Never invent an IP, country or count.
-If a field is missing, say so. Maximum 30 words per line. No greetings, no sign-off."""
+If a field is missing, say so. Maximum 30 words per line. No greetings, no sign-off.
+Output only the five lines and nothing else: no title or header line, no markdown
+headers, no code blocks, no bullet points. Do not restate this task, do not think out
+loud, and do not echo the JSON field names. Begin your answer directly with line 1."""
 
 MARKDOWN_PREFIX = re.compile(r"^\s*(?:[-*+]\s+|\d+[.)]\s+|#+\s+)")
+
+# Signs the model leaked its reasoning or restated the task instead of just
+# answering. A clean briefing never contains any of these.
+_REASONING_MARKERS = re.compile(
+    r"(here'?s a thinking|thinking process|the user wants|i need to write|"
+    r"i'?ll write|i will write|let me (analyze|think|write|start)|as an ai|"
+    r"chain of thought|analyz(e|ing) the (json|request|data|input)|the json summary|"
+    r"to summar(ize|ise)|\bstep \d\b|based on the (json|provided|input)|"
+    r"i'?m going to|i should (write|start|note))",
+    re.IGNORECASE,
+)
+_JSON_ECHO = re.compile(r"^[a-z][\w]*(?:\.[a-z][\w]*)+\s*[:=]", re.IGNORECASE)
+_MD_HEADER = re.compile(r"^\*\*.+\*\*:?\s*$")
 FALLBACK_NOTICE = "[template fallback, model unreachable]"
 GUARD_NOTICE = "[template fallback, model output failed validation]"
 
@@ -68,8 +84,23 @@ def _numbers(text: str) -> set[str]:
     return set(re.findall(r"\d[\d.]*", text))
 
 
+def looks_like_reasoning(lines: list[str]) -> bool:
+    """True if the model leaked its reasoning or restated the task."""
+    for line in lines:
+        if (
+            _REASONING_MARKERS.search(line)
+            or _JSON_ECHO.match(line)
+            or _MD_HEADER.match(line)
+            or line.startswith("```")
+        ):
+            return True
+    return False
+
+
 def validate(aggregate: dict, lines: list[str]) -> tuple[bool, str]:
     """Grounding check: the model may only mention IPs that are in the input."""
+    if looks_like_reasoning(lines):
+        return False, "model leaked reasoning instead of a clean briefing"
     blob = json.dumps(aggregate, ensure_ascii=False)
     known_ips = set(IPV4_RE.findall(blob))
     for line in lines:

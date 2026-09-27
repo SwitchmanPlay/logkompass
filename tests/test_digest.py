@@ -8,6 +8,7 @@ from logkompass.config import Provider
 from logkompass.digest import (
     five_lines,
     format_message,
+    looks_like_reasoning,
     make_digest,
     render_template,
     validate,
@@ -91,3 +92,34 @@ def test_format_message_can_mask_ips():
     result = make_digest(sample_aggregate(), client=None)
     assert "198.51.100.x" in format_message(result, mask=True)
     assert "198.51.100.7" not in format_message(result, mask=True)
+
+
+# A real leaked sample: the model restated the task and echoed JSON fields
+# instead of producing the five-line briefing.
+LEAKED_REASONING = "\n".join(
+    [
+        "LogKompass honeypot-01, 2026-09-27",
+        "The user wants a daily SSH briefing based on the JSON. I need to write five lines.",
+        "Let me analyze the JSON:",
+        "**Volume and comparison to 7-day average**:",
+        "totals.events = 1858",
+    ]
+)
+
+
+def test_reasoning_leak_is_detected_and_rejected():
+    lines = LEAKED_REASONING.splitlines()
+    assert looks_like_reasoning(lines) is True
+    ok, reason = validate(sample_aggregate(), lines)
+    assert ok is False and "reasoning" in reason
+
+
+def test_clean_briefing_is_not_flagged_as_reasoning():
+    assert looks_like_reasoning(GOOD_FIVE_LINES.splitlines()) is False
+
+
+def test_make_digest_falls_back_to_template_on_reasoning_leak():
+    transport = StubTransport(replies=[LEAKED_REASONING])
+    result = make_digest(sample_aggregate(), client=client_for(transport))
+    assert result.path == "template_fallback"
+    assert any("reasoning" in e for e in result.errors)
