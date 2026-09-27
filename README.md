@@ -4,6 +4,12 @@ SSH authentication log triage for a single small server. Deterministic rules fin
 signal, a local LLM writes five lines of English, systemd runs it every 15 minutes,
 SQLite keeps 90 days of history. No agent, no cloud log pipeline, no dashboard.
 
+> **🍯 Live honeypot deployment:** LogKompass also runs as the front end of a real
+> SSH honeypot — a public port 22 answered by [Cowrie](https://github.com/cowrie/cowrie),
+> capturing the passwords and commands attackers use. See
+> **[docs/honeypot.md](docs/honeypot.md)** for the architecture and findings from live
+> attack traffic.
+
 ```
 journald -> parse -> SQLite -> rules -> 24h aggregate (JSON) -> LLM -> 5 lines -> Telegram
 ```

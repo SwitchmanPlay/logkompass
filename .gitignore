@@ -17,3 +17,7 @@ agg*.json
 digest*.txt
 config.toml
 .env
+
+# Personal local notes / settings (never published)
+*.omg
+.claude/settings.local.json
