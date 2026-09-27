@@ -27,6 +27,8 @@ CREATE TABLE IF NOT EXISTS events (
   key_fp        TEXT,
   raw_hash      TEXT    NOT NULL,
   raw           TEXT    NOT NULL,
+  password      TEXT,
+  command       TEXT,
   UNIQUE(raw_hash, ts)
 );
 CREATE INDEX IF NOT EXISTS idx_events_ts ON events(ts);
@@ -100,6 +102,8 @@ def _row_to_event(row: sqlite3.Row) -> Event:
         port=row["port"],
         method=row["method"],
         key_fp=row["key_fp"],
+        password=row["password"] if "password" in row.keys() else None,
+        command=row["command"] if "command" in row.keys() else None,
     )
 
 
@@ -120,6 +124,11 @@ class Store:
 
     def migrate(self) -> None:
         self.conn.executescript(SCHEMA)
+        # Additive columns for honeypot data on databases created before they existed.
+        existing = {row["name"] for row in self.conn.execute("PRAGMA table_info(events)")}
+        for column in ("password", "command"):
+            if column not in existing:
+                self.conn.execute(f"ALTER TABLE events ADD COLUMN {column} TEXT")
         self.conn.commit()
 
     def close(self) -> None:
@@ -139,8 +148,9 @@ class Store:
             result.seen += 1
             cur = self.conn.execute(
                 "INSERT OR IGNORE INTO events"
-                " (ts, host, kind, username, ip, port, method, key_fp, raw_hash, raw)"
-                " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                " (ts, host, kind, username, ip, port, method, key_fp, raw_hash, raw,"
+                "  password, command)"
+                " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
                 event.as_row(),
             )
             if cur.rowcount:

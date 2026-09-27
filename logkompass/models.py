@@ -4,11 +4,21 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-FAILED_KINDS = frozenset({"failed_password", "invalid_user", "max_auth_exceeded"})
-ACCEPTED_KINDS = frozenset({"accepted_password", "accepted_publickey"})
+FAILED_KINDS = frozenset(
+    {"failed_password", "invalid_user", "max_auth_exceeded", "cowrie_login_failed"}
+)
+ACCEPTED_KINDS = frozenset(
+    {"accepted_password", "accepted_publickey", "cowrie_login_success"}
+)
 NOISE_KINDS = frozenset({"kex_failure", "banner_garbage"})
+# Honeypot (Cowrie) events beyond the login attempts above.
+COWRIE_KINDS = frozenset({"cowrie_connect", "cowrie_command", "cowrie_session"})
 KINDS = frozenset(
-    FAILED_KINDS | ACCEPTED_KINDS | NOISE_KINDS | {"preauth_disconnect", "other"}
+    FAILED_KINDS
+    | ACCEPTED_KINDS
+    | NOISE_KINDS
+    | COWRIE_KINDS
+    | {"preauth_disconnect", "other"}
 )
 SEVERITIES = ("info", "low", "medium", "high")
 
@@ -25,6 +35,8 @@ class Event:
     port: int | None = None
     method: str | None = None
     key_fp: str | None = None
+    password: str | None = None  # honeypot: the password an attacker tried
+    command: str | None = None  # honeypot: a command run in the fake shell
 
     @property
     def is_failed(self) -> bool:
@@ -50,6 +62,8 @@ class Event:
             self.key_fp,
             self.raw_hash,
             self.raw,
+            self.password,
+            self.command,
         )
 
 

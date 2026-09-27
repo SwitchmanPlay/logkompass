@@ -66,11 +66,12 @@ class Collect:
     source: str = "journald"
     unit: str = "ssh"
     authlog_path: str = "/var/log/auth.log"
+    cowrie_json_path: str = "/home/cowrie/cowrie/var/log/cowrie/cowrie.json"
     max_lines_per_run: int = 50000
 
     def __post_init__(self) -> None:
-        if self.source not in ("journald", "authlog"):
-            raise ConfigError("[collect] source must be journald or authlog")
+        if self.source not in ("journald", "authlog", "cowrie"):
+            raise ConfigError("[collect] source must be journald, authlog or cowrie")
 
 
 @dataclass
