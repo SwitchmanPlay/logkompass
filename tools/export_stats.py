@@ -58,6 +58,12 @@ def main() -> None:
             "group by hour order by hour"
         ),
     }
+
+    latest = conn.execute(
+        "select day, text, created_at from digests order by created_at desc limit 1"
+    ).fetchone()
+    if latest:
+        out["latest_digest"] = dict(latest)
     print(json.dumps(out, indent=1))
 
 

