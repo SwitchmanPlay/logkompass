@@ -43,12 +43,13 @@ jobs:
           chmod 600 ~/.ssh/sensor
 
       - name: Export fresh stats from the sensor
+        # The CI key is locked to a forced command on the sensor
+        # (/usr/local/bin/logkompass-ci-export), so any connection just prints
+        # the attack-stats JSON — no command or stdin is sent.
         run: |
           ssh -i ~/.ssh/sensor -p "$SENSOR_PORT" \
             -o StrictHostKeyChecking=accept-new -o ConnectTimeout=20 \
-            "$SENSOR_USER@$SENSOR_HOST" \
-            'sudo -u logkompass /opt/logkompass/.venv/bin/python -' \
-            < tools/export_stats.py > docs/findings/stats.json
+            "$SENSOR_USER@$SENSOR_HOST" > docs/findings/stats.json
           python -c "import json;d=json.load(open('docs/findings/stats.json'));print('events', d['totals']['events'])"
 
       - name: Regenerate charts

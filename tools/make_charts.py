@@ -21,15 +21,20 @@ import matplotlib.pyplot as plt  # noqa: E402
 HERE = Path(__file__).resolve().parent.parent
 FINDINGS = HERE / "docs" / "findings"
 
-INK = "#1f2933"
-ACCENT = "#2f6f8f"
-ACCENT2 = "#c1666b"
-GRID = "#e4e7eb"
+# Dark theme, matched to the dashboard cards so the PNGs blend in and stay
+# readable on GitHub in either light or dark mode.
+BG = "#161b22"
+INK = "#e6edf3"
+ACCENT = "#3fb0d8"
+ACCENT2 = "#e5698f"
+WARN = "#e3b341"
+GRID = "#2a3038"
 
 plt.rcParams.update(
     {
-        "figure.facecolor": "white",
-        "axes.facecolor": "white",
+        "figure.facecolor": BG,
+        "savefig.facecolor": BG,
+        "axes.facecolor": BG,
         "axes.edgecolor": GRID,
         "axes.labelcolor": INK,
         "text.color": INK,

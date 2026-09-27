@@ -1,25 +1,25 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 2550,
-  "distinct_ips": 14
+  "events": 3236,
+  "distinct_ips": 16
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 679
+   "n": 849
   },
   {
    "kind": "cowrie_connect",
-   "n": 630
+   "n": 803
   },
   {
    "kind": "cowrie_session",
-   "n": 630
+   "n": 803
   },
   {
    "kind": "cowrie_login_success",
-   "n": 608
+   "n": 778
   },
   {
    "kind": "cowrie_login_failed",
@@ -29,7 +29,7 @@
  "top_ips": [
   {
    "ip": "109.160.32.176",
-   "n": 2340,
+   "n": 3020,
    "country": "BG",
    "as_org": "TechTies Inc."
   },
@@ -82,6 +82,12 @@
    "as_org": "COMPANIA DE CIRCUITOS CERRADOS S.A."
   },
   {
+   "ip": "201.150.83.1",
+   "n": 4,
+   "country": "BR",
+   "as_org": "RazaoInfo Internet Ltda"
+  },
+  {
    "ip": "213.230.87.43",
    "n": 4,
    "country": "UZ",
@@ -92,18 +98,12 @@
    "n": 4,
    "country": "UA",
    "as_org": "LLC Onlinetelecom"
-  },
-  {
-   "ip": "64.23.140.96",
-   "n": 4,
-   "country": "US",
-   "as_org": "DigitalOcean, LLC"
   }
  ],
  "top_countries": [
   {
    "country": "BG",
-   "n": 2340
+   "n": 3020
   },
   {
    "country": "RO",
@@ -138,7 +138,7 @@
    "n": 4
   },
   {
-   "country": "BD",
+   "country": "BR",
    "n": 4
   }
  ],
@@ -150,6 +150,10 @@
   {
    "cred": "root/123@@@",
    "n": 3
+  },
+  {
+   "cred": "root/changeme",
+   "n": 2
   },
   {
    "cred": "root/admin123",
@@ -168,6 +172,10 @@
    "n": 2
   },
   {
+   "cred": "root/12345678",
+   "n": 2
+  },
+  {
    "cred": "root/123456",
    "n": 2
   },
@@ -180,6 +188,10 @@
    "n": 2
   },
   {
+   "cred": "root/123123",
+   "n": 2
+  },
+  {
    "cred": "root/111111",
    "n": 2
   },
@@ -188,76 +200,64 @@
    "n": 2
   },
   {
-   "cred": "zq/zqzq",
-   "n": 1
-  },
-  {
-   "cred": "zlm/123456",
-   "n": 1
-  },
-  {
-   "cred": "zhuangyue/q1w2e3R$",
-   "n": 1
-  },
-  {
-   "cred": "zahra/12345678",
+   "cred": "zyh/123456",
    "n": 1
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 247
-  },
-  {
-   "username": "admin",
-   "n": 19
+   "n": 303
   },
   {
    "username": "ubuntu",
-   "n": 17
+   "n": 26
   },
   {
-   "username": "deploy",
-   "n": 13
+   "username": "admin",
+   "n": 24
   },
   {
    "username": "user",
-   "n": 10
+   "n": 20
+  },
+  {
+   "username": "deploy",
+   "n": 14
   },
   {
    "username": "user1",
-   "n": 9
+   "n": 10
   },
   {
    "username": "test",
-   "n": 6
+   "n": 8
+  },
+  {
+   "username": "claude",
+   "n": 7
+  },
+  {
+   "username": "user2",
+   "n": 5
+  },
+  {
+   "username": "steam",
+   "n": 5
+  },
+  {
+   "username": "developer",
+   "n": 5
   },
   {
    "username": "dev",
    "n": 5
-  },
-  {
-   "username": "claude",
-   "n": 5
-  },
-  {
-   "username": "trader",
-   "n": 4
-  },
-  {
-   "username": "minecraft",
-   "n": 4
-  },
-  {
-   "username": "developer",
-   "n": 4
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 583
+   "n": 753
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
@@ -307,7 +307,7 @@
   },
   {
    "hour": "2026-09-27T21",
-   "n": 902
+   "n": 1588
   }
  ],
  "latest_digest": {
