@@ -1,0 +1,8 @@
+{"eventid":"cowrie.session.connect","src_ip":"203.0.113.10","src_port":52344,"dst_ip":"10.0.0.5","dst_port":2222,"session":"a1b2c3","protocol":"ssh","sensor":"svr01","timestamp":"2026-09-27T10:00:00.100000Z","message":"New connection"}
+{"eventid":"cowrie.client.version","src_ip":"203.0.113.10","session":"a1b2c3","version":"SSH-2.0-libssh","sensor":"svr01","timestamp":"2026-09-27T10:00:00.200000Z","message":"Remote SSH version"}
+{"eventid":"cowrie.login.failed","src_ip":"203.0.113.10","username":"root","password":"123456","session":"a1b2c3","sensor":"svr01","timestamp":"2026-09-27T10:00:01.000000Z","message":"login attempt [root/123456] failed"}
+{"eventid":"cowrie.login.failed","src_ip":"203.0.113.10","username":"admin","password":"admin","session":"a1b2c3","sensor":"svr01","timestamp":"2026-09-27T10:00:02.000000Z","message":"login attempt [admin/admin] failed"}
+{"eventid":"cowrie.login.success","src_ip":"198.51.100.7","username":"root","password":"root","session":"d4e5f6","sensor":"svr01","timestamp":"2026-09-27T10:05:00.000000Z","message":"login attempt [root/root] succeeded"}
+{"eventid":"cowrie.command.input","src_ip":"198.51.100.7","input":"uname -a; cat /etc/passwd","session":"d4e5f6","sensor":"svr01","timestamp":"2026-09-27T10:05:01.000000Z","message":"CMD: uname -a"}
+{"eventid":"cowrie.session.closed","src_ip":"198.51.100.7","session":"d4e5f6","duration":12.5,"sensor":"svr01","timestamp":"2026-09-27T10:05:13.000000Z","message":"Connection lost"}
+{"eventid":"cowrie.direct-tcpip.request","src_ip":"198.51.100.7","session":"d4e5f6","sensor":"svr01","timestamp":"2026-09-27T10:05:02.000000Z","message":"direct-tcp forward request"}
