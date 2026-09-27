@@ -102,14 +102,16 @@ fetch('findings/stats.json').then(r=>r.json()).then(d=>{
     tile(N(d.totals?.events), 'events captured'),
     tile(N(d.totals?.distinct_ips), 'distinct attacker IPs'),
     tile(N(commands), 'commands run in the trap'),
-    tile((topip.ip||'—'), 'loudest attacker', true),
+    tile((topip.ip||'—'), 'loudest attacker'+(topip.country?' · '+topip.country+(topip.as_org?' · '+topip.as_org:''):''), true),
   );
   app.append(tiles);
 
   // Briefing
   if(d.latest_digest?.text){
     app.append(el('h2',null,'Latest AI briefing'));
-    const body = d.latest_digest.text.split('\n').filter((l,i)=>!(i>0 && l.startsWith('model:'))).join('\n').trim();
+    const body = d.latest_digest.text.split('\n')
+      .filter(l => !/^\[.*\]$/.test(l.trim()) && !l.trim().startsWith('model:'))
+      .join('\n').trim();
     const b = el('div','brief', body.replace(/</g,'&lt;'));
     if(d.latest_digest.created_at) b.append(el('div','meta','generated '+d.latest_digest.created_at+' · nemotron-3-ultra via OpenRouter'));
     app.append(b);
@@ -123,14 +125,17 @@ fetch('findings/stats.json').then(r=>r.json()).then(d=>{
     hbar(mk('What attackers did').getContext('2d'),
          (d.by_kind||[]).map(r=>r.kind.replace('cowrie_','')), (d.by_kind||[]).map(r=>r.n), '#3fb0d8');
     hbar(mk('Loudest attacker IPs').getContext('2d'),
-         (d.top_ips||[]).map(r=>r.ip), (d.top_ips||[]).map(r=>r.n), '#e5698f');
+         (d.top_ips||[]).map(r=>r.ip+' ('+(r.country||'??')+')'), (d.top_ips||[]).map(r=>r.n), '#e5698f');
+    if((d.top_countries||[]).length) hbar(mk('Attacks by country').getContext('2d'),
+         (d.top_countries||[]).map(r=>r.country), (d.top_countries||[]).map(r=>r.n), '#3fb0d8');
     hbar(mk('Most-tried credentials').getContext('2d'),
          (d.top_credentials||[]).slice(0,12).map(r=>r.cred), (d.top_credentials||[]).slice(0,12).map(r=>r.n), '#3fb0d8');
     hbar(mk('Most-run commands').getContext('2d'),
          (d.top_commands||[]).filter(r=>r.cmd).slice(0,10).map(r=>r.cmd), (d.top_commands||[]).filter(r=>r.cmd).slice(0,10).map(r=>r.n), '#e3b341');
   } else {
     [['chart_kinds.png','What attackers did'],['chart_ips.png','Loudest attacker IPs'],
-     ['chart_creds.png','Most-tried credentials'],['chart_commands.png','Most-run commands']]
+     ['chart_countries.png','Attacks by country'],['chart_creds.png','Most-tried credentials'],
+     ['chart_commands.png','Most-run commands']]
       .forEach(([src,title])=>{ const c=el('div','card'); c.append(el('h3',null,title));
         const img=el('img'); img.src='findings/'+src; img.alt=title; img.style.width='100%'; img.style.borderRadius='6px'; img.loading='lazy';
         c.append(img); g.append(c); });

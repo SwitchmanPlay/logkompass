@@ -1,5 +1,5 @@
 {
- "generated_from": "honeypot-01 (Cowrie sensor, 92.5.188.26)",
+ "generated_from": "LogKompass Cowrie sensor",
  "totals": {
   "events": 2550,
   "distinct_ips": 14
@@ -29,50 +29,116 @@
  "top_ips": [
   {
    "ip": "109.160.32.176",
-   "n": 2340
+   "n": 2340,
+   "country": "BG",
+   "as_org": "TechTies Inc."
   },
   {
    "ip": "193.32.162.84",
-   "n": 127
+   "n": 127,
+   "country": "RO",
+   "as_org": "Unmanaged Ltd"
   },
   {
    "ip": "161.33.14.212",
-   "n": 22
+   "n": 22,
+   "country": "JP",
+   "as_org": "Oracle Corporation"
   },
   {
    "ip": "213.35.98.222",
-   "n": 22
+   "n": 22,
+   "country": "SG",
+   "as_org": "Oracle Corporation"
   },
   {
    "ip": "103.136.212.48",
-   "n": 4
+   "n": 4,
+   "country": "BD",
+   "as_org": "Razib Communication"
   },
   {
    "ip": "127.0.0.1",
-   "n": 4
+   "n": 4,
+   "country": null,
+   "as_org": null
   },
   {
    "ip": "130.12.180.51",
-   "n": 4
+   "n": 4,
+   "country": "NL",
+   "as_org": "Omegatech LTD"
   },
   {
    "ip": "165.50.87.246",
-   "n": 4
+   "n": 4,
+   "country": "TN",
+   "as_org": "Orange Tunisie"
   },
   {
    "ip": "190.114.118.179",
-   "n": 4
+   "n": 4,
+   "country": "AR",
+   "as_org": "COMPANIA DE CIRCUITOS CERRADOS S.A."
   },
   {
    "ip": "213.230.87.43",
-   "n": 4
+   "n": 4,
+   "country": "UZ",
+   "as_org": "Uzbektelekom Joint Stock Company"
   },
   {
    "ip": "5.180.100.157",
-   "n": 4
+   "n": 4,
+   "country": "UA",
+   "as_org": "LLC Onlinetelecom"
   },
   {
    "ip": "64.23.140.96",
+   "n": 4,
+   "country": "US",
+   "as_org": "DigitalOcean, LLC"
+  }
+ ],
+ "top_countries": [
+  {
+   "country": "BG",
+   "n": 2340
+  },
+  {
+   "country": "RO",
+   "n": 127
+  },
+  {
+   "country": "SG",
+   "n": 22
+  },
+  {
+   "country": "JP",
+   "n": 22
+  },
+  {
+   "country": "UZ",
+   "n": 4
+  },
+  {
+   "country": "US",
+   "n": 4
+  },
+  {
+   "country": "UA",
+   "n": 4
+  },
+  {
+   "country": "TN",
+   "n": 4
+  },
+  {
+   "country": "NL",
+   "n": 4
+  },
+  {
+   "country": "BD",
    "n": 4
   }
  ],
@@ -246,7 +312,7 @@
  ],
  "latest_digest": {
   "day": "2026-09-27",
-  "text": "LogKompass honeypot-01, 2026-09-27\n\n2550 events from 14 IPs; no 7-day baseline available\n109.160.32.176 (2340 events); country and network unknown\nTargeted root, admin, ubuntu, deploy, user via password brute force\nNo high-severity findings; all alerts rated low\nBlock 109.160.32.176 and enforce key-only authentication\n\nmodel: nvidia/nemotron-3-ultra-550b-a55b:free via openrouter-free, 12.1 s",
-  "created_at": "2026-09-27T21:21:15Z"
+  "text": "LogKompass honeypot-01, 2026-09-27\n\n[template fallback, model output failed validation]\n2550 auth events from 14 IPs, no baseline yet.\nLoudest source 109.160.32.176, BG, TechTies Inc., 2340 attempts, first seen 2026-09-27.\n3 failed attempts, most targeted usernames root, admin, ubuntu; 608 accepted.\nNo high-severity findings; highest is R03_high_value_user (low).\nNo action needed. Password auth stays open by design on this host.\n\nmodel: none, deterministic template, 2026-09-27T21:32:59Z",
+  "created_at": "2026-09-27T21:32:59Z"
  }
 }

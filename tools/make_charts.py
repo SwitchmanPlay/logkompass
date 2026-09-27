@@ -70,8 +70,13 @@ def main() -> None:
           "What attackers did (event types)", "chart_kinds.png")
 
     ip = data["top_ips"]
-    _hbar([r["ip"] for r in ip], [r["n"] for r in ip],
+    _hbar([f"{r['ip']} ({r['country'] or '??'})" for r in ip], [r["n"] for r in ip],
           "Loudest attacker IPs", "chart_ips.png", color=ACCENT2)
+
+    co = data.get("top_countries", [])
+    if co:
+        _hbar([r["country"] for r in co], [r["n"] for r in co],
+              "Attacks by country", "chart_countries.png", color=ACCENT)
 
     cr = data["top_credentials"][:12]
     _hbar([r["cred"] for r in cr], [r["n"] for r in cr],

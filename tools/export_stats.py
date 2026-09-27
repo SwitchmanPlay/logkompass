@@ -37,8 +37,14 @@ def main() -> None:
             "select kind, count(*) n from events group by kind order by n desc"
         ),
         "top_ips": rows(
-            "select ip, count(*) n from events where ip is not null "
-            "group by ip order by n desc limit 12"
+            "select e.ip, count(*) n, ac.country, ac.as_org "
+            "from events e left join actors ac on e.ip = ac.ip "
+            "where e.ip is not null group by e.ip order by n desc limit 12"
+        ),
+        "top_countries": rows(
+            "select coalesce(ac.country, '??') country, count(*) n "
+            "from events e left join actors ac on e.ip = ac.ip "
+            "where e.ip is not null group by country order by n desc limit 10"
         ),
         "top_credentials": rows(
             'select username || "/" || coalesce(password, "") cred, count(*) n '
