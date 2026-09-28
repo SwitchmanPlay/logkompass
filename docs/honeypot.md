@@ -24,15 +24,16 @@ of going live.
 
 ```mermaid
 flowchart LR
-    A[Attackers / botnets] -->|port 22| C
-    subgraph Sensor VM  -  Oracle Always Free, isolated VCN
-      C[Cowrie honeypot<br/>fake SSH shell]
-      C -->|cowrie.json| L[LogKompass<br/>collect every 15 min]
-      L --> DB[(SQLite)]
-      DB --> D[Daily aggregate + LLM digest]
-      SSHD[Real sshd :62222<br/>admin only] -.-> ADMIN[You]
+    A["Attackers / botnets"] -->|port 22| C
+    subgraph VM["Sensor VM: Oracle Always Free, isolated VCN"]
+      C["Cowrie honeypot<br/>fake SSH shell"]
+      C -->|cowrie.json| L["LogKompass<br/>collect every 15 min"]
+      L --> DB[("SQLite")]
+      DB --> D["Daily aggregate + LLM digest"]
+      SSHD["Real sshd :62222<br/>admin only"]
     end
-    D -->|briefing| TG[Telegram]
+    ADMIN["You"] -.->|admin SSH| SSHD
+    D -->|briefing| TG["Telegram"]
 ```
 
 - **Port 22 → Cowrie.** An `iptables` redirect sends public `:22` to Cowrie on
