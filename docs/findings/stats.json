@@ -1,43 +1,67 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 3912,
-  "distinct_ips": 16
+  "events": 9316,
+  "distinct_ips": 42
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 1018
+   "n": 2373
   },
   {
    "kind": "cowrie_connect",
-   "n": 972
+   "n": 2332
   },
   {
    "kind": "cowrie_session",
-   "n": 972
+   "n": 2332
   },
   {
    "kind": "cowrie_login_success",
-   "n": 947
+   "n": 2272
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 3
+   "n": 7
   }
  ],
  "top_ips": [
   {
-   "ip": "109.160.32.176",
-   "n": 3696,
+   "ip": "109.160.32.134",
+   "n": 4392,
    "country": "BG",
    "as_org": "TechTies Inc."
+  },
+  {
+   "ip": "109.160.32.176",
+   "n": 4392,
+   "country": "BG",
+   "as_org": "TechTies Inc."
+  },
+  {
+   "ip": "2.57.122.238",
+   "n": 142,
+   "country": "RO",
+   "as_org": "Unmanaged Ltd"
   },
   {
    "ip": "193.32.162.84",
    "n": 127,
    "country": "RO",
    "as_org": "Unmanaged Ltd"
+  },
+  {
+   "ip": "92.118.39.49",
+   "n": 45,
+   "country": "US",
+   "as_org": "Unmanaged Ltd"
+  },
+  {
+   "ip": "195.178.110.232",
+   "n": 26,
+   "country": "BG",
+   "as_org": "Techoff Srv Limited"
   },
   {
    "ip": "161.33.14.212",
@@ -52,62 +76,46 @@
    "as_org": "Oracle Corporation"
   },
   {
-   "ip": "103.136.212.48",
-   "n": 4,
-   "country": "BD",
-   "as_org": "Razib Communication"
-  },
-  {
-   "ip": "127.0.0.1",
-   "n": 4,
-   "country": null,
-   "as_org": null
-  },
-  {
-   "ip": "130.12.180.51",
-   "n": 4,
+   "ip": "94.154.43.69",
+   "n": 20,
    "country": "NL",
-   "as_org": "Omegatech LTD"
+   "as_org": "Storm Industries LLC"
   },
   {
-   "ip": "165.50.87.246",
-   "n": 4,
-   "country": "TN",
-   "as_org": "Orange Tunisie"
+   "ip": "2.57.122.150",
+   "n": 18,
+   "country": "RO",
+   "as_org": "Unmanaged Ltd"
   },
   {
-   "ip": "190.114.118.179",
-   "n": 4,
-   "country": "AR",
-   "as_org": "COMPANIA DE CIRCUITOS CERRADOS S.A."
+   "ip": "193.46.255.86",
+   "n": 6,
+   "country": "RO",
+   "as_org": "Unmanaged Ltd"
   },
   {
-   "ip": "201.150.83.1",
-   "n": 4,
-   "country": "BR",
-   "as_org": "RazaoInfo Internet Ltda"
-  },
-  {
-   "ip": "213.230.87.43",
-   "n": 4,
-   "country": "UZ",
-   "as_org": "Uzbektelekom Joint Stock Company"
-  },
-  {
-   "ip": "5.180.100.157",
-   "n": 4,
-   "country": "UA",
-   "as_org": "LLC Onlinetelecom"
+   "ip": "77.239.124.70",
+   "n": 5,
+   "country": "US",
+   "as_org": "Banatsync Srl"
   }
  ],
  "top_countries": [
   {
    "country": "BG",
-   "n": 3696
+   "n": 8812
   },
   {
    "country": "RO",
-   "n": 127
+   "n": 296
+  },
+  {
+   "country": "US",
+   "n": 75
+  },
+  {
+   "country": "NL",
+   "n": 24
   },
   {
    "country": "SG",
@@ -118,158 +126,154 @@
    "n": 22
   },
   {
+   "country": "CL",
+   "n": 10
+  },
+  {
+   "country": "AR",
+   "n": 8
+  },
+  {
+   "country": "VE",
+   "n": 6
+  },
+  {
    "country": "UZ",
-   "n": 4
-  },
-  {
-   "country": "US",
-   "n": 4
-  },
-  {
-   "country": "UA",
-   "n": 4
-  },
-  {
-   "country": "TN",
-   "n": 4
-  },
-  {
-   "country": "NL",
-   "n": 4
-  },
-  {
-   "country": "BR",
    "n": 4
   }
  ],
  "top_credentials": [
   {
    "cred": "root/LeitboGi0ro",
-   "n": 7
+   "n": 8
+  },
+  {
+   "cred": "ubuntu/ubuntu",
+   "n": 4
   },
   {
    "cred": "root/123@@@",
-   "n": 3
-  },
-  {
-   "cred": "admin/admin",
-   "n": 3
-  },
-  {
-   "cred": "root/changeme",
-   "n": 2
-  },
-  {
-   "cred": "root/admin123",
-   "n": 2
-  },
-  {
-   "cred": "root/admin",
-   "n": 2
-  },
-  {
-   "cred": "root/P@ssw0rd",
-   "n": 2
-  },
-  {
-   "cred": "root/123456789",
-   "n": 2
+   "n": 4
   },
   {
    "cred": "root/12345678",
-   "n": 2
+   "n": 4
   },
   {
    "cred": "root/123456",
-   "n": 2
+   "n": 4
   },
   {
    "cred": "root/12345",
-   "n": 2
+   "n": 4
   },
   {
    "cred": "root/1234",
-   "n": 2
+   "n": 4
   },
   {
-   "cred": "root/123123",
-   "n": 2
+   "cred": "root/123",
+   "n": 4
   },
   {
    "cred": "root/111111",
-   "n": 2
+   "n": 4
   },
   {
-   "cred": "zyh/123456",
-   "n": 1
+   "cred": "node/node",
+   "n": 4
+  },
+  {
+   "cred": "admin/admin",
+   "n": 4
+  },
+  {
+   "cred": "trader/trader",
+   "n": 3
+  },
+  {
+   "cred": "test2/test2",
+   "n": 3
+  },
+  {
+   "cred": "test1/test1",
+   "n": 3
+  },
+  {
+   "cred": "support/support",
+   "n": 3
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 358
+   "n": 818
   },
   {
    "username": "ubuntu",
-   "n": 34
+   "n": 78
   },
   {
    "username": "admin",
-   "n": 27
+   "n": 60
   },
   {
    "username": "user",
-   "n": 22
+   "n": 50
   },
   {
    "username": "deploy",
-   "n": 18
-  },
-  {
-   "username": "user1",
-   "n": 11
+   "n": 46
   },
   {
    "username": "test",
-   "n": 8
+   "n": 32
+  },
+  {
+   "username": "user1",
+   "n": 24
   },
   {
    "username": "claude",
-   "n": 8
+   "n": 20
   },
   {
-   "username": "dev",
-   "n": 6
+   "username": "postgres",
+   "n": 18
   },
   {
    "username": "debian",
-   "n": 6
+   "n": 16
   },
   {
-   "username": "admin1",
-   "n": 6
+   "username": "minecraft",
+   "n": 15
   },
   {
-   "username": "username",
-   "n": 5
+   "username": "dev",
+   "n": 14
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 922
+   "n": 2192
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 30
+   "n": 50
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 30
+   "n": 50
+  },
+  {
+   "cmd": "/bin/./uname -s -v -n -r -m",
+   "n": 35
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 15
+   "n": 25
   },
   {
    "cmd": "rm /tmp/bendi.py",
@@ -307,7 +311,31 @@
   },
   {
    "hour": "2026-09-27T21",
-   "n": 2264
+   "n": 2762
+  },
+  {
+   "hour": "2026-09-27T22",
+   "n": 209
+  },
+  {
+   "hour": "2026-09-27T23",
+   "n": 40
+  },
+  {
+   "hour": "2026-09-28T00",
+   "n": 2023
+  },
+  {
+   "hour": "2026-09-28T01",
+   "n": 2551
+  },
+  {
+   "hour": "2026-09-28T02",
+   "n": 54
+  },
+  {
+   "hour": "2026-09-28T03",
+   "n": 29
   }
  ],
  "latest_digest": {
