@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 15475,
-  "distinct_ips": 146
+  "events": 16972,
+  "distinct_ips": 175
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 4181
-  },
-  {
-   "kind": "cowrie_connect",
-   "n": 3826
+   "n": 4622
   },
   {
    "kind": "cowrie_session",
-   "n": 3826
+   "n": 4193
+  },
+  {
+   "kind": "cowrie_connect",
+   "n": 4192
   },
   {
    "kind": "cowrie_login_success",
-   "n": 3621
+   "n": 3937
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 21
+   "n": 28
   }
  ],
  "top_ips": [
@@ -47,9 +47,21 @@
   },
   {
    "ip": "154.18.197.29",
-   "n": 296,
+   "n": 1170,
    "country": "PH",
    "as_org": "EWS DS Networks Inc"
+  },
+  {
+   "ip": "195.178.110.227",
+   "n": 346,
+   "country": "BG",
+   "as_org": "Techoff Srv Limited"
+  },
+  {
+   "ip": "2.57.122.238",
+   "n": 292,
+   "country": "RO",
+   "as_org": "Unmanaged Ltd"
   },
   {
    "ip": "80.94.92.55",
@@ -58,10 +70,10 @@
    "as_org": "Unmanaged Ltd"
   },
   {
-   "ip": "2.57.122.238",
-   "n": 146,
-   "country": "RO",
-   "as_org": "Unmanaged Ltd"
+   "ip": "195.178.110.232",
+   "n": 196,
+   "country": "BG",
+   "as_org": "Techoff Srv Limited"
   },
   {
    "ip": "2.57.122.209",
@@ -76,20 +88,8 @@
    "as_org": "Unmanaged Ltd"
   },
   {
-   "ip": "195.178.110.232",
-   "n": 127,
-   "country": "BG",
-   "as_org": "Techoff Srv Limited"
-  },
-  {
-   "ip": "195.178.110.227",
-   "n": 125,
-   "country": "BG",
-   "as_org": "Techoff Srv Limited"
-  },
-  {
    "ip": "2.57.122.53",
-   "n": 122,
+   "n": 124,
    "country": "RO",
    "as_org": "Unmanaged Ltd"
   },
@@ -103,19 +103,19 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 13436
+   "n": 13728
   },
   {
    "country": "RO",
-   "n": 1094
+   "n": 1266
   },
   {
    "country": "PH",
-   "n": 296
+   "n": 1170
   },
   {
    "country": "US",
-   "n": 189
+   "n": 223
   },
   {
    "country": "UA",
@@ -123,103 +123,103 @@
   },
   {
    "country": "NL",
-   "n": 52
+   "n": 116
   },
   {
    "country": "AT",
    "n": 31
   },
   {
+   "country": "CN",
+   "n": 28
+  },
+  {
    "country": "SG",
-   "n": 22
+   "n": 27
   },
   {
    "country": "JP",
    "n": 22
-  },
-  {
-   "country": "GB",
-   "n": 19
   }
  ],
  "top_credentials": [
   {
+   "cred": "root/123456",
+   "n": 16
+  },
+  {
    "cred": "admin/admin",
+   "n": 16
+  },
+  {
+   "cred": "root/123123",
+   "n": 14
+  },
+  {
+   "cred": "root/12345",
+   "n": 13
+  },
+  {
+   "cred": "root/1234",
+   "n": 13
+  },
+  {
+   "cred": "root/111111",
    "n": 13
   },
   {
    "cred": "root/admin",
-   "n": 11
-  },
-  {
-   "cred": "root/123456",
-   "n": 11
-  },
-  {
-   "cred": "root/12345",
-   "n": 11
-  },
-  {
-   "cred": "root/1234",
-   "n": 11
-  },
-  {
-   "cred": "root/123123",
-   "n": 11
-  },
-  {
-   "cred": "root/111111",
-   "n": 11
+   "n": 12
   },
   {
    "cred": "root/12345678",
+   "n": 12
+  },
+  {
+   "cred": "root/123456789",
+   "n": 11
+  },
+  {
+   "cred": "root/admin123",
    "n": 10
   },
   {
    "cred": "root/LeitboGi0ro",
+   "n": 10
+  },
+  {
+   "cred": "root/123321",
    "n": 9
   },
   {
-   "cred": "root/123456789",
-   "n": 9
-  },
-  {
-   "cred": "root/admin123",
+   "cred": "ubuntu/ubuntu",
    "n": 8
   },
   {
-   "cred": "root/ubuntu",
-   "n": 6
-  },
-  {
    "cred": "root/root",
-   "n": 6
+   "n": 8
   },
   {
-   "cred": "root/passw0rd",
-   "n": 6
-  },
-  {
-   "cred": "root/Password1",
-   "n": 6
+   "cred": "root/P@ssw0rd",
+   "n": 8
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 1397
+   "n": 1664
   },
   {
    "username": "ubuntu",
-   "n": 117
+   "n": 120
   },
   {
    "username": "admin",
-   "n": 110
+   "n": 118
   },
   {
    "username": "user",
-   "n": 79
+   "n": 81
   },
   {
    "username": "deploy",
@@ -239,7 +239,7 @@
   },
   {
    "username": "postgres",
-   "n": 27
+   "n": 28
   },
   {
    "username": "debian",
@@ -261,46 +261,46 @@
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 246
+   "n": 316
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 246
-  },
-  {
-   "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 123
+   "n": 316
   },
   {
    "cmd": "echo xsec",
-   "n": 74
+   "n": 292
+  },
+  {
+   "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
+   "n": 158
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
-   "n": 64
+   "n": 99
   },
   {
    "cmd": "",
    "n": 26
   },
   {
+   "cmd": "uname -a ; echo 'vT'",
+   "n": 12
+  },
+  {
    "cmd": "ls -l /home/",
    "n": 6
+  },
+  {
+   "cmd": "uname -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; cd /tmp || cd /var/tmp || ",
+   "n": 5
   },
   {
    "cmd": "ls",
    "n": 5
   },
   {
-   "cmd": "uname -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; cd /tmp || cd /var/tmp || ",
-   "n": 4
-  },
-  {
    "cmd": "rm /tmp/bendi.py",
-   "n": 4
-  },
-  {
-   "cmd": "python3 /tmp/bendi.py",
    "n": 4
   }
  ],
@@ -415,7 +415,27 @@
   },
   {
    "hour": "2026-09-28T22",
-   "n": 138
+   "n": 187
+  },
+  {
+   "hour": "2026-09-28T23",
+   "n": 154
+  },
+  {
+   "hour": "2026-09-29T00",
+   "n": 290
+  },
+  {
+   "hour": "2026-09-29T01",
+   "n": 331
+  },
+  {
+   "hour": "2026-09-29T02",
+   "n": 273
+  },
+  {
+   "hour": "2026-09-29T03",
+   "n": 400
   }
  ],
  "latest_digest": {
