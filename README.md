@@ -12,7 +12,8 @@ commands attackers use. It geolocates them, writes a daily LLM briefing, and sho
 it all on a self-refreshing dashboard.
 
 **▶ [Live dashboard](https://switchmanplay.github.io/logkompass/)** ·
-**📄 [Architecture & findings](docs/honeypot.md)**
+**📄 [Case study](docs/case-study.md)** ·
+**🔧 [Architecture & findings](docs/honeypot.md)**
 
 [![LogKompass honeypot dashboard — loudest attacker IPs by country](docs/findings/chart_ips.png)](https://switchmanplay.github.io/logkompass/)
 
