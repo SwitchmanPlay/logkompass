@@ -1,35 +1,35 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 45434,
-  "distinct_ips": 332
+  "events": 51389,
+  "distinct_ips": 357
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 11941
-  },
-  {
-   "kind": "cowrie_session",
-   "n": 11329
+   "n": 13421
   },
   {
    "kind": "cowrie_connect",
-   "n": 11328
+   "n": 12833
+  },
+  {
+   "kind": "cowrie_session",
+   "n": 12833
   },
   {
    "kind": "cowrie_login_success",
-   "n": 10786
+   "n": 12249
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 50
+   "n": 53
   }
  ],
  "top_ips": [
   {
    "ip": "154.18.197.29",
-   "n": 4758,
+   "n": 4866,
    "country": "PH",
    "as_org": "EWS DS Networks Inc"
   },
@@ -82,198 +82,198 @@
    "as_org": "TechTies Inc."
   },
   {
-   "ip": "195.178.110.227",
-   "n": 442,
+   "ip": "109.160.32.36",
+   "n": 3596,
    "country": "BG",
-   "as_org": "Techoff Srv Limited"
+   "as_org": "TechTies Inc."
   },
   {
-   "ip": "195.178.110.232",
-   "n": 425,
+   "ip": "109.160.32.155",
+   "n": 750,
    "country": "BG",
-   "as_org": "Techoff Srv Limited"
+   "as_org": "TechTies Inc."
   },
   {
-   "ip": "2.57.122.238",
-   "n": 292,
-   "country": "RO",
-   "as_org": "Unmanaged Ltd"
+   "ip": "195.154.107.115",
+   "n": 592,
+   "country": "FR",
+   "as_org": "Scaleway SAS"
   }
  ],
  "top_countries": [
   {
    "country": "BG",
-   "n": 32222
+   "n": 37486
   },
   {
    "country": "US",
-   "n": 5096
+   "n": 5131
   },
   {
    "country": "PH",
-   "n": 4758
+   "n": 4866
   },
   {
    "country": "RO",
-   "n": 1863
+   "n": 1963
   },
   {
    "country": "FR",
-   "n": 276
+   "n": 600
   },
   {
    "country": "NL",
-   "n": 235
+   "n": 306
   },
   {
    "country": "UA",
-   "n": 151
+   "n": 159
   },
   {
    "country": "TR",
-   "n": 128
-  },
-  {
-   "country": "CN",
-   "n": 63
+   "n": 137
   },
   {
    "country": "AR",
-   "n": 60
+   "n": 70
+  },
+  {
+   "country": "CN",
+   "n": 67
   }
  ],
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 49
-  },
-  {
-   "cred": "root/123456",
-   "n": 28
+   "n": 53
   },
   {
    "cred": "root/111111",
+   "n": 32
+  },
+  {
+   "cred": "root/123456",
+   "n": 30
+  },
+  {
+   "cred": "root/123123",
    "n": 28
   },
   {
    "cred": "admin/admin",
+   "n": 28
+  },
+  {
+   "cred": "root/12345",
+   "n": 27
+  },
+  {
+   "cred": "root/1234",
    "n": 27
   },
   {
    "cred": "root/12345678",
-   "n": 25
-  },
-  {
-   "cred": "root/123123",
-   "n": 25
-  },
-  {
-   "cred": "root/12345",
-   "n": 24
-  },
-  {
-   "cred": "root/1234",
-   "n": 24
+   "n": 26
   },
   {
    "cred": "root/123456789",
-   "n": 23
+   "n": 25
   },
   {
    "cred": "root/admin",
-   "n": 22
+   "n": 24
   },
   {
    "cred": "root/123",
-   "n": 21
+   "n": 24
   },
   {
    "cred": "root/123321",
-   "n": 19
-  },
-  {
-   "cred": "root/root",
-   "n": 18
+   "n": 22
   },
   {
    "cred": "root/admin123",
-   "n": 18
+   "n": 20
   },
   {
-   "cred": "root/password",
-   "n": 16
+   "cred": "root/root",
+   "n": 19
+  },
+  {
+   "cred": "root/1q2w3e4r",
+   "n": 19
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 4787
+   "n": 5302
   },
   {
    "username": "ubuntu",
-   "n": 318
+   "n": 359
   },
   {
    "username": "admin",
-   "n": 315
+   "n": 350
   },
   {
    "username": "user",
-   "n": 207
+   "n": 235
   },
   {
    "username": "deploy",
-   "n": 187
+   "n": 208
   },
   {
    "username": "test",
-   "n": 131
+   "n": 141
   },
   {
    "username": "user1",
-   "n": 96
+   "n": 105
   },
   {
    "username": "claude",
-   "n": 80
+   "n": 92
   },
   {
    "username": "postgres",
-   "n": 74
+   "n": 83
   },
   {
    "username": "support",
-   "n": 73
+   "n": 79
   },
   {
    "username": "debian",
-   "n": 65
+   "n": 72
   },
   {
    "username": "minecraft",
-   "n": 58
+   "n": 65
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 8870
+   "n": 10182
   },
   {
    "cmd": "echo xsec",
-   "n": 1260
+   "n": 1367
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 610
+   "n": 628
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 610
+   "n": 628
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 305
+   "n": 314
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
@@ -281,7 +281,7 @@
   },
   {
    "cmd": "uname -a ; echo 'vT'",
-   "n": 28
+   "n": 44
   },
   {
    "cmd": "",
@@ -563,7 +563,31 @@
   },
   {
    "hour": "2026-09-30T11",
-   "n": 127
+   "n": 1615
+  },
+  {
+   "hour": "2026-09-30T12",
+   "n": 2940
+  },
+  {
+   "hour": "2026-09-30T13",
+   "n": 426
+  },
+  {
+   "hour": "2026-09-30T14",
+   "n": 99
+  },
+  {
+   "hour": "2026-09-30T15",
+   "n": 87
+  },
+  {
+   "hour": "2026-09-30T16",
+   "n": 137
+  },
+  {
+   "hour": "2026-09-30T17",
+   "n": 778
   }
  ],
  "latest_digest": {
