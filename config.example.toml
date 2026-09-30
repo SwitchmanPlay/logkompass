@@ -30,7 +30,9 @@ protocol_noise_threshold = 5
 # Get them with: ssh-keygen -lf ~/.ssh/id_ed25519.pub
 known_key_fingerprints = []
 
-# Providers are tried in order. First one that answers wins.
+# Providers form a resilient chain: they are tried in order, and a provider
+# that errors OR whose output fails validation (a reasoning leak, an ungrounded
+# briefing) is skipped to the next one before the deterministic template.
 # 1) local Qwen3 on the workstation, reached over Tailscale or a LAN address
 [[llm.providers]]
 name = "local-qwen3"
@@ -42,11 +44,22 @@ temperature = 0.0
 # Qwen3 emits <think> blocks by default. llama.cpp and vLLM accept this switch.
 extra_body = { chat_template_kwargs = { enable_thinking = false } }
 
-# 2) free hosted fallback, used only when the local box is off
+# 2) free hosted primary. Free OpenRouter models come and go and some "reasoning"
+#    models leak their thoughts; pick one that returns clean output (validated).
 [[llm.providers]]
-name = "openrouter-free"
+name = "openrouter-primary"
 base_url = "https://openrouter.ai/api/v1"
-model = "meta-llama/llama-3.3-70b-instruct:free"
+model = "poolside/laguna-s-2.1:free"
+api_key = "env:OPENROUTER_API_KEY"
+timeout_seconds = 60
+max_tokens = 700
+temperature = 0.0
+
+# 3) free hosted backup, in case the primary is down or starts leaking
+[[llm.providers]]
+name = "openrouter-backup"
+base_url = "https://openrouter.ai/api/v1"
+model = "nvidia/nemotron-3-super-120b-a12b:free"
 api_key = "env:OPENROUTER_API_KEY"
 timeout_seconds = 60
 max_tokens = 700

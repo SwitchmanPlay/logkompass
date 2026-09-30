@@ -91,7 +91,14 @@ class LlmClient:
         headers.update(provider.headers or {})
         return headers
 
-    def complete(self, system: str, user: str) -> LlmResult:
+    def complete(self, system: str, user: str, accept=None) -> LlmResult:
+        """Return the first provider whose output is usable.
+
+        ``accept`` is an optional ``str -> bool`` guard. When given, a provider
+        that answers but whose text fails the guard (e.g. a reasoning leak or an
+        ungrounded briefing) is treated like a failure, so the chain moves on to
+        the next model instead of returning garbage.
+        """
         self.attempts = []
         if not self.providers:
             raise LlmError("no usable LLM provider configured")
@@ -110,6 +117,11 @@ class LlmClient:
                 except Exception as error:  # noqa: BLE001 - any failure means: next provider
                     self.attempts.append(
                         f"{provider.name} attempt {attempt + 1}: {type(error).__name__}: {error}"
+                    )
+                    continue
+                if accept is not None and not accept(text):
+                    self.attempts.append(
+                        f"{provider.name} attempt {attempt + 1}: rejected (unusable output)"
                     )
                     continue
                 latency = int((time.monotonic() - started) * 1000)

@@ -55,14 +55,14 @@ def test_hallucinated_ip_is_rejected_and_template_takes_over():
     bad = GOOD_FIVE_LINES.replace("198.51.100.7", "10.13.37.66")
     result = make_digest(sample_aggregate(), client=client_for(StubTransport([bad])))
     assert result.path == "template_fallback"
-    assert "not in the aggregate" in " ".join(result.errors)
+    assert "rejected" in " ".join(result.errors)
     assert "failed validation" in format_message(result)
 
 
 def test_short_answer_is_rejected():
     result = make_digest(sample_aggregate(), client=client_for(StubTransport(["one line only"])))
     assert result.path == "template_fallback"
-    assert "fewer than five" in " ".join(result.errors)
+    assert "rejected" in " ".join(result.errors)
 
 
 def test_unreachable_model_falls_back_and_reports_the_error():
@@ -122,4 +122,17 @@ def test_make_digest_falls_back_to_template_on_reasoning_leak():
     transport = StubTransport(replies=[LEAKED_REASONING])
     result = make_digest(sample_aggregate(), client=client_for(transport))
     assert result.path == "template_fallback"
-    assert any("reasoning" in e for e in result.errors)
+    assert any("rejected" in e or "unusable" in e for e in result.errors)
+
+
+def test_make_digest_tries_next_model_when_first_leaks():
+    # First provider leaks reasoning; the chain should skip to the second,
+    # which returns a clean briefing — no template fallback.
+    transport = StubTransport(replies=[LEAKED_REASONING, GOOD_FIVE_LINES])
+    p1 = Provider(name="primary", base_url="http://a/v1", model="m1")
+    p2 = Provider(name="backup", base_url="http://b/v1", model="m2")
+    client = LlmClient([p1, p2], transport=transport, retries=0)
+    result = make_digest(sample_aggregate(), client=client)
+    assert result.path == "cloud_llm"
+    assert result.provider == "backup"
+    assert result.lines == five_lines(GOOD_FIVE_LINES)

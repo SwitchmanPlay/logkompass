@@ -185,29 +185,30 @@ def make_digest(
     errors: list[str] = []
 
     if client is not None:
+
+        def _accept(text: str) -> bool:
+            lines = five_lines(text)
+            return lines is not None and validate(aggregate, lines)[0]
+
         try:
-            result = client.complete(SYSTEM_PROMPT, build_user_prompt(aggregate))
+            result = client.complete(
+                SYSTEM_PROMPT, build_user_prompt(aggregate), accept=_accept
+            )
             lines = five_lines(result.text)
-            if lines is None:
-                errors.append("model returned fewer than five usable lines")
-            else:
-                ok, reason = validate(aggregate, lines)
-                if not ok:
-                    errors.append(reason)
-                else:
-                    is_local = any(
-                        name in result.provider for name in local_provider_names
-                    )
-                    return DigestResult(
-                        day=day,
-                        host=host,
-                        lines=lines,
-                        path="local_llm" if is_local else "cloud_llm",
-                        provider=result.provider,
-                        model=result.model,
-                        latency_ms=result.latency_ms,
-                        errors=errors,
-                    )
+            if lines is not None:  # guaranteed by _accept, checked for safety
+                is_local = any(
+                    name in result.provider for name in local_provider_names
+                )
+                return DigestResult(
+                    day=day,
+                    host=host,
+                    lines=lines,
+                    path="local_llm" if is_local else "cloud_llm",
+                    provider=result.provider,
+                    model=result.model,
+                    latency_ms=result.latency_ms,
+                    errors=errors,
+                )
         except LlmError as error:
             errors.append(str(error))
         except Exception as error:  # noqa: BLE001
