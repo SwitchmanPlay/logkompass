@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 51389,
-  "distinct_ips": 357
+  "events": 55239,
+  "distinct_ips": 378
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 13421
-  },
-  {
-   "kind": "cowrie_connect",
-   "n": 12833
+   "n": 14414
   },
   {
    "kind": "cowrie_session",
-   "n": 12833
+   "n": 13796
+  },
+  {
+   "kind": "cowrie_connect",
+   "n": 13795
   },
   {
    "kind": "cowrie_login_success",
-   "n": 12249
+   "n": 13177
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 53
+   "n": 57
   }
  ],
  "top_ips": [
@@ -88,26 +88,26 @@
    "as_org": "TechTies Inc."
   },
   {
-   "ip": "109.160.32.155",
-   "n": 750,
+   "ip": "109.160.32.153",
+   "n": 2002,
    "country": "BG",
    "as_org": "TechTies Inc."
   },
   {
-   "ip": "195.154.107.115",
-   "n": 592,
-   "country": "FR",
-   "as_org": "Scaleway SAS"
+   "ip": "109.160.32.155",
+   "n": 2002,
+   "country": "BG",
+   "as_org": "TechTies Inc."
   }
  ],
  "top_countries": [
   {
    "country": "BG",
-   "n": 37486
+   "n": 40849
   },
   {
    "country": "US",
-   "n": 5131
+   "n": 5163
   },
   {
    "country": "PH",
@@ -115,111 +115,111 @@
   },
   {
    "country": "RO",
-   "n": 1963
+   "n": 2057
   },
   {
    "country": "FR",
-   "n": 600
+   "n": 847
   },
   {
    "country": "NL",
-   "n": 306
+   "n": 310
   },
   {
    "country": "UA",
-   "n": 159
+   "n": 161
   },
   {
    "country": "TR",
-   "n": 137
+   "n": 151
+  },
+  {
+   "country": "SG",
+   "n": 116
   },
   {
    "country": "AR",
    "n": 70
-  },
-  {
-   "country": "CN",
-   "n": 67
   }
  ],
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 53
-  },
-  {
-   "cred": "root/111111",
-   "n": 32
+   "n": 59
   },
   {
    "cred": "root/123456",
+   "n": 33
+  },
+  {
+   "cred": "root/111111",
+   "n": 33
+  },
+  {
+   "cred": "root/12345",
    "n": 30
   },
   {
    "cred": "root/123123",
-   "n": 28
+   "n": 30
   },
   {
    "cred": "admin/admin",
-   "n": 28
-  },
-  {
-   "cred": "root/12345",
-   "n": 27
-  },
-  {
-   "cred": "root/1234",
-   "n": 27
+   "n": 30
   },
   {
    "cred": "root/12345678",
-   "n": 26
+   "n": 28
+  },
+  {
+   "cred": "root/1234",
+   "n": 28
   },
   {
    "cred": "root/123456789",
-   "n": 25
+   "n": 27
   },
   {
    "cred": "root/admin",
-   "n": 24
+   "n": 26
   },
   {
    "cred": "root/123",
-   "n": 24
+   "n": 25
   },
   {
    "cred": "root/123321",
-   "n": 22
+   "n": 23
+  },
+  {
+   "cred": "root/root",
+   "n": 20
   },
   {
    "cred": "root/admin123",
    "n": 20
   },
   {
-   "cred": "root/root",
-   "n": 19
-  },
-  {
-   "cred": "root/1q2w3e4r",
+   "cred": "root/password",
    "n": 19
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 5302
+   "n": 5394
+  },
+  {
+   "username": "admin",
+   "n": 362
   },
   {
    "username": "ubuntu",
    "n": 359
   },
   {
-   "username": "admin",
-   "n": 350
-  },
-  {
    "username": "user",
-   "n": 235
+   "n": 238
   },
   {
    "username": "deploy",
@@ -227,7 +227,7 @@
   },
   {
    "username": "test",
-   "n": 141
+   "n": 142
   },
   {
    "username": "user1",
@@ -238,12 +238,12 @@
    "n": 92
   },
   {
-   "username": "postgres",
-   "n": 83
+   "username": "support",
+   "n": 85
   },
   {
-   "username": "support",
-   "n": 79
+   "username": "postgres",
+   "n": 83
   },
   {
    "username": "debian",
@@ -251,29 +251,29 @@
   },
   {
    "username": "minecraft",
-   "n": 65
+   "n": 66
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 10182
+   "n": 10995
   },
   {
    "cmd": "echo xsec",
-   "n": 1367
+   "n": 1429
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 628
+   "n": 668
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 628
+   "n": 668
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 314
+   "n": 334
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
@@ -288,6 +288,10 @@
    "n": 26
   },
   {
+   "cmd": "echo SHELL_TEST",
+   "n": 18
+  },
+  {
    "cmd": "uname -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; cd /tmp || cd /var/tmp || ",
    "n": 7
   },
@@ -297,10 +301,6 @@
   },
   {
    "cmd": "uname -a",
-   "n": 5
-  },
-  {
-   "cmd": "ls",
    "n": 5
   }
  ],
@@ -587,7 +587,23 @@
   },
   {
    "hour": "2026-09-30T17",
-   "n": 778
+   "n": 2071
+  },
+  {
+   "hour": "2026-09-30T18",
+   "n": 194
+  },
+  {
+   "hour": "2026-09-30T19",
+   "n": 2009
+  },
+  {
+   "hour": "2026-09-30T20",
+   "n": 232
+  },
+  {
+   "hour": "2026-09-30T21",
+   "n": 122
   }
  ],
  "latest_digest": {
