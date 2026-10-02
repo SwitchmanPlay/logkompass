@@ -50,7 +50,9 @@ def make_geo(cfg: Config) -> GeoIp:
 
 def make_client(cfg: Config) -> LlmClient | None:
     providers = cfg.available_providers()
-    return LlmClient(providers) if providers else None
+    # One attempt per provider: free models rate-limit a quick retry (429), so
+    # redundancy comes from the provider chain, not from retrying one model.
+    return LlmClient(providers, retries=0) if providers else None
 
 
 def emit(data: dict) -> None:
