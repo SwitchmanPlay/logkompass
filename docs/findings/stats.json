@@ -1,25 +1,25 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 82513,
-  "distinct_ips": 552
+  "events": 83181,
+  "distinct_ips": 553
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 21654
+   "n": 21821
   },
   {
    "kind": "cowrie_session",
-   "n": 20582
+   "n": 20749
   },
   {
    "kind": "cowrie_connect",
-   "n": 20580
+   "n": 20748
   },
   {
    "kind": "cowrie_login_success",
-   "n": 19617
+   "n": 19783
   },
   {
    "kind": "cowrie_login_failed",
@@ -107,7 +107,7 @@
   },
   {
    "country": "US",
-   "n": 10614
+   "n": 11254
   },
   {
    "country": "PH",
@@ -119,11 +119,11 @@
   },
   {
    "country": "FR",
-   "n": 3373
+   "n": 3389
   },
   {
    "country": "NL",
-   "n": 380
+   "n": 385
   },
   {
    "country": "TR",
@@ -161,7 +161,7 @@
   },
   {
    "cred": "root/12345",
-   "n": 43
+   "n": 44
   },
   {
    "cred": "root/123123",
@@ -197,41 +197,41 @@
   },
   {
    "cred": "root/123321",
-   "n": 27
+   "n": 28
   },
   {
-   "cred": "root/root",
-   "n": 26
+   "cred": "root/admin123",
+   "n": 27
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 7065
+   "n": 7126
   },
   {
    "username": "admin",
-   "n": 526
+   "n": 528
   },
   {
    "username": "ubuntu",
-   "n": 448
+   "n": 450
   },
   {
    "username": "user",
-   "n": 304
+   "n": 308
   },
   {
    "username": "deploy",
-   "n": 257
+   "n": 260
   },
   {
    "username": "test",
-   "n": 186
+   "n": 188
   },
   {
    "username": "user1",
-   "n": 134
+   "n": 136
   },
   {
    "username": "support",
@@ -239,7 +239,7 @@
   },
   {
    "username": "claude",
-   "n": 113
+   "n": 116
   },
   {
    "username": "postgres",
@@ -247,7 +247,7 @@
   },
   {
    "username": "debian",
-   "n": 90
+   "n": 91
   },
   {
    "username": "dev",
@@ -257,11 +257,11 @@
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 16284
+   "n": 16444
   },
   {
    "cmd": "echo xsec",
-   "n": 2056
+   "n": 2060
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
@@ -775,7 +775,11 @@
   },
   {
    "hour": "2026-10-02T16",
-   "n": 489
+   "n": 810
+  },
+  {
+   "hour": "2026-10-02T17",
+   "n": 347
   }
  ],
  "latest_digest": {
