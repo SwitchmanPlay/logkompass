@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 83181,
-  "distinct_ips": 553
+  "events": 89540,
+  "distinct_ips": 573
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 21821
+   "n": 23449
   },
   {
    "kind": "cowrie_session",
-   "n": 20749
+   "n": 22340
   },
   {
    "kind": "cowrie_connect",
-   "n": 20748
+   "n": 22338
   },
   {
    "kind": "cowrie_login_success",
-   "n": 19783
+   "n": 21328
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 80
+   "n": 85
   }
  ],
  "top_ips": [
@@ -76,6 +76,12 @@
    "as_org": "TechTies Inc."
   },
   {
+   "ip": "77.239.124.148",
+   "n": 4392,
+   "country": "US",
+   "as_org": "Banatsync Srl"
+  },
+  {
    "ip": "77.239.124.157",
    "n": 4392,
    "country": "US",
@@ -92,22 +98,16 @@
    "n": 4384,
    "country": "BG",
    "as_org": "TechTies Inc."
-  },
-  {
-   "ip": "109.160.32.36",
-   "n": 3596,
-   "country": "BG",
-   "as_org": "TechTies Inc."
   }
  ],
  "top_countries": [
   {
    "country": "BG",
-   "n": 57356
+   "n": 59833
   },
   {
    "country": "US",
-   "n": 11254
+   "n": 14644
   },
   {
    "country": "PH",
@@ -115,165 +115,165 @@
   },
   {
    "country": "RO",
-   "n": 3894
+   "n": 3933
   },
   {
    "country": "FR",
-   "n": 3389
+   "n": 3673
   },
   {
    "country": "NL",
-   "n": 385
+   "n": 401
   },
   {
    "country": "TR",
-   "n": 263
+   "n": 275
   },
   {
    "country": "BD",
    "n": 250
   },
   {
-   "country": "UA",
-   "n": 179
+   "country": "IR",
+   "n": 187
   },
   {
-   "country": "SG",
-   "n": 153
+   "country": "UA",
+   "n": 179
   }
  ],
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 97
+   "n": 102
   },
   {
    "cred": "root/123456",
-   "n": 49
+   "n": 51
   },
   {
    "cred": "root/111111",
-   "n": 46
+   "n": 48
   },
   {
    "cred": "admin/admin",
-   "n": 45
+   "n": 46
   },
   {
    "cred": "root/12345",
+   "n": 45
+  },
+  {
+   "cred": "root/12345678",
    "n": 44
   },
   {
    "cred": "root/123123",
-   "n": 43
-  },
-  {
-   "cred": "root/12345678",
-   "n": 42
+   "n": 44
   },
   {
    "cred": "root/123456789",
-   "n": 40
+   "n": 42
   },
   {
    "cred": "root/1234",
-   "n": 40
-  },
-  {
-   "cred": "root/123",
-   "n": 36
+   "n": 42
   },
   {
    "cred": "root/admin",
-   "n": 35
+   "n": 37
+  },
+  {
+   "cred": "root/123",
+   "n": 37
   },
   {
    "cred": "root/1q2w3e4r",
-   "n": 30
+   "n": 31
   },
   {
    "cred": "root/LeitboGi0ro",
-   "n": 28
+   "n": 30
   },
   {
    "cred": "root/123321",
-   "n": 28
+   "n": 30
   },
   {
-   "cred": "root/admin123",
+   "cred": "root/root",
    "n": 27
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 7126
+   "n": 7544
   },
   {
    "username": "admin",
-   "n": 528
+   "n": 564
   },
   {
    "username": "ubuntu",
-   "n": 450
+   "n": 486
   },
   {
    "username": "user",
-   "n": 308
+   "n": 329
   },
   {
    "username": "deploy",
-   "n": 260
+   "n": 278
   },
   {
    "username": "test",
-   "n": 188
+   "n": 203
   },
   {
    "username": "user1",
-   "n": 136
+   "n": 145
   },
   {
    "username": "support",
-   "n": 131
+   "n": 139
   },
   {
    "username": "claude",
-   "n": 116
+   "n": 123
   },
   {
    "username": "postgres",
-   "n": 105
+   "n": 113
   },
   {
    "username": "debian",
-   "n": 91
+   "n": 99
   },
   {
    "username": "dev",
-   "n": 86
+   "n": 92
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 16444
+   "n": 17844
   },
   {
    "cmd": "echo xsec",
-   "n": 2060
+   "n": 2130
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 1128
+   "n": 1182
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 1128
+   "n": 1182
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 564
+   "n": 591
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
@@ -288,12 +288,12 @@
    "n": 26
   },
   {
-   "cmd": "echo SHELL_TEST",
-   "n": 18
+   "cmd": "uname -a",
+   "n": 23
   },
   {
-   "cmd": "uname -a",
-   "n": 17
+   "cmd": "echo SHELL_TEST",
+   "n": 18
   },
   {
    "cmd": "uname -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; cd /tmp || cd /var/tmp || ",
@@ -779,7 +779,23 @@
   },
   {
    "hour": "2026-10-02T17",
-   "n": 347
+   "n": 2597
+  },
+  {
+   "hour": "2026-10-02T18",
+   "n": 1355
+  },
+  {
+   "hour": "2026-10-02T19",
+   "n": 1684
+  },
+  {
+   "hour": "2026-10-02T20",
+   "n": 1004
+  },
+  {
+   "hour": "2026-10-02T21",
+   "n": 66
   }
  ],
  "latest_digest": {
