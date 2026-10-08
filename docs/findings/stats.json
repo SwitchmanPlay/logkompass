@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 174538,
-  "distinct_ips": 1021
+  "events": 175083,
+  "distinct_ips": 1040
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 45077
+   "n": 45249
   },
   {
    "kind": "cowrie_session",
-   "n": 43779
+   "n": 43919
   },
   {
    "kind": "cowrie_connect",
-   "n": 43777
+   "n": 43917
   },
   {
    "kind": "cowrie_login_success",
-   "n": 41651
+   "n": 41741
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 254
+   "n": 257
   }
  ],
  "top_ips": [
@@ -103,15 +103,15 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 120622
+   "n": 120824
   },
   {
    "country": "US",
-   "n": 29217
+   "n": 29235
   },
   {
    "country": "RO",
-   "n": 8409
+   "n": 8568
   },
   {
    "country": "PH",
@@ -119,7 +119,7 @@
   },
   {
    "country": "FR",
-   "n": 4406
+   "n": 4414
   },
   {
    "country": "IR",
@@ -127,11 +127,11 @@
   },
   {
    "country": "NL",
-   "n": 882
+   "n": 888
   },
   {
    "country": "TR",
-   "n": 590
+   "n": 605
   },
   {
    "country": "SE",
@@ -139,7 +139,7 @@
   },
   {
    "country": "CH",
-   "n": 361
+   "n": 381
   }
  ],
  "top_credentials": [
@@ -149,47 +149,47 @@
   },
   {
    "cred": "support/support",
-   "n": 208
+   "n": 213
   },
   {
    "cred": "root/123456",
-   "n": 87
+   "n": 89
   },
   {
    "cred": "root/111111",
-   "n": 78
+   "n": 80
   },
   {
    "cred": "root/1234",
-   "n": 76
+   "n": 79
   },
   {
    "cred": "root/12345",
-   "n": 75
-  },
-  {
-   "cred": "root/123123",
-   "n": 72
+   "n": 78
   },
   {
    "cred": "root/12345678",
-   "n": 71
+   "n": 74
+  },
+  {
+   "cred": "root/123123",
+   "n": 74
   },
   {
    "cred": "admin/admin",
-   "n": 71
+   "n": 72
   },
   {
    "cred": "root/123456789",
-   "n": 69
+   "n": 70
+  },
+  {
+   "cred": "root/123",
+   "n": 66
   },
   {
    "cred": "admin/1234",
    "n": 66
-  },
-  {
-   "cred": "root/123",
-   "n": 65
   },
   {
    "cred": "root/LeitboGi0ro",
@@ -197,29 +197,29 @@
   },
   {
    "cred": "root/admin",
-   "n": 54
+   "n": 55
   },
   {
    "cred": "root/123321",
-   "n": 47
+   "n": 48
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 9829
+   "n": 9860
   },
   {
    "username": "admin",
-   "n": 1016
+   "n": 1025
   },
   {
    "username": "ubuntu",
-   "n": 628
+   "n": 631
   },
   {
    "username": "user",
-   "n": 431
+   "n": 434
   },
   {
    "username": "deploy",
@@ -231,7 +231,7 @@
   },
   {
    "username": "support",
-   "n": 263
+   "n": 268
   },
   {
    "username": "0",
@@ -243,7 +243,7 @@
   },
   {
    "username": "claude",
-   "n": 158
+   "n": 159
   },
   {
    "username": "postgres",
@@ -251,13 +251,13 @@
   },
   {
    "username": "debian",
-   "n": 132
+   "n": 133
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 36165
+   "n": 36185
   },
   {
    "cmd": "echo xsec",
@@ -265,19 +265,19 @@
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 2186
+   "n": 2238
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 2186
+   "n": 2238
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 1093
+   "n": 1119
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
-   "n": 259
+   "n": 281
   },
   {
    "cmd": "uname -a ; echo 'vT'",
@@ -1279,7 +1279,27 @@
   },
   {
    "hour": "2026-10-07T22",
-   "n": 4
+   "n": 25
+  },
+  {
+   "hour": "2026-10-07T23",
+   "n": 154
+  },
+  {
+   "hour": "2026-10-08T00",
+   "n": 120
+  },
+  {
+   "hour": "2026-10-08T01",
+   "n": 52
+  },
+  {
+   "hour": "2026-10-08T02",
+   "n": 98
+  },
+  {
+   "hour": "2026-10-08T03",
+   "n": 100
   }
  ],
  "latest_digest": {
