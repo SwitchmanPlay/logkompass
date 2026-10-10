@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 206718,
-  "distinct_ips": 1191
+  "events": 209128,
+  "distinct_ips": 1215
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 53421
+   "n": 54049
   },
   {
    "kind": "cowrie_session",
-   "n": 51846
+   "n": 52460
   },
   {
    "kind": "cowrie_connect",
-   "n": 51844
+   "n": 52458
   },
   {
    "kind": "cowrie_login_success",
-   "n": 49322
+   "n": 49874
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 285
+   "n": 287
   }
  ],
  "top_ips": [
@@ -103,15 +103,15 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 145155
+   "n": 146851
   },
   {
    "country": "US",
-   "n": 34690
+   "n": 34710
   },
   {
    "country": "RO",
-   "n": 9197
+   "n": 9758
   },
   {
    "country": "PH",
@@ -127,7 +127,7 @@
   },
   {
    "country": "NL",
-   "n": 946
+   "n": 956
   },
   {
    "country": "BD",
@@ -135,7 +135,7 @@
   },
   {
    "country": "TR",
-   "n": 733
+   "n": 754
   },
   {
    "country": "SE",
@@ -145,7 +145,7 @@
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 255
+   "n": 262
   },
   {
    "cred": "0/0",
@@ -153,39 +153,39 @@
   },
   {
    "cred": "root/123456",
-   "n": 102
+   "n": 104
   },
   {
    "cred": "root/1234",
-   "n": 92
+   "n": 94
   },
   {
    "cred": "root/12345",
-   "n": 91
+   "n": 92
   },
   {
    "cred": "root/111111",
-   "n": 89
+   "n": 91
   },
   {
    "cred": "root/12345678",
-   "n": 85
+   "n": 86
   },
   {
    "cred": "root/123123",
-   "n": 82
+   "n": 84
   },
   {
    "cred": "root/123456789",
-   "n": 81
+   "n": 82
   },
   {
    "cred": "admin/admin",
-   "n": 79
+   "n": 82
   },
   {
    "cred": "root/123",
-   "n": 73
+   "n": 75
   },
   {
    "cred": "admin/1234",
@@ -193,7 +193,7 @@
   },
   {
    "cred": "root/LeitboGi0ro",
-   "n": 63
+   "n": 64
   },
   {
    "cred": "root/admin",
@@ -201,25 +201,25 @@
   },
   {
    "cred": "root/123321",
-   "n": 52
+   "n": 53
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 10473
+   "n": 10508
   },
   {
    "username": "admin",
-   "n": 1148
+   "n": 1161
   },
   {
    "username": "ubuntu",
-   "n": 677
+   "n": 679
   },
   {
    "username": "user",
-   "n": 469
+   "n": 470
   },
   {
    "username": "deploy",
@@ -227,7 +227,7 @@
   },
   {
    "username": "support",
-   "n": 319
+   "n": 326
   },
   {
    "username": "test",
@@ -239,7 +239,7 @@
   },
   {
    "username": "user1",
-   "n": 206
+   "n": 208
   },
   {
    "username": "claude",
@@ -257,15 +257,15 @@
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 43251
+   "n": 43675
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 2610
+   "n": 2664
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 2610
+   "n": 2664
   },
   {
    "cmd": "echo xsec",
@@ -273,11 +273,11 @@
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 1305
+   "n": 1332
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
-   "n": 424
+   "n": 492
   },
   {
    "cmd": "uname -a ; echo 'vT'",
@@ -1491,12 +1491,44 @@
   },
   {
    "hour": "2026-10-10T03",
-   "n": 359
+   "n": 543
+  },
+  {
+   "hour": "2026-10-10T04",
+   "n": 1607
+  },
+  {
+   "hour": "2026-10-10T05",
+   "n": 247
+  },
+  {
+   "hour": "2026-10-10T06",
+   "n": 25
+  },
+  {
+   "hour": "2026-10-10T07",
+   "n": 16
+  },
+  {
+   "hour": "2026-10-10T08",
+   "n": 23
+  },
+  {
+   "hour": "2026-10-10T09",
+   "n": 34
+  },
+  {
+   "hour": "2026-10-10T10",
+   "n": 144
+  },
+  {
+   "hour": "2026-10-10T11",
+   "n": 130
   }
  ],
  "latest_digest": {
-  "day": "2026-10-08",
-  "text": "LogKompass honeypot-01, 2026-10-08\n\n[template fallback, model output failed validation]\n13166 auth events from 110 IPs, 23 percent below the 7-day average.\nLoudest source 109.160.32.39, BG, TechTies Inc., 2002 attempts, first seen 2026-09-29.\n6 failed attempts, most targeted usernames root, admin, support; 3169 accepted.\nHigh: R05_new_country_success for 193.32.162.84 (RO, first successful login from this country).\nCheck that this login was you; if not, rotate keys and close password auth.\n\nmodel: none, deterministic template, 2026-10-09T07:07:05Z",
-  "created_at": "2026-10-09T07:07:05Z"
+  "day": "2026-10-09",
+  "text": "LogKompass honeypot-01, 2026-10-09\n\n16318 events today, 5% below the 7-day average of 17243.\nTop source is 77.239.124.147 from US, network Banatsync Srl, with 4392 events.\nAttackers targeted admin, root, git, jenkins, oracle, and postgres via brute-force login attempts.\nHigh-severity finding: successful logins from new countries including RO, BG, TR, BE, AU, CN, KR, NL, HK, and DE.\nBlock or rate-limit IP 77.239.124.147 and review all successful logins from new countries.\n\nmodel: poolside/laguna-s-2.1:free via openrouter-laguna, 8.9 s",
+  "created_at": "2026-10-10T07:07:11Z"
  }
 }
