@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 227676,
-  "distinct_ips": 1285
+  "events": 230438,
+  "distinct_ips": 1302
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 58773
+   "n": 59470
   },
   {
    "kind": "cowrie_session",
-   "n": 57204
+   "n": 57905
   },
   {
    "kind": "cowrie_connect",
-   "n": 57201
+   "n": 57902
   },
   {
    "kind": "cowrie_login_success",
-   "n": 54195
+   "n": 54857
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 303
+   "n": 304
   }
  ],
  "top_ips": [
@@ -103,39 +103,39 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 157104
+   "n": 159108
   },
   {
    "country": "US",
-   "n": 39479
+   "n": 39523
   },
   {
    "country": "RO",
-   "n": 10671
+   "n": 10785
   },
   {
    "country": "PH",
-   "n": 4874
+   "n": 4876
   },
   {
    "country": "FR",
-   "n": 4436
+   "n": 4440
   },
   {
    "country": "DE",
-   "n": 1992
+   "n": 2496
   },
   {
    "country": "IR",
-   "n": 1426
+   "n": 1428
   },
   {
    "country": "NL",
-   "n": 976
+   "n": 988
   },
   {
    "country": "TR",
-   "n": 820
+   "n": 832
   },
   {
    "country": "BD",
@@ -145,7 +145,7 @@
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 284
+   "n": 289
   },
   {
    "cred": "0/0",
@@ -153,47 +153,47 @@
   },
   {
    "cred": "root/123456",
-   "n": 118
+   "n": 119
   },
   {
    "cred": "root/1234",
-   "n": 108
+   "n": 109
   },
   {
    "cred": "root/12345",
-   "n": 107
+   "n": 108
   },
   {
    "cred": "root/111111",
-   "n": 100
+   "n": 101
   },
   {
    "cred": "root/12345678",
-   "n": 96
+   "n": 97
   },
   {
    "cred": "root/123123",
+   "n": 94
+  },
+  {
+   "cred": "admin/admin",
    "n": 93
   },
   {
    "cred": "root/123456789",
-   "n": 90
-  },
-  {
-   "cred": "admin/admin",
-   "n": 89
+   "n": 91
   },
   {
    "cred": "root/123",
-   "n": 85
+   "n": 86
+  },
+  {
+   "cred": "root/LeitboGi0ro",
+   "n": 72
   },
   {
    "cred": "admin/1234",
    "n": 71
-  },
-  {
-   "cred": "root/LeitboGi0ro",
-   "n": 69
   },
   {
    "cred": "root/admin",
@@ -201,17 +201,17 @@
   },
   {
    "cred": "root/123321",
-   "n": 59
+   "n": 60
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 11517
+   "n": 11661
   },
   {
    "username": "admin",
-   "n": 1231
+   "n": 1240
   },
   {
    "username": "ubuntu",
@@ -227,7 +227,7 @@
   },
   {
    "username": "support",
-   "n": 351
+   "n": 357
   },
   {
    "username": "test",
@@ -257,51 +257,51 @@
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 47258
+   "n": 47758
   },
   {
    "cmd": "echo xsec",
-   "n": 3023
+   "n": 3149
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 2926
+   "n": 2944
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 2926
+   "n": 2944
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 1463
+   "n": 1472
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
    "n": 494
   },
   {
-   "cmd": "uname -a ; echo 'vT'",
-   "n": 69
+   "cmd": "uname -a",
+   "n": 70
   },
   {
-   "cmd": "uname -a",
-   "n": 66
+   "cmd": "uname -a ; echo 'vT'",
+   "n": 69
   },
   {
    "cmd": "echo SHELL_TEST",
    "n": 36
   },
   {
-   "cmd": "",
+   "cmd": "rm /tmp/bendi.py",
    "n": 27
   },
   {
-   "cmd": "rm /tmp/bendi.py",
-   "n": 25
+   "cmd": "python3 /tmp/bendi.py",
+   "n": 27
   },
   {
-   "cmd": "python3 /tmp/bendi.py",
-   "n": 25
+   "cmd": "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y ",
+   "n": 27
   }
  ],
  "by_hour": [
@@ -1619,7 +1619,31 @@
   },
   {
    "hour": "2026-10-11T11",
-   "n": 115
+   "n": 134
+  },
+  {
+   "hour": "2026-10-11T12",
+   "n": 133
+  },
+  {
+   "hour": "2026-10-11T13",
+   "n": 2120
+  },
+  {
+   "hour": "2026-10-11T14",
+   "n": 103
+  },
+  {
+   "hour": "2026-10-11T15",
+   "n": 135
+  },
+  {
+   "hour": "2026-10-11T16",
+   "n": 178
+  },
+  {
+   "hour": "2026-10-11T17",
+   "n": 74
   }
  ],
  "latest_digest": {
