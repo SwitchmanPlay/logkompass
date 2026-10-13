@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 259268,
-  "distinct_ips": 1425
+  "events": 265477,
+  "distinct_ips": 1475
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 67078
+   "n": 68713
   },
   {
    "kind": "cowrie_session",
-   "n": 65087
+   "n": 66653
   },
   {
    "kind": "cowrie_connect",
-   "n": 65084
+   "n": 66649
   },
   {
    "kind": "cowrie_login_success",
-   "n": 61700
+   "n": 63138
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 319
+   "n": 324
   }
  ],
  "top_ips": [
@@ -83,7 +83,7 @@
   },
   {
    "ip": "164.30.17.82",
-   "n": 4911,
+   "n": 5611,
    "country": "DE",
    "as_org": "T-Systems International GmbH"
   },
@@ -103,19 +103,19 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 182537
+   "n": 186830
   },
   {
    "country": "US",
-   "n": 40439
+   "n": 40714
   },
   {
    "country": "RO",
-   "n": 11552
+   "n": 12155
   },
   {
    "country": "DE",
-   "n": 5310
+   "n": 6012
   },
   {
    "country": "PH",
@@ -127,15 +127,15 @@
   },
   {
    "country": "IR",
-   "n": 1430
+   "n": 1434
   },
   {
    "country": "NL",
-   "n": 1008
+   "n": 1074
   },
   {
    "country": "TR",
-   "n": 912
+   "n": 945
   },
   {
    "country": "BD",
@@ -145,7 +145,7 @@
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 315
+   "n": 326
   },
   {
    "cred": "0/0",
@@ -153,73 +153,73 @@
   },
   {
    "cred": "root/123456",
-   "n": 129
+   "n": 133
   },
   {
    "cred": "root/1234",
+   "n": 122
+  },
+  {
+   "cred": "root/111111",
    "n": 118
   },
   {
    "cred": "root/12345",
-   "n": 114
-  },
-  {
-   "cred": "root/111111",
-   "n": 113
-  },
-  {
-   "cred": "root/12345678",
-   "n": 103
+   "n": 117
   },
   {
    "cred": "root/123123",
-   "n": 103
+   "n": 108
   },
   {
-   "cred": "root/123456789",
-   "n": 97
+   "cred": "root/12345678",
+   "n": 106
   },
   {
    "cred": "admin/admin",
-   "n": 95
+   "n": 101
+  },
+  {
+   "cred": "root/123456789",
+   "n": 100
   },
   {
    "cred": "root/123",
-   "n": 94
+   "n": 95
   },
   {
    "cred": "root/LeitboGi0ro",
-   "n": 79
+   "n": 80
   },
   {
    "cred": "admin/1234",
-   "n": 73
+   "n": 74
   },
   {
    "cred": "root/admin",
-   "n": 67
+   "n": 69
   },
   {
    "cred": "root/123321",
-   "n": 63
+   "n": 65
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 12646
+   "n": 12747
   },
   {
    "username": "admin",
-   "n": 1317
+   "n": 1357
   },
   {
    "username": "ubuntu",
-   "n": 746
+   "n": 927
   },
   {
    "username": "user",
-   "n": 510
+   "n": 515
   },
   {
    "username": "deploy",
@@ -227,11 +227,11 @@
   },
   {
    "username": "support",
-   "n": 385
+   "n": 396
   },
   {
    "username": "test",
-   "n": 312
+   "n": 315
   },
   {
    "username": "0",
@@ -247,41 +247,41 @@
   },
   {
    "username": "postgres",
-   "n": 174
+   "n": 175
   },
   {
    "username": "debian",
-   "n": 160
+   "n": 161
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 53276
+   "n": 54225
   },
   {
    "cmd": "echo xsec",
-   "n": 3847
+   "n": 4022
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 3390
+   "n": 3516
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 3390
+   "n": 3516
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 1695
+   "n": 1758
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
-   "n": 682
+   "n": 854
   },
   {
    "cmd": "uname -a",
-   "n": 79
+   "n": 82
   },
   {
    "cmd": "uname -a ; echo 'vT'",
@@ -1764,11 +1764,67 @@
   {
    "hour": "2026-10-12T23",
    "n": 875
+  },
+  {
+   "hour": "2026-10-13T00",
+   "n": 2230
+  },
+  {
+   "hour": "2026-10-13T01",
+   "n": 160
+  },
+  {
+   "hour": "2026-10-13T02",
+   "n": 201
+  },
+  {
+   "hour": "2026-10-13T03",
+   "n": 869
+  },
+  {
+   "hour": "2026-10-13T04",
+   "n": 1640
+  },
+  {
+   "hour": "2026-10-13T05",
+   "n": 49
+  },
+  {
+   "hour": "2026-10-13T06",
+   "n": 122
+  },
+  {
+   "hour": "2026-10-13T07",
+   "n": 212
+  },
+  {
+   "hour": "2026-10-13T08",
+   "n": 121
+  },
+  {
+   "hour": "2026-10-13T09",
+   "n": 200
+  },
+  {
+   "hour": "2026-10-13T10",
+   "n": 134
+  },
+  {
+   "hour": "2026-10-13T11",
+   "n": 132
+  },
+  {
+   "hour": "2026-10-13T12",
+   "n": 114
+  },
+  {
+   "hour": "2026-10-13T13",
+   "n": 25
   }
  ],
  "latest_digest": {
-  "day": "2026-10-11",
-  "text": "LogKompass honeypot-01, 2026-10-11\n\nEvents were 10969, below the 7-day average of 17528.3 (0.63 ratio), indicating lower than normal activity.\nThe most active source was 164.30.17.82 from Germany (DE), operated by T-Systems International GmbH.\nAttackers primarily targeted the root username, with admin and support also common, using brute-force login attempts.\nHigh-severity finding: successful logins from new countries including BG, DE, GR, NL, RO, TR, US, VN, KR, BE, IL, and CN.\nNo action needed beyond monitoring; consider reviewing new-country login alerts and tightening access controls.\n\nmodel: poolside/laguna-s-2.1:free via openrouter-laguna, 12.0 s",
-  "created_at": "2026-10-12T07:07:20Z"
+  "day": "2026-10-12",
+  "text": "LogKompass honeypot-01, 2026-10-12\n\n[template fallback, model output failed validation]\n25672 auth events from 152 IPs, 60 percent above the 7-day average.\nLoudest source 164.30.17.82, DE, T-Systems International GmbH, 2236 attempts, first seen 2026-10-10.\n14 failed attempts, most targeted usernames root, admin, support; 6089 accepted.\nHigh: R05_new_country_success for 164.30.17.82 (DE, first successful login from this country).\nCheck that this login was you; if not, rotate keys and close password auth.\n\nmodel: none, deterministic template, 2026-10-13T07:19:20Z",
+  "created_at": "2026-10-13T07:19:20Z"
  }
 }
