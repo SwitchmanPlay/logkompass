@@ -1,25 +1,25 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 291226,
-  "distinct_ips": 1568
+  "events": 295356,
+  "distinct_ips": 1586
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 75671
+   "n": 76674
   },
   {
    "kind": "cowrie_session",
-   "n": 72988
+   "n": 74040
   },
   {
    "kind": "cowrie_connect",
-   "n": 72984
+   "n": 74036
   },
   {
    "kind": "cowrie_login_success",
-   "n": 69245
+   "n": 70268
   },
   {
    "kind": "cowrie_login_failed",
@@ -70,6 +70,12 @@
    "as_org": "TechTies Inc."
   },
   {
+   "ip": "109.160.32.147",
+   "n": 6394,
+   "country": "BG",
+   "as_org": "TechTies Inc."
+  },
+  {
    "ip": "109.160.32.176",
    "n": 6394,
    "country": "BG",
@@ -92,26 +98,20 @@
    "n": 6006,
    "country": "BG",
    "as_org": "TechTies Inc."
-  },
-  {
-   "ip": "154.18.197.29",
-   "n": 4866,
-   "country": "PH",
-   "as_org": "EWS DS Networks Inc"
   }
  ],
  "top_countries": [
   {
    "country": "BG",
-   "n": 205080
+   "n": 209084
   },
   {
    "country": "US",
-   "n": 45974
+   "n": 45978
   },
   {
    "country": "RO",
-   "n": 12783
+   "n": 12822
   },
   {
    "country": "DE",
@@ -131,11 +131,11 @@
   },
   {
    "country": "NL",
-   "n": 1154
+   "n": 1160
   },
   {
    "country": "TR",
-   "n": 1007
+   "n": 1022
   },
   {
    "country": "BD",
@@ -145,7 +145,7 @@
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 348
+   "n": 353
   },
   {
    "cred": "0/0",
@@ -181,7 +181,7 @@
   },
   {
    "cred": "admin/admin",
-   "n": 108
+   "n": 109
   },
   {
    "cred": "root/123",
@@ -189,7 +189,7 @@
   },
   {
    "cred": "root/LeitboGi0ro",
-   "n": 83
+   "n": 84
   },
   {
    "cred": "admin/1234",
@@ -207,11 +207,11 @@
  "top_usernames": [
   {
    "username": "root",
-   "n": 13377
+   "n": 13382
   },
   {
    "username": "admin",
-   "n": 1431
+   "n": 1438
   },
   {
    "username": "ubuntu",
@@ -219,7 +219,7 @@
   },
   {
    "username": "user",
-   "n": 547
+   "n": 548
   },
   {
    "username": "deploy",
@@ -227,11 +227,11 @@
   },
   {
    "username": "support",
-   "n": 423
+   "n": 429
   },
   {
    "username": "test",
-   "n": 335
+   "n": 337
   },
   {
    "username": "0",
@@ -243,21 +243,21 @@
   },
   {
    "username": "claude",
-   "n": 198
+   "n": 199
   },
   {
    "username": "postgres",
-   "n": 186
+   "n": 187
   },
   {
    "username": "debian",
-   "n": 170
+   "n": 171
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 59695
+   "n": 60695
   },
   {
    "cmd": "echo xsec",
@@ -1927,7 +1927,27 @@
   },
   {
    "hour": "2026-10-14T16",
-   "n": 13
+   "n": 36
+  },
+  {
+   "hour": "2026-10-14T17",
+   "n": 22
+  },
+  {
+   "hour": "2026-10-14T18",
+   "n": 1490
+  },
+  {
+   "hour": "2026-10-14T19",
+   "n": 2554
+  },
+  {
+   "hour": "2026-10-14T20",
+   "n": 23
+  },
+  {
+   "hour": "2026-10-14T21",
+   "n": 18
   }
  ],
  "latest_digest": {
