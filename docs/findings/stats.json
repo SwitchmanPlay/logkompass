@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 270921,
-  "distinct_ips": 1500
+  "events": 276910,
+  "distinct_ips": 1516
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 70217
+   "n": 71836
   },
   {
    "kind": "cowrie_session",
-   "n": 67985
+   "n": 69453
   },
   {
    "kind": "cowrie_connect",
-   "n": 67981
+   "n": 69450
   },
   {
    "kind": "cowrie_login_success",
-   "n": 64409
+   "n": 65841
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 329
+   "n": 330
   }
  ],
  "top_ips": [
@@ -44,6 +44,12 @@
    "n": 7600,
    "country": "BG",
    "as_org": "TechTies Inc."
+  },
+  {
+   "ip": "164.30.17.82",
+   "n": 6459,
+   "country": "DE",
+   "as_org": "T-Systems International GmbH"
   },
   {
    "ip": "109.160.32.119",
@@ -70,12 +76,6 @@
    "as_org": "TechTies Inc."
   },
   {
-   "ip": "164.30.17.82",
-   "n": 6219,
-   "country": "DE",
-   "as_org": "T-Systems International GmbH"
-  },
-  {
    "ip": "109.160.32.154",
    "n": 6006,
    "country": "BG",
@@ -88,34 +88,34 @@
    "as_org": "TechTies Inc."
   },
   {
+   "ip": "77.239.124.149",
+   "n": 5018,
+   "country": "US",
+   "as_org": "Banatsync Srl"
+  },
+  {
    "ip": "154.18.197.29",
    "n": 4866,
    "country": "PH",
    "as_org": "EWS DS Networks Inc"
-  },
-  {
-   "ip": "109.160.32.132",
-   "n": 4434,
-   "country": "BG",
-   "as_org": "TechTies Inc."
   }
  ],
  "top_countries": [
   {
    "country": "BG",
-   "n": 190921
+   "n": 195698
   },
   {
    "country": "US",
-   "n": 41202
+   "n": 41862
   },
   {
    "country": "RO",
-   "n": 12215
+   "n": 12482
   },
   {
    "country": "DE",
-   "n": 6620
+   "n": 6860
   },
   {
    "country": "PH",
@@ -131,11 +131,11 @@
   },
   {
    "country": "NL",
-   "n": 1142
+   "n": 1148
   },
   {
    "country": "TR",
-   "n": 966
+   "n": 975
   },
   {
    "country": "BD",
@@ -145,7 +145,7 @@
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 334
+   "n": 338
   },
   {
    "cred": "0/0",
@@ -153,39 +153,39 @@
   },
   {
    "cred": "root/123456",
-   "n": 137
+   "n": 138
   },
   {
    "cred": "root/1234",
-   "n": 126
+   "n": 127
   },
   {
    "cred": "root/111111",
-   "n": 122
+   "n": 124
   },
   {
    "cred": "root/12345",
-   "n": 121
+   "n": 122
   },
   {
    "cred": "root/123123",
-   "n": 112
+   "n": 113
   },
   {
    "cred": "root/12345678",
-   "n": 110
+   "n": 111
   },
   {
    "cred": "root/123456789",
-   "n": 105
+   "n": 106
   },
   {
    "cred": "admin/admin",
-   "n": 104
+   "n": 106
   },
   {
    "cred": "root/123",
-   "n": 97
+   "n": 99
   },
   {
    "cred": "root/LeitboGi0ro",
@@ -197,41 +197,41 @@
   },
   {
    "cred": "root/admin",
-   "n": 71
+   "n": 72
   },
   {
    "cred": "root/123321",
-   "n": 66
+   "n": 67
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 12822
+   "n": 12924
   },
   {
    "username": "admin",
-   "n": 1372
+   "n": 1382
   },
   {
    "username": "ubuntu",
-   "n": 1086
+   "n": 1152
   },
   {
    "username": "user",
-   "n": 516
+   "n": 519
   },
   {
    "username": "deploy",
-   "n": 407
+   "n": 412
   },
   {
    "username": "support",
-   "n": 404
+   "n": 410
   },
   {
    "username": "test",
-   "n": 315
+   "n": 317
   },
   {
    "username": "0",
@@ -239,41 +239,41 @@
   },
   {
    "username": "user1",
-   "n": 222
+   "n": 224
   },
   {
    "username": "claude",
-   "n": 187
+   "n": 192
   },
   {
    "username": "postgres",
-   "n": 175
+   "n": 178
   },
   {
    "username": "debian",
-   "n": 162
+   "n": 164
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 55225
+   "n": 56528
   },
   {
    "cmd": "echo xsec",
-   "n": 4174
+   "n": 4234
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 3642
+   "n": 3744
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 3642
+   "n": 3744
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 1821
+   "n": 1872
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
@@ -1855,7 +1855,27 @@
   },
   {
    "hour": "2026-10-13T22",
-   "n": 6
+   "n": 2307
+  },
+  {
+   "hour": "2026-10-13T23",
+   "n": 274
+  },
+  {
+   "hour": "2026-10-14T00",
+   "n": 1339
+  },
+  {
+   "hour": "2026-10-14T01",
+   "n": 72
+  },
+  {
+   "hour": "2026-10-14T02",
+   "n": 1369
+  },
+  {
+   "hour": "2026-10-14T03",
+   "n": 634
   }
  ],
  "latest_digest": {
