@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 295356,
-  "distinct_ips": 1586
+  "events": 302157,
+  "distinct_ips": 1606
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 76674
+   "n": 78485
   },
   {
    "kind": "cowrie_session",
-   "n": 74040
+   "n": 75719
   },
   {
    "kind": "cowrie_connect",
-   "n": 74036
+   "n": 75718
   },
   {
    "kind": "cowrie_login_success",
-   "n": 70268
+   "n": 71895
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 338
+   "n": 340
   }
  ],
  "top_ips": [
@@ -58,6 +58,12 @@
    "as_org": "T-Systems International GmbH"
   },
   {
+   "ip": "109.160.32.154",
+   "n": 6644,
+   "country": "BG",
+   "as_org": "TechTies Inc."
+  },
+  {
    "ip": "109.160.32.119",
    "n": 6394,
    "country": "BG",
@@ -88,13 +94,7 @@
    "as_org": "TechTies Inc."
   },
   {
-   "ip": "109.160.32.154",
-   "n": 6006,
-   "country": "BG",
-   "as_org": "TechTies Inc."
-  },
-  {
-   "ip": "109.160.32.163",
+   "ip": "109.160.32.109",
    "n": 6006,
    "country": "BG",
    "as_org": "TechTies Inc."
@@ -103,15 +103,15 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 209084
+   "n": 214918
   },
   {
    "country": "US",
-   "n": 45978
+   "n": 46010
   },
   {
    "country": "RO",
-   "n": 12822
+   "n": 13279
   },
   {
    "country": "DE",
@@ -131,21 +131,21 @@
   },
   {
    "country": "NL",
-   "n": 1160
+   "n": 1162
   },
   {
    "country": "TR",
-   "n": 1022
+   "n": 1037
   },
   {
-   "country": "BD",
-   "n": 814
+   "country": "CH",
+   "n": 867
   }
  ],
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 353
+   "n": 358
   },
   {
    "cred": "0/0",
@@ -153,39 +153,39 @@
   },
   {
    "cred": "root/123456",
-   "n": 143
+   "n": 145
   },
   {
    "cred": "root/1234",
-   "n": 131
+   "n": 133
   },
   {
    "cred": "root/111111",
-   "n": 127
+   "n": 129
   },
   {
    "cred": "root/12345",
-   "n": 126
+   "n": 128
   },
   {
    "cred": "root/123123",
-   "n": 116
+   "n": 118
   },
   {
    "cred": "root/12345678",
-   "n": 115
+   "n": 117
   },
   {
    "cred": "root/123456789",
-   "n": 110
+   "n": 112
   },
   {
    "cred": "admin/admin",
-   "n": 109
+   "n": 110
   },
   {
    "cred": "root/123",
-   "n": 102
+   "n": 104
   },
   {
    "cred": "root/LeitboGi0ro",
@@ -193,7 +193,7 @@
   },
   {
    "cred": "admin/1234",
-   "n": 75
+   "n": 76
   },
   {
    "cred": "root/admin",
@@ -201,25 +201,25 @@
   },
   {
    "cred": "root/123321",
-   "n": 70
+   "n": 71
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 13382
+   "n": 13421
   },
   {
    "username": "admin",
-   "n": 1438
+   "n": 1469
   },
   {
    "username": "ubuntu",
-   "n": 1259
+   "n": 1266
   },
   {
    "username": "user",
-   "n": 548
+   "n": 551
   },
   {
    "username": "deploy",
@@ -227,11 +227,11 @@
   },
   {
    "username": "support",
-   "n": 429
+   "n": 434
   },
   {
    "username": "test",
-   "n": 337
+   "n": 346
   },
   {
    "username": "0",
@@ -239,25 +239,25 @@
   },
   {
    "username": "user1",
-   "n": 237
+   "n": 239
   },
   {
    "username": "claude",
-   "n": 199
+   "n": 200
   },
   {
    "username": "postgres",
-   "n": 187
+   "n": 188
   },
   {
    "username": "debian",
-   "n": 171
+   "n": 172
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 60695
+   "n": 62150
   },
   {
    "cmd": "echo xsec",
@@ -265,19 +265,19 @@
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 3980
+   "n": 4082
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 3980
+   "n": 4082
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 1990
+   "n": 2041
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
-   "n": 871
+   "n": 972
   },
   {
    "cmd": "uname -a",
@@ -1947,7 +1947,27 @@
   },
   {
    "hour": "2026-10-14T21",
-   "n": 18
+   "n": 28
+  },
+  {
+   "hour": "2026-10-14T22",
+   "n": 2061
+  },
+  {
+   "hour": "2026-10-14T23",
+   "n": 143
+  },
+  {
+   "hour": "2026-10-15T00",
+   "n": 1699
+  },
+  {
+   "hour": "2026-10-15T01",
+   "n": 856
+  },
+  {
+   "hour": "2026-10-15T02",
+   "n": 2032
   }
  ],
  "latest_digest": {
