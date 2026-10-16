@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 323353,
-  "distinct_ips": 1672
+  "events": 328029,
+  "distinct_ips": 1698
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 83972
+   "n": 85210
   },
   {
    "kind": "cowrie_session",
-   "n": 81000
+   "n": 82160
   },
   {
    "kind": "cowrie_connect",
-   "n": 80997
+   "n": 82156
   },
   {
    "kind": "cowrie_login_success",
-   "n": 77033
+   "n": 78137
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 351
+   "n": 366
   }
  ],
  "top_ips": [
@@ -103,19 +103,19 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 233300
+   "n": 237311
   },
   {
    "country": "US",
-   "n": 46671
+   "n": 46773
   },
   {
    "country": "RO",
-   "n": 13797
+   "n": 14199
   },
   {
    "country": "DE",
-   "n": 7177
+   "n": 7201
   },
   {
    "country": "PH",
@@ -123,7 +123,7 @@
   },
   {
    "country": "FR",
-   "n": 4448
+   "n": 4460
   },
   {
    "country": "CH",
@@ -135,17 +135,17 @@
   },
   {
    "country": "NL",
-   "n": 1184
+   "n": 1192
   },
   {
    "country": "TR",
-   "n": 1101
+   "n": 1122
   }
  ],
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 379
+   "n": 387
   },
   {
    "cred": "0/0",
@@ -153,65 +153,65 @@
   },
   {
    "cred": "root/123456",
-   "n": 152
+   "n": 155
   },
   {
    "cred": "root/1234",
-   "n": 139
+   "n": 142
   },
   {
    "cred": "root/12345",
-   "n": 132
+   "n": 135
   },
   {
    "cred": "root/111111",
-   "n": 132
+   "n": 135
   },
   {
    "cred": "root/123123",
-   "n": 120
+   "n": 123
   },
   {
    "cred": "root/12345678",
-   "n": 119
+   "n": 122
   },
   {
    "cred": "admin/admin",
-   "n": 115
+   "n": 118
   },
   {
    "cred": "root/123456789",
-   "n": 114
+   "n": 116
   },
   {
    "cred": "root/123",
-   "n": 107
+   "n": 110
   },
   {
    "cred": "root/LeitboGi0ro",
    "n": 94
   },
   {
+   "cred": "root/admin",
+   "n": 77
+  },
+  {
    "cred": "admin/1234",
    "n": 77
   },
   {
-   "cred": "root/admin",
-   "n": 75
-  },
-  {
    "cred": "root/123321",
-   "n": 71
+   "n": 72
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 13600
+   "n": 13669
   },
   {
    "username": "admin",
-   "n": 1523
+   "n": 1538
   },
   {
    "username": "ubuntu",
@@ -223,7 +223,7 @@
   },
   {
    "username": "support",
-   "n": 457
+   "n": 465
   },
   {
    "username": "deploy",
@@ -257,23 +257,23 @@
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 66693
+   "n": 67695
+  },
+  {
+   "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
+   "n": 4390
+  },
+  {
+   "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
+   "n": 4390
   },
   {
    "cmd": "echo xsec",
    "n": 4308
   },
   {
-   "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 4296
-  },
-  {
-   "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 4296
-  },
-  {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 2148
+   "n": 2195
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
@@ -2063,12 +2063,44 @@
   },
   {
    "hour": "2026-10-16T02",
-   "n": 1207
+   "n": 1240
+  },
+  {
+   "hour": "2026-10-16T03",
+   "n": 32
+  },
+  {
+   "hour": "2026-10-16T04",
+   "n": 93
+  },
+  {
+   "hour": "2026-10-16T05",
+   "n": 139
+  },
+  {
+   "hour": "2026-10-16T06",
+   "n": 44
+  },
+  {
+   "hour": "2026-10-16T07",
+   "n": 89
+  },
+  {
+   "hour": "2026-10-16T08",
+   "n": 1438
+  },
+  {
+   "hour": "2026-10-16T09",
+   "n": 2738
+  },
+  {
+   "hour": "2026-10-16T10",
+   "n": 70
   }
  ],
  "latest_digest": {
-  "day": "2026-10-14",
-  "text": "LogKompass honeypot-01, 2026-10-14\n\n24074 events today, 1.35x the 7-day average of 17873.3.\nTop source is 77.239.124.149 from US, network Banatsync Srl, with 4424 events.\nAttackers targeted admin, root, git, jenkins, oracle, postgres via brute-force username guessing.\nHigh severity: successful logins from new countries BG, DE, RO, TR, US, CN, BE, NL, CH.\nBlock or rate-limit IP 77.239.124.149 and enforce key-based auth for all users.\n\nmodel: poolside/laguna-s-2.1:free via openrouter-laguna, 12.6 s",
-  "created_at": "2026-10-15T07:07:18Z"
+  "day": "2026-10-15",
+  "text": "LogKompass honeypot-01, 2026-10-15\n\n[template fallback, model output failed validation]\n23610 auth events from 107 IPs, 35 percent above the 7-day average.\nLoudest source 109.160.32.160, BG, TechTies Inc., 2002 attempts, first seen 2026-10-15.\n11 failed attempts, most targeted usernames root, admin, ubuntu; 5698 accepted.\nHigh: R05_new_country_success for 209.99.190.215 (CH, first successful login from this country).\nCheck that this login was you; if not, rotate keys and close password auth.\n\nmodel: none, deterministic template, 2026-10-16T07:21:08Z",
+  "created_at": "2026-10-16T07:21:08Z"
  }
 }
