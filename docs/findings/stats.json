@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 330460,
-  "distinct_ips": 1716
+  "events": 332274,
+  "distinct_ips": 1728
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 85768
+   "n": 86218
   },
   {
    "kind": "cowrie_session",
-   "n": 82799
+   "n": 83259
   },
   {
    "kind": "cowrie_connect",
-   "n": 82795
+   "n": 83256
   },
   {
    "kind": "cowrie_login_success",
-   "n": 78721
+   "n": 79157
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 377
+   "n": 384
   }
  ],
  "top_ips": [
@@ -103,19 +103,19 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 239315
+   "n": 241007
   },
   {
    "country": "US",
-   "n": 46791
+   "n": 46819
   },
   {
    "country": "RO",
-   "n": 14397
+   "n": 14430
   },
   {
    "country": "DE",
-   "n": 7285
+   "n": 7297
   },
   {
    "country": "PH",
@@ -127,7 +127,7 @@
   },
   {
    "country": "CH",
-   "n": 2119
+   "n": 2123
   },
   {
    "country": "IR",
@@ -135,17 +135,17 @@
   },
   {
    "country": "NL",
-   "n": 1255
+   "n": 1257
   },
   {
    "country": "TR",
-   "n": 1131
+   "n": 1143
   }
  ],
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 390
+   "n": 394
   },
   {
    "cred": "0/0",
@@ -153,31 +153,31 @@
   },
   {
    "cred": "root/123456",
-   "n": 156
+   "n": 157
   },
   {
    "cred": "root/1234",
-   "n": 142
+   "n": 143
   },
   {
    "cred": "root/12345",
-   "n": 135
+   "n": 136
   },
   {
    "cred": "root/111111",
-   "n": 135
+   "n": 136
   },
   {
    "cred": "root/123123",
+   "n": 124
+  },
+  {
+   "cred": "root/12345678",
    "n": 123
   },
   {
    "cred": "admin/admin",
    "n": 123
-  },
-  {
-   "cred": "root/12345678",
-   "n": 122
   },
   {
    "cred": "root/123456789",
@@ -189,7 +189,7 @@
   },
   {
    "cred": "root/LeitboGi0ro",
-   "n": 94
+   "n": 97
   },
   {
    "cred": "admin/1234",
@@ -207,11 +207,11 @@
  "top_usernames": [
   {
    "username": "root",
-   "n": 13692
+   "n": 13712
   },
   {
    "username": "admin",
-   "n": 1556
+   "n": 1561
   },
   {
    "username": "ubuntu",
@@ -219,11 +219,11 @@
   },
   {
    "username": "user",
-   "n": 565
+   "n": 566
   },
   {
    "username": "support",
-   "n": 468
+   "n": 473
   },
   {
    "username": "deploy",
@@ -257,15 +257,15 @@
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 68195
+   "n": 68604
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 4396
+   "n": 4408
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 4396
+   "n": 4408
   },
   {
    "cmd": "echo xsec",
@@ -273,7 +273,7 @@
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 2198
+   "n": 2204
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
@@ -281,7 +281,7 @@
   },
   {
    "cmd": "uname -a",
-   "n": 93
+   "n": 94
   },
   {
    "cmd": "uname -a ; echo 'vT'",
@@ -293,15 +293,15 @@
   },
   {
    "cmd": "rm /tmp/bendi.py",
-   "n": 38
+   "n": 40
   },
   {
    "cmd": "python3 /tmp/bendi.py",
-   "n": 38
+   "n": 40
   },
   {
    "cmd": "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y ",
-   "n": 38
+   "n": 40
   }
  ],
  "by_hour": [
@@ -2115,7 +2115,27 @@
   },
   {
    "hour": "2026-10-16T15",
-   "n": 124
+   "n": 132
+  },
+  {
+   "hour": "2026-10-16T16",
+   "n": 72
+  },
+  {
+   "hour": "2026-10-16T17",
+   "n": 17
+  },
+  {
+   "hour": "2026-10-16T18",
+   "n": 22
+  },
+  {
+   "hour": "2026-10-16T19",
+   "n": 1250
+  },
+  {
+   "hour": "2026-10-16T20",
+   "n": 445
   }
  ],
  "latest_digest": {
