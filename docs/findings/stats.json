@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 336951,
-  "distinct_ips": 1756
+  "events": 339787,
+  "distinct_ips": 1784
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 87387
+   "n": 88072
   },
   {
    "kind": "cowrie_session",
-   "n": 84442
+   "n": 85174
   },
   {
    "kind": "cowrie_connect",
-   "n": 84438
+   "n": 85170
   },
   {
    "kind": "cowrie_login_success",
-   "n": 80285
+   "n": 80959
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 399
+   "n": 412
   }
  ],
  "top_ips": [
@@ -64,6 +64,12 @@
    "as_org": "T-Systems International GmbH"
   },
   {
+   "ip": "109.160.32.109",
+   "n": 6564,
+   "country": "BG",
+   "as_org": "TechTies Inc."
+  },
+  {
    "ip": "109.160.32.119",
    "n": 6394,
    "country": "BG",
@@ -92,30 +98,24 @@
    "n": 6394,
    "country": "BG",
    "as_org": "TechTies Inc."
-  },
-  {
-   "ip": "109.160.32.149",
-   "n": 6246,
-   "country": "BG",
-   "as_org": "TechTies Inc."
   }
  ],
  "top_countries": [
   {
    "country": "BG",
-   "n": 245006
+   "n": 247568
   },
   {
    "country": "US",
-   "n": 46961
+   "n": 46991
   },
   {
    "country": "RO",
-   "n": 14490
+   "n": 14610
   },
   {
    "country": "DE",
-   "n": 7323
+   "n": 7355
   },
   {
    "country": "PH",
@@ -135,17 +135,17 @@
   },
   {
    "country": "NL",
-   "n": 1263
+   "n": 1267
   },
   {
    "country": "TR",
-   "n": 1158
+   "n": 1179
   }
  ],
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 399
+   "n": 406
   },
   {
    "cred": "0/0",
@@ -153,39 +153,39 @@
   },
   {
    "cred": "root/123456",
-   "n": 158
+   "n": 159
   },
   {
    "cred": "root/1234",
-   "n": 144
+   "n": 145
   },
   {
    "cred": "root/111111",
-   "n": 138
+   "n": 139
   },
   {
    "cred": "root/12345",
-   "n": 137
+   "n": 138
   },
   {
    "cred": "root/12345678",
-   "n": 125
+   "n": 126
+  },
+  {
+   "cred": "admin/admin",
+   "n": 126
   },
   {
    "cred": "root/123123",
    "n": 125
   },
   {
-   "cred": "admin/admin",
-   "n": 125
-  },
-  {
    "cred": "root/123456789",
-   "n": 117
+   "n": 118
   },
   {
    "cred": "root/123",
-   "n": 110
+   "n": 111
   },
   {
    "cred": "root/LeitboGi0ro",
@@ -207,15 +207,15 @@
  "top_usernames": [
   {
    "username": "root",
-   "n": 13753
+   "n": 13777
   },
   {
    "username": "admin",
-   "n": 1573
+   "n": 1582
   },
   {
    "username": "ubuntu",
-   "n": 1322
+   "n": 1323
   },
   {
    "username": "user",
@@ -223,15 +223,15 @@
   },
   {
    "username": "support",
-   "n": 478
+   "n": 485
   },
   {
    "username": "deploy",
-   "n": 439
+   "n": 440
   },
   {
    "username": "test",
-   "n": 362
+   "n": 363
   },
   {
    "username": "0",
@@ -247,7 +247,7 @@
   },
   {
    "username": "postgres",
-   "n": 194
+   "n": 195
   },
   {
    "username": "debian",
@@ -257,15 +257,15 @@
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 69603
+   "n": 70242
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 4440
+   "n": 4458
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 4440
+   "n": 4458
   },
   {
    "cmd": "echo xsec",
@@ -273,7 +273,7 @@
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 2220
+   "n": 2229
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
@@ -2159,12 +2159,40 @@
   },
   {
    "hour": "2026-10-17T02",
-   "n": 17
+   "n": 25
+  },
+  {
+   "hour": "2026-10-17T03",
+   "n": 1394
+  },
+  {
+   "hour": "2026-10-17T04",
+   "n": 1235
+  },
+  {
+   "hour": "2026-10-17T05",
+   "n": 24
+  },
+  {
+   "hour": "2026-10-17T06",
+   "n": 24
+  },
+  {
+   "hour": "2026-10-17T07",
+   "n": 30
+  },
+  {
+   "hour": "2026-10-17T08",
+   "n": 35
+  },
+  {
+   "hour": "2026-10-17T09",
+   "n": 86
   }
  ],
  "latest_digest": {
-  "day": "2026-10-15",
-  "text": "LogKompass honeypot-01, 2026-10-15\n\n[template fallback, model output failed validation]\n23610 auth events from 107 IPs, 35 percent above the 7-day average.\nLoudest source 109.160.32.160, BG, TechTies Inc., 2002 attempts, first seen 2026-10-15.\n11 failed attempts, most targeted usernames root, admin, ubuntu; 5698 accepted.\nHigh: R05_new_country_success for 209.99.190.215 (CH, first successful login from this country).\nCheck that this login was you; if not, rotate keys and close password auth.\n\nmodel: none, deterministic template, 2026-10-16T07:21:08Z",
-  "created_at": "2026-10-16T07:21:08Z"
+  "day": "2026-10-16",
+  "text": "LogKompass honeypot-01, 2026-10-16\n\nVolume was 14,467 events, below the 7-day average of 19,043 (0.76 ratio).\nMost active source was 109.160.32.122 from Bulgaria, network TechTies Inc.\nAttackers targeted root, admin, and service accounts via SSH brute-force login attempts.\nHigh severity: successful logins from new countries including US, TR, RO, BG, SI, PK, ET, NL, CN, HK, BE, AR, DE, and SG.\nBlock or rate-limit IP 109.160.32.122 and review all successful logins from new countries.\n\nmodel: poolside/laguna-s-2.1:free via openrouter-laguna, 11.9 s",
+  "created_at": "2026-10-17T07:07:14Z"
  }
 }
