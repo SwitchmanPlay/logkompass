@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 350767,
-  "distinct_ips": 1841
+  "events": 359375,
+  "distinct_ips": 1867
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 90843
+   "n": 93175
   },
   {
    "kind": "cowrie_session",
-   "n": 88047
+   "n": 90158
   },
   {
    "kind": "cowrie_connect",
-   "n": 88043
+   "n": 90154
   },
   {
    "kind": "cowrie_login_success",
-   "n": 83377
+   "n": 85415
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 457
+   "n": 473
   }
  ],
  "top_ips": [
@@ -103,19 +103,19 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 252115
+   "n": 258254
   },
   {
    "country": "US",
-   "n": 49697
+   "n": 51723
   },
   {
    "country": "RO",
-   "n": 15880
+   "n": 16158
   },
   {
    "country": "DE",
-   "n": 7431
+   "n": 7461
   },
   {
    "country": "PH",
@@ -135,17 +135,17 @@
   },
   {
    "country": "IR",
-   "n": 1436
+   "n": 1438
   },
   {
    "country": "NL",
-   "n": 1279
+   "n": 1281
   }
  ],
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 419
+   "n": 426
   },
   {
    "cred": "0/0",
@@ -153,39 +153,39 @@
   },
   {
    "cred": "root/123456",
-   "n": 167
+   "n": 169
   },
   {
    "cred": "root/1234",
-   "n": 151
+   "n": 153
   },
   {
    "cred": "root/12345",
-   "n": 144
+   "n": 146
   },
   {
    "cred": "root/111111",
-   "n": 142
+   "n": 143
   },
   {
    "cred": "root/12345678",
-   "n": 132
+   "n": 134
   },
   {
    "cred": "admin/admin",
-   "n": 130
+   "n": 132
   },
   {
    "cred": "root/123123",
-   "n": 128
+   "n": 129
   },
   {
    "cred": "root/123456789",
-   "n": 123
+   "n": 125
   },
   {
    "cred": "root/123",
-   "n": 112
+   "n": 114
   },
   {
    "cred": "root/LeitboGi0ro",
@@ -193,11 +193,11 @@
   },
   {
    "cred": "root/admin",
-   "n": 82
+   "n": 83
   },
   {
    "cred": "admin/1234",
-   "n": 79
+   "n": 80
   },
   {
    "cred": "root/123321",
@@ -207,23 +207,23 @@
  "top_usernames": [
   {
    "username": "root",
-   "n": 14371
+   "n": 14435
   },
   {
    "username": "admin",
-   "n": 1632
+   "n": 1669
   },
   {
    "username": "ubuntu",
-   "n": 1330
+   "n": 1331
   },
   {
    "username": "user",
-   "n": 572
+   "n": 574
   },
   {
    "username": "support",
-   "n": 500
+   "n": 509
   },
   {
    "username": "deploy",
@@ -231,7 +231,7 @@
   },
   {
    "username": "test",
-   "n": 365
+   "n": 368
   },
   {
    "username": "0",
@@ -243,37 +243,37 @@
   },
   {
    "username": "claude",
-   "n": 204
+   "n": 205
   },
   {
    "username": "postgres",
-   "n": 196
+   "n": 197
   },
   {
    "username": "debian",
-   "n": 177
+   "n": 178
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 71820
+   "n": 73742
+  },
+  {
+   "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
+   "n": 4832
+  },
+  {
+   "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
+   "n": 4832
   },
   {
    "cmd": "echo xsec",
    "n": 4756
   },
   {
-   "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 4668
-  },
-  {
-   "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 4668
-  },
-  {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 2334
+   "n": 2416
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
@@ -2255,12 +2255,44 @@
   },
   {
    "hour": "2026-10-18T02",
-   "n": 448
+   "n": 2823
+  },
+  {
+   "hour": "2026-10-18T03",
+   "n": 3370
+  },
+  {
+   "hour": "2026-10-18T04",
+   "n": 36
+  },
+  {
+   "hour": "2026-10-18T05",
+   "n": 43
+  },
+  {
+   "hour": "2026-10-18T06",
+   "n": 154
+  },
+  {
+   "hour": "2026-10-18T07",
+   "n": 2323
+  },
+  {
+   "hour": "2026-10-18T08",
+   "n": 256
+  },
+  {
+   "hour": "2026-10-18T09",
+   "n": 47
+  },
+  {
+   "hour": "2026-10-18T10",
+   "n": 4
   }
  ],
  "latest_digest": {
-  "day": "2026-10-16",
-  "text": "LogKompass honeypot-01, 2026-10-16\n\nVolume was 14,467 events, below the 7-day average of 19,043 (0.76 ratio).\nMost active source was 109.160.32.122 from Bulgaria, network TechTies Inc.\nAttackers targeted root, admin, and service accounts via SSH brute-force login attempts.\nHigh severity: successful logins from new countries including US, TR, RO, BG, SI, PK, ET, NL, CN, HK, BE, AR, DE, and SG.\nBlock or rate-limit IP 109.160.32.122 and review all successful logins from new countries.\n\nmodel: poolside/laguna-s-2.1:free via openrouter-laguna, 11.9 s",
-  "created_at": "2026-10-17T07:07:14Z"
+  "day": "2026-10-17",
+  "text": "LogKompass honeypot-01, 2026-10-17\n\n[template fallback, model output failed validation]\n14188 auth events from 124 IPs, 24 percent below the 7-day average.\nLoudest source 109.160.32.150, BG, TechTies Inc., 2002 attempts, first seen 2026-09-29.\n55 failed attempts, most targeted usernames root, admin, support; 3201 accepted.\nHigh: R05_new_country_success for 109.160.32.114 (BG, first successful login from this country).\nCheck that this login was you; if not, rotate keys and close password auth.\n\nmodel: none, deterministic template, 2026-10-18T07:07:06Z",
+  "created_at": "2026-10-18T07:07:06Z"
  }
 }
