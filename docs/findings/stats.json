@@ -1,32 +1,38 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 369345,
-  "distinct_ips": 1946
+  "events": 382726,
+  "distinct_ips": 1980
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 95866
+   "n": 99268
   },
   {
    "kind": "cowrie_session",
-   "n": 92624
+   "n": 95977
   },
   {
    "kind": "cowrie_connect",
-   "n": 92620
+   "n": 95973
   },
   {
    "kind": "cowrie_login_success",
-   "n": 87732
+   "n": 91000
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 503
+   "n": 508
   }
  ],
  "top_ips": [
+  {
+   "ip": "109.160.32.174",
+   "n": 10398,
+   "country": "BG",
+   "as_org": "TechTies Inc."
+  },
   {
    "ip": "109.160.32.36",
    "n": 9602,
@@ -40,13 +46,13 @@
    "as_org": "Banatsync Srl"
   },
   {
-   "ip": "109.160.32.174",
-   "n": 8396,
+   "ip": "109.160.32.154",
+   "n": 8008,
    "country": "BG",
    "as_org": "TechTies Inc."
   },
   {
-   "ip": "109.160.32.154",
+   "ip": "109.160.32.163",
    "n": 8008,
    "country": "BG",
    "as_org": "TechTies Inc."
@@ -92,30 +98,24 @@
    "n": 6394,
    "country": "BG",
    "as_org": "TechTies Inc."
-  },
-  {
-   "ip": "109.160.32.30",
-   "n": 6394,
-   "country": "BG",
-   "as_org": "TechTies Inc."
   }
  ],
  "top_countries": [
   {
    "country": "BG",
-   "n": 266696
+   "n": 274628
   },
   {
    "country": "US",
-   "n": 52313
+   "n": 56777
   },
   {
    "country": "RO",
-   "n": 16484
+   "n": 17230
   },
   {
    "country": "DE",
-   "n": 7515
+   "n": 7525
   },
   {
    "country": "PH",
@@ -134,18 +134,18 @@
    "n": 1867
   },
   {
-   "country": "IR",
-   "n": 1440
+   "country": "NL",
+   "n": 1485
   },
   {
-   "country": "NL",
-   "n": 1402
+   "country": "IR",
+   "n": 1440
   }
  ],
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 438
+   "n": 449
   },
   {
    "cred": "0/0",
@@ -153,119 +153,119 @@
   },
   {
    "cred": "root/123456",
-   "n": 175
+   "n": 178
   },
   {
    "cred": "root/1234",
-   "n": 160
+   "n": 163
   },
   {
    "cred": "root/12345",
-   "n": 153
+   "n": 156
   },
   {
    "cred": "root/111111",
-   "n": 149
+   "n": 152
   },
   {
    "cred": "root/12345678",
-   "n": 140
+   "n": 143
   },
   {
    "cred": "root/123123",
-   "n": 135
+   "n": 138
   },
   {
    "cred": "admin/admin",
-   "n": 133
+   "n": 136
   },
   {
    "cred": "root/123456789",
-   "n": 130
+   "n": 133
   },
   {
    "cred": "root/123",
-   "n": 117
+   "n": 119
   },
   {
    "cred": "root/LeitboGi0ro",
-   "n": 100
+   "n": 101
   },
   {
    "cred": "root/admin",
-   "n": 86
+   "n": 88
   },
   {
    "cred": "admin/1234",
-   "n": 82
+   "n": 84
   },
   {
    "cred": "root/password",
-   "n": 76
+   "n": 78
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 14600
+   "n": 15053
   },
   {
    "username": "admin",
-   "n": 1717
+   "n": 1762
   },
   {
    "username": "ubuntu",
-   "n": 1334
+   "n": 1375
   },
   {
    "username": "user",
-   "n": 577
+   "n": 603
   },
   {
    "username": "support",
-   "n": 521
+   "n": 536
   },
   {
    "username": "deploy",
-   "n": 443
+   "n": 466
   },
   {
    "username": "test",
-   "n": 368
+   "n": 385
+  },
+  {
+   "username": "user1",
+   "n": 262
   },
   {
    "username": "0",
    "n": 252
   },
   {
-   "username": "user1",
-   "n": 249
-  },
-  {
    "username": "claude",
-   "n": 206
+   "n": 218
   },
   {
    "username": "postgres",
-   "n": 198
+   "n": 208
   },
   {
    "username": "debian",
-   "n": 179
+   "n": 187
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 75742
+   "n": 78827
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 5084
+   "n": 5174
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 5084
+   "n": 5174
   },
   {
    "cmd": "echo xsec",
@@ -273,11 +273,11 @@
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 2542
+   "n": 2587
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
-   "n": 1678
+   "n": 1758
   },
   {
    "cmd": "uname -a",
@@ -2351,12 +2351,48 @@
   },
   {
    "hour": "2026-10-19T02",
-   "n": 298
+   "n": 324
+  },
+  {
+   "hour": "2026-10-19T03",
+   "n": 1800
+  },
+  {
+   "hour": "2026-10-19T04",
+   "n": 3663
+  },
+  {
+   "hour": "2026-10-19T05",
+   "n": 3112
+  },
+  {
+   "hour": "2026-10-19T06",
+   "n": 1102
+  },
+  {
+   "hour": "2026-10-19T07",
+   "n": 957
+  },
+  {
+   "hour": "2026-10-19T08",
+   "n": 1981
+  },
+  {
+   "hour": "2026-10-19T09",
+   "n": 459
+  },
+  {
+   "hour": "2026-10-19T10",
+   "n": 263
+  },
+  {
+   "hour": "2026-10-19T11",
+   "n": 18
   }
  ],
  "latest_digest": {
-  "day": "2026-10-17",
-  "text": "LogKompass honeypot-01, 2026-10-17\n\n[template fallback, model output failed validation]\n14188 auth events from 124 IPs, 24 percent below the 7-day average.\nLoudest source 109.160.32.150, BG, TechTies Inc., 2002 attempts, first seen 2026-09-29.\n55 failed attempts, most targeted usernames root, admin, support; 3201 accepted.\nHigh: R05_new_country_success for 109.160.32.114 (BG, first successful login from this country).\nCheck that this login was you; if not, rotate keys and close password auth.\n\nmodel: none, deterministic template, 2026-10-18T07:07:06Z",
-  "created_at": "2026-10-18T07:07:06Z"
+  "day": "2026-10-18",
+  "text": "LogKompass honeypot-01, 2026-10-18\n\nWe need to output exactly five lines, plain text, no markdown, no bullets. Each line must be <=30 words. Use only numbers present in JSON. No invented IPs, countries, counts. If a field missing, say so. Let's parse the JSON.\nWe have:\n\"comparison\": days_of_history = 7, events_vs_7day_avg = 1.04, new_ips_today = 107, seven_day_avg_events = 18172.6\n\"countries\": BG 14956, CN 126, DE 96, NL 94, RO 727, RU 36, SE 38, SI 53, TR 74, US 2547\n\"day\": \"2026-10-18\"\n\nmodel: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free via openrouter-nemotron-nano, 294.9 s",
+  "created_at": "2026-10-19T07:12:00Z"
  }
 }
