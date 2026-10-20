@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 394755,
-  "distinct_ips": 2094
+  "events": 400164,
+  "distinct_ips": 2122
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 102350
+   "n": 103777
   },
   {
    "kind": "cowrie_session",
-   "n": 99001
+   "n": 100346
   },
   {
    "kind": "cowrie_connect",
-   "n": 98998
+   "n": 100342
   },
   {
    "kind": "cowrie_login_success",
-   "n": 93892
+   "n": 95180
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 514
+   "n": 519
   }
  ],
  "top_ips": [
@@ -36,6 +36,12 @@
   {
    "ip": "109.160.32.174",
    "n": 10398,
+   "country": "BG",
+   "as_org": "TechTies Inc."
+  },
+  {
+   "ip": "109.160.32.39",
+   "n": 10262,
    "country": "BG",
    "as_org": "TechTies Inc."
   },
@@ -92,26 +98,20 @@
    "n": 6394,
    "country": "BG",
    "as_org": "TechTies Inc."
-  },
-  {
-   "ip": "109.160.32.147",
-   "n": 6394,
-   "country": "BG",
-   "as_org": "TechTies Inc."
   }
  ],
  "top_countries": [
   {
    "country": "BG",
-   "n": 285009
+   "n": 289310
   },
   {
    "country": "US",
-   "n": 57111
+   "n": 57157
   },
   {
    "country": "RO",
-   "n": 17830
+   "n": 18243
   },
   {
    "country": "DE",
@@ -123,11 +123,11 @@
   },
   {
    "country": "FR",
-   "n": 4506
+   "n": 4510
   },
   {
    "country": "CH",
-   "n": 2123
+   "n": 2621
   },
   {
    "country": "TH",
@@ -135,17 +135,17 @@
   },
   {
    "country": "NL",
-   "n": 1526
+   "n": 1528
   },
   {
    "country": "IR",
-   "n": 1455
+   "n": 1457
   }
  ],
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 462
+   "n": 470
   },
   {
    "cred": "0/0",
@@ -153,89 +153,89 @@
   },
   {
    "cred": "root/123456",
-   "n": 182
+   "n": 186
   },
   {
    "cred": "root/1234",
-   "n": 167
+   "n": 170
   },
   {
    "cred": "root/12345",
-   "n": 160
+   "n": 163
   },
   {
    "cred": "root/111111",
-   "n": 159
+   "n": 161
   },
   {
    "cred": "root/12345678",
-   "n": 146
+   "n": 148
   },
   {
    "cred": "root/123123",
-   "n": 143
+   "n": 144
   },
   {
    "cred": "admin/admin",
-   "n": 141
+   "n": 144
   },
   {
    "cred": "root/123456789",
-   "n": 138
+   "n": 139
   },
   {
    "cred": "root/123",
-   "n": 125
+   "n": 128
   },
   {
    "cred": "root/LeitboGi0ro",
-   "n": 104
+   "n": 105
   },
   {
    "cred": "root/admin",
-   "n": 92
+   "n": 93
   },
   {
    "cred": "admin/1234",
-   "n": 87
+   "n": 89
   },
   {
    "cred": "root/password",
-   "n": 83
+   "n": 84
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 15997
+   "n": 16392
   },
   {
    "username": "admin",
-   "n": 1866
+   "n": 1916
   },
   {
    "username": "ubuntu",
-   "n": 1476
+   "n": 1549
   },
   {
    "username": "user",
-   "n": 656
+   "n": 682
   },
   {
    "username": "support",
-   "n": 555
+   "n": 566
   },
   {
    "username": "deploy",
-   "n": 510
+   "n": 533
   },
   {
    "username": "test",
-   "n": 423
+   "n": 438
   },
   {
    "username": "user1",
-   "n": 288
+   "n": 298
   },
   {
    "username": "0",
@@ -243,29 +243,29 @@
   },
   {
    "username": "claude",
-   "n": 240
+   "n": 249
   },
   {
    "username": "postgres",
-   "n": 226
+   "n": 236
   },
   {
    "username": "debian",
-   "n": 204
+   "n": 211
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 81276
+   "n": 82350
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 5314
+   "n": 5400
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 5314
+   "n": 5400
   },
   {
    "cmd": "echo xsec",
@@ -273,11 +273,11 @@
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 2657
+   "n": 2700
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
-   "n": 1918
+   "n": 2042
   },
   {
    "cmd": "uname -a",
@@ -285,14 +285,14 @@
   },
   {
    "cmd": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-   "n": 76
-  },
-  {
-   "cmd": "uname -a ; echo 'vT'",
-   "n": 69
+   "n": 84
   },
   {
    "cmd": "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAr",
+   "n": 75
+  },
+  {
+   "cmd": "uname -a ; echo 'vT'",
    "n": 69
   },
   {
@@ -2447,12 +2447,44 @@
   },
   {
    "hour": "2026-10-20T02",
-   "n": 596
+   "n": 703
+  },
+  {
+   "hour": "2026-10-20T03",
+   "n": 3241
+  },
+  {
+   "hour": "2026-10-20T04",
+   "n": 1065
+  },
+  {
+   "hour": "2026-10-20T05",
+   "n": 125
+  },
+  {
+   "hour": "2026-10-20T06",
+   "n": 153
+  },
+  {
+   "hour": "2026-10-20T07",
+   "n": 125
+  },
+  {
+   "hour": "2026-10-20T08",
+   "n": 89
+  },
+  {
+   "hour": "2026-10-20T09",
+   "n": 333
+  },
+  {
+   "hour": "2026-10-20T10",
+   "n": 171
   }
  ],
  "latest_digest": {
-  "day": "2026-10-18",
-  "text": "LogKompass honeypot-01, 2026-10-18\n\nWe need to output exactly five lines, plain text, no markdown, no bullets. Each line must be <=30 words. Use only numbers present in JSON. No invented IPs, countries, counts. If a field missing, say so. Let's parse the JSON.\nWe have:\n\"comparison\": days_of_history = 7, events_vs_7day_avg = 1.04, new_ips_today = 107, seven_day_avg_events = 18172.6\n\"countries\": BG 14956, CN 126, DE 96, NL 94, RO 727, RU 36, SE 38, SI 53, TR 74, US 2547\n\"day\": \"2026-10-18\"\n\nmodel: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free via openrouter-nemotron-nano, 294.9 s",
-  "created_at": "2026-10-19T07:12:00Z"
+  "day": "2026-10-19",
+  "text": "LogKompass honeypot-01, 2026-10-19\n\n[template fallback, model output failed validation]\n25044 auth events from 172 IPs, 30 percent above the 7-day average.\nLoudest source 109.160.32.109, BG, TechTies Inc., 4788 attempts, first seen 2026-10-04.\n15 failed attempts, most targeted usernames root, admin, ubuntu; 6035 accepted.\nHigh: R05_new_country_success for 45.156.87.146 (NL, first successful login from this country).\nCheck that this login was you; if not, rotate keys and close password auth.\n\nmodel: none, deterministic template, 2026-10-20T07:07:09Z",
+  "created_at": "2026-10-20T07:07:09Z"
  }
 }
