@@ -1,32 +1,38 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 384060,
-  "distinct_ips": 2014
+  "events": 394755,
+  "distinct_ips": 2094
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 99737
+   "n": 102350
   },
   {
    "kind": "cowrie_session",
-   "n": 96281
+   "n": 99001
   },
   {
    "kind": "cowrie_connect",
-   "n": 96277
+   "n": 98998
   },
   {
    "kind": "cowrie_login_success",
-   "n": 91255
+   "n": 93892
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 510
+   "n": 514
   }
  ],
  "top_ips": [
+  {
+   "ip": "109.160.32.109",
+   "n": 11352,
+   "country": "BG",
+   "as_org": "TechTies Inc."
+  },
   {
    "ip": "109.160.32.174",
    "n": 10398,
@@ -70,8 +76,8 @@
    "as_org": "T-Systems International GmbH"
   },
   {
-   "ip": "109.160.32.109",
-   "n": 6564,
+   "ip": "109.160.32.159",
+   "n": 6542,
    "country": "BG",
    "as_org": "TechTies Inc."
   },
@@ -92,26 +98,20 @@
    "n": 6394,
    "country": "BG",
    "as_org": "TechTies Inc."
-  },
-  {
-   "ip": "109.160.32.176",
-   "n": 6394,
-   "country": "BG",
-   "as_org": "TechTies Inc."
   }
  ],
  "top_countries": [
   {
    "country": "BG",
-   "n": 275130
+   "n": 285009
   },
   {
    "country": "US",
-   "n": 56968
+   "n": 57111
   },
   {
    "country": "RO",
-   "n": 17634
+   "n": 17830
   },
   {
    "country": "DE",
@@ -123,7 +123,7 @@
   },
   {
    "country": "FR",
-   "n": 4495
+   "n": 4506
   },
   {
    "country": "CH",
@@ -135,17 +135,17 @@
   },
   {
    "country": "NL",
-   "n": 1514
+   "n": 1526
   },
   {
    "country": "IR",
-   "n": 1442
+   "n": 1455
   }
  ],
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 453
+   "n": 462
   },
   {
    "cred": "0/0",
@@ -153,89 +153,89 @@
   },
   {
    "cred": "root/123456",
-   "n": 180
+   "n": 182
   },
   {
    "cred": "root/1234",
-   "n": 165
+   "n": 167
   },
   {
    "cred": "root/12345",
-   "n": 158
+   "n": 160
   },
   {
    "cred": "root/111111",
-   "n": 154
+   "n": 159
   },
   {
    "cred": "root/12345678",
-   "n": 145
+   "n": 146
   },
   {
    "cred": "root/123123",
-   "n": 140
+   "n": 143
   },
   {
    "cred": "admin/admin",
-   "n": 139
+   "n": 141
   },
   {
    "cred": "root/123456789",
-   "n": 135
+   "n": 138
   },
   {
    "cred": "root/123",
-   "n": 121
+   "n": 125
   },
   {
    "cred": "root/LeitboGi0ro",
-   "n": 101
+   "n": 104
   },
   {
    "cred": "root/admin",
-   "n": 90
+   "n": 92
   },
   {
    "cred": "admin/1234",
-   "n": 85
+   "n": 87
   },
   {
    "cred": "root/password",
-   "n": 80
+   "n": 83
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 15118
+   "n": 15997
   },
   {
    "username": "admin",
-   "n": 1796
+   "n": 1866
   },
   {
    "username": "ubuntu",
-   "n": 1394
+   "n": 1476
   },
   {
    "username": "user",
-   "n": 607
+   "n": 656
   },
   {
    "username": "support",
-   "n": 540
+   "n": 555
   },
   {
    "username": "deploy",
-   "n": 466
+   "n": 510
   },
   {
    "username": "test",
-   "n": 388
+   "n": 423
   },
   {
    "username": "user1",
-   "n": 262
+   "n": 288
   },
   {
    "username": "0",
@@ -243,29 +243,29 @@
   },
   {
    "username": "claude",
-   "n": 218
+   "n": 240
   },
   {
    "username": "postgres",
-   "n": 209
+   "n": 226
   },
   {
    "username": "debian",
-   "n": 187
+   "n": 204
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 78827
+   "n": 81276
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 5300
+   "n": 5314
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 5300
+   "n": 5314
   },
   {
    "cmd": "echo xsec",
@@ -273,18 +273,26 @@
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 2650
+   "n": 2657
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
-   "n": 1883
+   "n": 1918
   },
   {
    "cmd": "uname -a",
-   "n": 101
+   "n": 102
+  },
+  {
+   "cmd": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+   "n": 76
   },
   {
    "cmd": "uname -a ; echo 'vT'",
+   "n": 69
+  },
+  {
+   "cmd": "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAr",
    "n": 69
   },
   {
@@ -293,14 +301,6 @@
   },
   {
    "cmd": "rm /tmp/bendi.py",
-   "n": 40
-  },
-  {
-   "cmd": "python3 /tmp/bendi.py",
-   "n": 40
-  },
-  {
-   "cmd": "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y ",
    "n": 40
   }
  ],
@@ -2415,7 +2415,39 @@
   },
   {
    "hour": "2026-10-19T18",
-   "n": 11
+   "n": 1745
+  },
+  {
+   "hour": "2026-10-19T19",
+   "n": 3107
+  },
+  {
+   "hour": "2026-10-19T20",
+   "n": 337
+  },
+  {
+   "hour": "2026-10-19T21",
+   "n": 26
+  },
+  {
+   "hour": "2026-10-19T22",
+   "n": 1687
+  },
+  {
+   "hour": "2026-10-19T23",
+   "n": 2914
+  },
+  {
+   "hour": "2026-10-20T00",
+   "n": 268
+  },
+  {
+   "hour": "2026-10-20T01",
+   "n": 26
+  },
+  {
+   "hour": "2026-10-20T02",
+   "n": 596
   }
  ],
  "latest_digest": {
