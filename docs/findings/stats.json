@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 418345,
-  "distinct_ips": 2410
+  "events": 419090,
+  "distinct_ips": 2537
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 108429
+   "n": 108534
   },
   {
    "kind": "cowrie_session",
-   "n": 104927
+   "n": 105156
   },
   {
    "kind": "cowrie_connect",
-   "n": 104923
+   "n": 105152
   },
   {
    "kind": "cowrie_login_success",
-   "n": 99522
+   "n": 99703
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 544
+   "n": 545
   }
  ],
  "top_ips": [
@@ -103,19 +103,19 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 303858
+   "n": 303975
   },
   {
    "country": "US",
-   "n": 57529
+   "n": 57582
   },
   {
    "country": "RO",
-   "n": 19601
+   "n": 19640
   },
   {
    "country": "DE",
-   "n": 7692
+   "n": 7713
   },
   {
    "country": "PH",
@@ -123,7 +123,7 @@
   },
   {
    "country": "FR",
-   "n": 4541
+   "n": 4543
   },
   {
    "country": "CH",
@@ -135,17 +135,17 @@
   },
   {
    "country": "NL",
-   "n": 1605
+   "n": 1613
   },
   {
-   "country": "IR",
-   "n": 1461
+   "country": "TR",
+   "n": 1482
   }
  ],
  "top_credentials": [
   {
    "cred": "support/support",
-   "n": 497
+   "n": 500
   },
   {
    "cred": "0/0",
@@ -153,43 +153,43 @@
   },
   {
    "cred": "root/123456",
-   "n": 195
+   "n": 196
   },
   {
    "cred": "root/1234",
-   "n": 178
+   "n": 179
   },
   {
    "cred": "root/12345",
-   "n": 171
+   "n": 172
   },
   {
    "cred": "root/111111",
-   "n": 169
+   "n": 170
   },
   {
    "cred": "root/12345678",
-   "n": 155
+   "n": 156
   },
   {
    "cred": "admin/admin",
-   "n": 153
+   "n": 155
   },
   {
    "cred": "root/123123",
-   "n": 152
-  },
-  {
-   "cred": "root/123456789",
-   "n": 146
+   "n": 153
   },
   {
    "cred": "345gs5662d34/345gs5662d34",
-   "n": 140
+   "n": 148
+  },
+  {
+   "cred": "root/123456789",
+   "n": 147
   },
   {
    "cred": "root/123",
-   "n": 135
+   "n": 136
   },
   {
    "cred": "root/LeitboGi0ro",
@@ -207,15 +207,15 @@
  "top_usernames": [
   {
    "username": "root",
-   "n": 17871
+   "n": 17912
   },
   {
    "username": "admin",
-   "n": 2080
+   "n": 2102
   },
   {
    "username": "ubuntu",
-   "n": 1668
+   "n": 1671
   },
   {
    "username": "user",
@@ -223,7 +223,7 @@
   },
   {
    "username": "support",
-   "n": 616
+   "n": 633
   },
   {
    "username": "deploy",
@@ -231,7 +231,7 @@
   },
   {
    "username": "test",
-   "n": 489
+   "n": 492
   },
   {
    "username": "user1",
@@ -251,7 +251,7 @@
   },
   {
    "username": "debian",
-   "n": 245
+   "n": 247
   }
  ],
  "top_commands": [
@@ -261,11 +261,11 @@
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
-   "n": 5748
+   "n": 5776
   },
   {
    "cmd": "#!/bin/bash\necho \"xxxxxx\"\n",
-   "n": 5748
+   "n": 5776
   },
   {
    "cmd": "echo xsec",
@@ -273,7 +273,7 @@
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
-   "n": 2874
+   "n": 2888
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
@@ -281,15 +281,15 @@
   },
   {
    "cmd": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-   "n": 159
+   "n": 168
   },
   {
    "cmd": "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAr",
-   "n": 148
+   "n": 157
   },
   {
    "cmd": "uname -a",
-   "n": 104
+   "n": 105
   },
   {
    "cmd": "uname -a ; echo 'vT'",
@@ -2575,7 +2575,31 @@
   },
   {
    "hour": "2026-10-21T10",
-   "n": 289
+   "n": 304
+  },
+  {
+   "hour": "2026-10-21T11",
+   "n": 150
+  },
+  {
+   "hour": "2026-10-21T12",
+   "n": 211
+  },
+  {
+   "hour": "2026-10-21T13",
+   "n": 152
+  },
+  {
+   "hour": "2026-10-21T14",
+   "n": 90
+  },
+  {
+   "hour": "2026-10-21T15",
+   "n": 95
+  },
+  {
+   "hour": "2026-10-21T16",
+   "n": 32
   }
  ],
  "latest_digest": {
