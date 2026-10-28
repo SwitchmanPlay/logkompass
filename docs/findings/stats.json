@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 568092,
-  "distinct_ips": 4843
+  "events": 575065,
+  "distinct_ips": 4890
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 151948
+   "n": 154116
   },
   {
    "kind": "cowrie_session",
-   "n": 140943
+   "n": 142559
   },
   {
    "kind": "cowrie_connect",
-   "n": 140936
+   "n": 142552
   },
   {
    "kind": "cowrie_login_success",
-   "n": 133602
+   "n": 135159
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 663
+   "n": 679
   }
  ],
  "top_ips": [
@@ -107,157 +107,157 @@
   },
   {
    "country": "US",
-   "n": 70899
+   "n": 75927
   },
   {
    "country": "RO",
-   "n": 30183
+   "n": 30876
   },
   {
    "country": "CH",
-   "n": 9740
+   "n": 10421
   },
   {
    "country": "DE",
-   "n": 8266
+   "n": 8286
   },
   {
    "country": "PH",
-   "n": 4953
+   "n": 4958
   },
   {
    "country": "FR",
-   "n": 4912
+   "n": 4929
   },
   {
    "country": "CN",
-   "n": 4796
+   "n": 4884
   },
   {
    "country": "SE",
-   "n": 2419
+   "n": 2481
   },
   {
    "country": "NL",
-   "n": 2344
+   "n": 2362
   }
  ],
  "top_credentials": [
   {
    "cred": "0/0",
-   "n": 2265
+   "n": 2301
   },
   {
    "cred": "345gs5662d34/345gs5662d34",
-   "n": 687
+   "n": 706
   },
   {
    "cred": "support/support",
-   "n": 685
+   "n": 690
   },
   {
    "cred": "root/3245gs5662d34",
-   "n": 439
+   "n": 453
   },
   {
    "cred": "root/123456",
-   "n": 260
+   "n": 264
   },
   {
    "cred": "root/1234",
-   "n": 245
+   "n": 249
   },
   {
    "cred": "root/12345",
-   "n": 238
+   "n": 241
   },
   {
    "cred": "root/111111",
-   "n": 235
-  },
-  {
-   "cred": "root/12345678",
-   "n": 215
+   "n": 240
   },
   {
    "cred": "admin/admin",
-   "n": 214
+   "n": 219
+  },
+  {
+   "cred": "root/12345678",
+   "n": 218
   },
   {
    "cred": "root/123123",
-   "n": 212
+   "n": 216
   },
   {
    "cred": "root/123456789",
-   "n": 199
+   "n": 201
   },
   {
    "cred": "root/123",
-   "n": 190
+   "n": 194
   },
   {
    "cred": "root/admin",
-   "n": 146
+   "n": 147
   },
   {
    "cred": "root/LeitboGi0ro",
-   "n": 136
+   "n": 137
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 28439
+   "n": 28908
   },
   {
    "username": "admin",
-   "n": 3348
+   "n": 3410
   },
   {
    "username": "ubuntu",
-   "n": 2585
+   "n": 2637
   },
   {
    "username": "0",
-   "n": 2265
+   "n": 2301
   },
   {
    "username": "user",
-   "n": 1463
+   "n": 1501
   },
   {
    "username": "support",
-   "n": 1143
+   "n": 1157
   },
   {
    "username": "deploy",
-   "n": 1076
+   "n": 1099
   },
   {
    "username": "test",
-   "n": 937
+   "n": 965
   },
   {
    "username": "345gs5662d34",
-   "n": 687
+   "n": 706
   },
   {
    "username": "user1",
-   "n": 593
+   "n": 609
   },
   {
    "username": "guest",
-   "n": 551
+   "n": 560
   },
   {
    "username": "claude",
-   "n": 509
+   "n": 520
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 110106
+   "n": 111277
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
@@ -277,19 +277,19 @@
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
-   "n": 3091
+   "n": 3245
   },
   {
    "cmd": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-   "n": 760
+   "n": 782
   },
   {
    "cmd": "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAr",
-   "n": 728
+   "n": 749
   },
   {
    "cmd": "chmod +x '/root/.16'",
-   "n": 304
+   "n": 323
   },
   {
    "cmd": "uname -a",
@@ -3252,6 +3252,34 @@
   {
    "hour": "2026-10-28T11",
    "n": 154
+  },
+  {
+   "hour": "2026-10-28T12",
+   "n": 160
+  },
+  {
+   "hour": "2026-10-28T13",
+   "n": 284
+  },
+  {
+   "hour": "2026-10-28T14",
+   "n": 195
+  },
+  {
+   "hour": "2026-10-28T15",
+   "n": 329
+  },
+  {
+   "hour": "2026-10-28T16",
+   "n": 1966
+  },
+  {
+   "hour": "2026-10-28T17",
+   "n": 3833
+  },
+  {
+   "hour": "2026-10-28T18",
+   "n": 206
   }
  ],
  "latest_digest": {
