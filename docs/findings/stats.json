@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 613253,
-  "distinct_ips": 5380
+  "events": 622565,
+  "distinct_ips": 5433
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 165163
+   "n": 168427
   },
   {
    "kind": "cowrie_session",
-   "n": 151742
+   "n": 153784
   },
   {
    "kind": "cowrie_connect",
-   "n": 151740
+   "n": 153778
   },
   {
    "kind": "cowrie_login_success",
-   "n": 143836
+   "n": 145783
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 772
+   "n": 793
   }
  ],
  "top_ips": [
@@ -70,6 +70,12 @@
    "as_org": "TechTies Inc."
   },
   {
+   "ip": "164.30.17.82",
+   "n": 9508,
+   "country": "DE",
+   "as_org": "T-Systems International GmbH"
+  },
+  {
    "ip": "109.160.32.48",
    "n": 9430,
    "country": "BG",
@@ -92,38 +98,32 @@
    "n": 8792,
    "country": "BG",
    "as_org": "TechTies Inc."
-  },
-  {
-   "ip": "109.160.32.175",
-   "n": 8792,
-   "country": "BG",
-   "as_org": "TechTies Inc."
   }
  ],
  "top_countries": [
   {
    "country": "BG",
-   "n": 422424
+   "n": 427164
   },
   {
    "country": "US",
-   "n": 79004
+   "n": 80429
   },
   {
    "country": "RO",
-   "n": 33248
+   "n": 33308
   },
   {
    "country": "CH",
-   "n": 13522
+   "n": 14508
   },
   {
    "country": "DE",
-   "n": 10500
+   "n": 11275
   },
   {
    "country": "CN",
-   "n": 6080
+   "n": 6266
   },
   {
    "country": "FR",
@@ -131,133 +131,133 @@
   },
   {
    "country": "PH",
-   "n": 4985
+   "n": 4990
   },
   {
    "country": "SE",
-   "n": 2949
+   "n": 3053
   },
   {
    "country": "BR",
-   "n": 2719
+   "n": 2938
   }
  ],
  "top_credentials": [
   {
    "cred": "0/0",
-   "n": 3120
+   "n": 3178
   },
   {
    "cred": "345gs5662d34/345gs5662d34",
-   "n": 969
+   "n": 988
   },
   {
    "cred": "support/support",
-   "n": 746
+   "n": 766
   },
   {
    "cred": "root/3245gs5662d34",
-   "n": 563
+   "n": 567
   },
   {
    "cred": "root/123456",
-   "n": 279
+   "n": 282
   },
   {
    "cred": "root/1234",
-   "n": 261
+   "n": 264
   },
   {
    "cred": "root/12345",
-   "n": 252
+   "n": 255
   },
   {
    "cred": "root/111111",
-   "n": 252
+   "n": 255
   },
   {
    "cred": "root/12345678",
-   "n": 229
+   "n": 232
   },
   {
    "cred": "admin/admin",
-   "n": 228
+   "n": 231
   },
   {
    "cred": "root/123123",
-   "n": 226
+   "n": 229
   },
   {
    "cred": "root/123456789",
-   "n": 210
+   "n": 213
   },
   {
    "cred": "root/123",
-   "n": 206
+   "n": 209
   },
   {
    "cred": "root/admin",
-   "n": 156
+   "n": 159
   },
   {
    "cred": "root/LeitboGi0ro",
-   "n": 152
+   "n": 154
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 31550
+   "n": 32203
   },
   {
    "username": "admin",
-   "n": 3783
-  },
-  {
-   "username": "0",
-   "n": 3120
+   "n": 3883
   },
   {
    "username": "ubuntu",
-   "n": 3084
+   "n": 3251
+  },
+  {
+   "username": "0",
+   "n": 3178
   },
   {
    "username": "user",
-   "n": 1647
+   "n": 1687
   },
   {
    "username": "deploy",
-   "n": 1297
+   "n": 1318
   },
   {
    "username": "support",
-   "n": 1278
+   "n": 1307
   },
   {
    "username": "test",
-   "n": 1103
+   "n": 1128
   },
   {
    "username": "345gs5662d34",
-   "n": 969
+   "n": 988
   },
   {
    "username": "user1",
-   "n": 664
+   "n": 676
   },
   {
    "username": "guest",
-   "n": 593
+   "n": 599
   },
   {
-   "username": "claude",
-   "n": 567
+   "username": "debian",
+   "n": 582
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 116199
+   "n": 117274
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
@@ -269,11 +269,11 @@
   },
   {
    "cmd": "echo xsec",
-   "n": 5520
+   "n": 5806
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
-   "n": 3492
+   "n": 3712
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
@@ -281,15 +281,15 @@
   },
   {
    "cmd": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-   "n": 1067
+   "n": 1089
   },
   {
    "cmd": "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAr",
-   "n": 1016
+   "n": 1038
   },
   {
    "cmd": "chmod +x '/root/.16'",
-   "n": 409
+   "n": 438
   },
   {
    "cmd": "uname -a",
@@ -3443,7 +3443,47 @@
   },
   {
    "hour": "2026-10-30T11",
-   "n": 1995
+   "n": 2232
+  },
+  {
+   "hour": "2026-10-30T12",
+   "n": 2968
+  },
+  {
+   "hour": "2026-10-30T13",
+   "n": 2236
+  },
+  {
+   "hour": "2026-10-30T14",
+   "n": 816
+  },
+  {
+   "hour": "2026-10-30T15",
+   "n": 436
+  },
+  {
+   "hour": "2026-10-30T16",
+   "n": 376
+  },
+  {
+   "hour": "2026-10-30T17",
+   "n": 418
+  },
+  {
+   "hour": "2026-10-30T18",
+   "n": 377
+  },
+  {
+   "hour": "2026-10-30T19",
+   "n": 365
+  },
+  {
+   "hour": "2026-10-30T20",
+   "n": 335
+  },
+  {
+   "hour": "2026-10-30T21",
+   "n": 748
   }
  ],
  "latest_digest": {
