@@ -89,7 +89,7 @@ def read_authlog(
         stat = os.stat(path)
         rotated = (inode is not None and stat.st_ino != inode) or stat.st_size < offset
         start = 0 if rotated else offset
-        with open(path, "r", errors="replace") as handle:
+        with open(path, errors="replace") as handle:
             handle.seek(start)
             lines = handle.readlines()[:max_lines]
             new_offset = handle.tell()

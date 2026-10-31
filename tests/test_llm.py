@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import pytest
 from helpers import StubTransport
 
 from logkompass.config import Provider
@@ -54,10 +55,8 @@ def test_chain_falls_through_to_the_next_provider():
 def test_retry_happens_once_per_provider():
     transport = StubTransport(error=OSError("boom"))
     client = LlmClient([LOCAL], transport=transport, retries=1)
-    try:
+    with pytest.raises(LlmError):
         client.complete("s", "u")
-    except LlmError:
-        pass
     assert len(transport.calls) == 2
 
 
