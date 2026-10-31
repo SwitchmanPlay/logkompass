@@ -34,6 +34,13 @@ def check_log_source(cfg: Config) -> Check:
             f"journalctl at {binary}, unit {cfg.collect.unit}"
             + ("" if readable else " (journal dir not directly readable, group membership needed)"),
         )
+    if cfg.collect.source == "cowrie":
+        path = Path(cfg.collect.cowrie_json_path)
+        if not path.is_file():
+            return Check("log source", False, f"{path} does not exist (is cowrie running?)")
+        if not os.access(path, os.R_OK):
+            return Check("log source", False, f"{path} is not readable by this user")
+        return Check("log source", True, f"cowrie JSON {path}, {path.stat().st_size} bytes")
     path = Path(cfg.collect.authlog_path)
     if not path.is_file():
         return Check("log source", False, f"{path} does not exist (Ubuntu 24.04 may lack rsyslog)")

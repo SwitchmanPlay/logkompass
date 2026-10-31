@@ -21,3 +21,6 @@ config.toml
 # Personal local notes / settings (never published)
 *.omg
 .claude/settings.local.json
+
+# local agent worktrees
+.claude/
