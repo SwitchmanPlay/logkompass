@@ -158,13 +158,42 @@ def test_owner_findings_are_kept_but_tagged():
     assert "owner" not in untagged["findings"][0]
 
 
+def test_attacker_high_finding_is_not_hidden_behind_the_owner():
+    store = seeded_store()
+
+    def new_key(ip, ts):
+        return Finding(
+            rule_id="R06_new_key_fingerprint",
+            severity="high",
+            ts=ts,
+            window_from=ts,
+            window_to=ts,
+            ip=ip,
+            count=1,
+        )
+
+    # the owner's expected login comes first in time and would sort first
+    store.insert_findings(
+        [new_key("78.104.125.0", "2026-09-20T08:00:00Z"), new_key("62.60.130.0", "2026-09-20T14:00:00Z")]
+    )
+    aggregate = build_aggregate(store, "2026-09-20", owner_ips=["78.104.125.0"])
+    assert aggregate["findings"][0]["ip"] == "62.60.130.0"
+    lines = render_template(aggregate)
+    assert "62.60.130.0" in lines[3]
+    assert "owner_ips" not in lines[4]
+
+    # the template guards on its own too, for aggregates built elsewhere
+    reordered = dict(aggregate, findings=list(reversed(aggregate["findings"])))
+    assert "62.60.130.0" in render_template(reordered)[3]
+
+
 @pytest.mark.parametrize("bad", [["not-an-ip"], "78.104.0.0/16"])
 def test_bad_owner_ips_are_rejected(bad):
     with pytest.raises(ConfigError):
         Config.from_dict({"rules": {"owner_ips": bad}}, env={})
 
 
-@pytest.mark.parametrize("bad", [-1, "5", True])
+@pytest.mark.parametrize("bad", [-1, "5", True, 8])
 def test_bad_baseline_min_days_is_rejected(bad):
     with pytest.raises(ConfigError):
         Config.from_dict({"rules": {"baseline_min_days": bad}}, env={})

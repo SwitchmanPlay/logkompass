@@ -152,9 +152,16 @@ def build_aggregate(
         )
     )
 
+    # Within a severity, other people's findings come before the owner's own, so
+    # an expected owner login can never push an attacker's finding out of view.
     ranked = sorted(
         all_findings,
-        key=lambda f: (SEVERITY_ORDER.get(f.severity, 9), -(f.count or 0), f.ts),
+        key=lambda f: (
+            SEVERITY_ORDER.get(f.severity, 9),
+            is_owner_ip(f.ip, owner_networks),
+            -(f.count or 0),
+            f.ts,
+        ),
     )
     # One example per (rule, ip) and a few per rule, so one noisy rule cannot
     # crowd out a rarer high-severity one.

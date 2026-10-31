@@ -134,3 +134,13 @@ def test_unknown_line_still_counts_against_the_parse_rate():
     events = [parse_line("something genuinely new from sshd", TS)]
     assert events[0].kind == "other"
     assert parse_rate(events) == 0.0
+
+
+def test_scanner_hangup_before_login_keeps_its_ip():
+    scanner = parse_line(
+        "Received disconnect from 62.60.130.0 port 5555:11: disconnected by user [preauth]", TS
+    )
+    assert scanner.kind == "preauth_disconnect"
+    assert scanner.ip == "62.60.130.0"
+    session_end = "Received disconnect from 203.0.113.0 port 51234:11: disconnected by user"
+    assert parse_line(session_end, TS).kind == "ignored"

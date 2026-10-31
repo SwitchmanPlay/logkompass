@@ -40,7 +40,9 @@ IGNORED_PATTERNS: list[re.Pattern[str]] = [
     re.compile(r"^(?:Received|Got) SIGHUP"),
     # Owner logging out cleanly. OpenSSH 9.x wording.
     re.compile(r"^Disconnected from user \S+ "),
-    re.compile(r"^Received disconnect from \S+ port \d+:\d+: disconnected by user"),
+    # Only after a session. "[preauth]" means a scanner hung up before logging
+    # in; that stays a preauth_disconnect with its IP.
+    re.compile(r"^Received disconnect from \S+ port \d+:\d+: disconnected by user(?!.*\[preauth\])"),
     re.compile(r"^Accepted key \S+ \S+ found at "),
     re.compile(r"^Postponed (?:publickey|keyboard-interactive)"),
     re.compile(r"^userauth_pubkey: "),

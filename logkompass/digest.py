@@ -166,6 +166,8 @@ def render_template(aggregate: dict) -> list[str]:
     order = {"high": 0, "medium": 1, "low": 2, "info": 3}
     ranked = sorted(findings, key=lambda f: order.get(str(f.get("severity")), 9))
     high = [f for f in ranked if f.get("severity") == "high"]
+    # An attacker's high finding always wins over the owner's own expected one.
+    high.sort(key=lambda f: bool(f.get("owner")))
     if high:
         top_finding = high[0]
         line4 = (

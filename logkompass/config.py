@@ -131,9 +131,10 @@ class RuleSettings:
         if (
             isinstance(self.baseline_min_days, bool)
             or not isinstance(self.baseline_min_days, int)
-            or self.baseline_min_days < 0
+            or not 0 <= self.baseline_min_days <= 7
         ):
-            raise ConfigError("[rules] baseline_min_days must be a non-negative integer")
+            # The baseline window is 7 days, so a higher value could never be met.
+            raise ConfigError("[rules] baseline_min_days must be an integer from 0 to 7")
 
 
 @dataclass
