@@ -57,7 +57,7 @@ def _hbar(labels, values, title, fname, color=ACCENT, xlabel="events"):
     ax.spines[["top", "right"]].set_visible(False)
     ax.xaxis.grid(True, color=GRID, linewidth=0.8)
     ax.set_axisbelow(True)
-    for b, v in zip(bars, values):
+    for b, v in zip(bars, values, strict=True):
         ax.text(v, b.get_y() + b.get_height() / 2, f" {v:,}", va="center", fontsize=9)
     fig.tight_layout()
     fig.savefig(FINDINGS / fname, bbox_inches="tight")

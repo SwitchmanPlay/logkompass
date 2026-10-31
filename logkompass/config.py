@@ -11,9 +11,10 @@ from __future__ import annotations
 import os
 import socket
 import tomllib
+from collections.abc import Mapping
 from dataclasses import dataclass, field, fields, is_dataclass
 from pathlib import Path
-from typing import Any, Mapping
+from typing import Any
 
 
 class ConfigError(RuntimeError):
@@ -130,7 +131,7 @@ class Config:
     retention_days: int = 90
 
     @classmethod
-    def from_dict(cls, data: Mapping[str, Any], env: Mapping[str, str] | None = None) -> "Config":
+    def from_dict(cls, data: Mapping[str, Any], env: Mapping[str, str] | None = None) -> Config:
         allowed = {"paths", "collect", "rules", "llm", "notify", "host", "retention_days"}
         unknown = set(data) - allowed
         if unknown:
@@ -181,7 +182,7 @@ class Config:
         )
 
     @classmethod
-    def load(cls, path: str | Path, env: Mapping[str, str] | None = None) -> "Config":
+    def load(cls, path: str | Path, env: Mapping[str, str] | None = None) -> Config:
         file_path = Path(path)
         if not file_path.is_file():
             raise ConfigError(f"config file not found: {file_path}")

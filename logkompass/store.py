@@ -7,9 +7,9 @@ the second time, otherwise a retried timer run would invent an attack.
 from __future__ import annotations
 
 import sqlite3
+from collections.abc import Callable, Iterable, Sequence
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Callable, Iterable, Sequence
 
 from .models import ACCEPTED_KINDS, FAILED_KINDS, Actor, Event, Finding
 from .util import day_bounds, parse_iso
@@ -102,8 +102,8 @@ def _row_to_event(row: sqlite3.Row) -> Event:
         port=row["port"],
         method=row["method"],
         key_fp=row["key_fp"],
-        password=row["password"] if "password" in row.keys() else None,
-        command=row["command"] if "command" in row.keys() else None,
+        password=row["password"] if "password" in row.keys() else None,  # noqa: SIM118 sqlite3.Row: `in` checks values
+        command=row["command"] if "command" in row.keys() else None,  # noqa: SIM118
     )
 
 
@@ -113,7 +113,7 @@ class Store:
         self.conn.row_factory = sqlite3.Row
 
     @classmethod
-    def open(cls, path: str | Path) -> "Store":
+    def open(cls, path: str | Path) -> Store:
         target = str(path)
         if target != ":memory:":
             Path(target).parent.mkdir(parents=True, exist_ok=True)
@@ -134,7 +134,7 @@ class Store:
     def close(self) -> None:
         self.conn.close()
 
-    def __enter__(self) -> "Store":
+    def __enter__(self) -> Store:
         return self
 
     def __exit__(self, *_exc) -> None:
@@ -285,7 +285,7 @@ class Store:
         row = self.conn.execute("SELECT * FROM actors WHERE ip = ?", (ip,)).fetchone()
         if row is None:
             return None
-        return Actor(**{key: row[key] for key in row.keys()})
+        return Actor(**{key: row[key] for key in row.keys()})  # noqa: SIM118
 
     def actors(self, ips: Sequence[str] | None = None) -> dict[str, Actor]:
         if ips is None:
@@ -297,7 +297,10 @@ class Store:
             rows = self.conn.execute(
                 f"SELECT * FROM actors WHERE ip IN ({marks})", tuple(ips)
             ).fetchall()
-        return {row["ip"]: Actor(**{key: row[key] for key in row.keys()}) for row in rows}
+        return {
+            row["ip"]: Actor(**{key: row[key] for key in row.keys()})  # noqa: SIM118
+            for row in rows
+        }
 
     def new_ips_on_day(self, day: str) -> int:
         start, end = day_bounds(day)

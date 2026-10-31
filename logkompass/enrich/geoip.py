@@ -15,7 +15,7 @@ class GeoIp:
         self.asn_reader = asn_reader
 
     @classmethod
-    def from_paths(cls, country_path: str | None, asn_path: str | None) -> "GeoIp":
+    def from_paths(cls, country_path: str | None, asn_path: str | None) -> GeoIp:
         country_reader = asn_reader = None
         try:
             import geoip2.database  # type: ignore

@@ -29,7 +29,7 @@ def setup_workspace(tmp_path, seed=True):
         "198.51.100.7 port 41022 ssh2\n"
     )
     config = tmp_path / "config.toml"
-    config.write_text(CONFIG.format(db=db, log=log))
+    config.write_text(CONFIG.format(db=db.as_posix(), log=log.as_posix()))
     if seed:
         store = Store.open(str(db))
         store.insert_events(
