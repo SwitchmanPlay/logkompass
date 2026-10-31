@@ -13,9 +13,12 @@ geoip_country = "/var/lib/logkompass/GeoLite2-Country.mmdb"
 geoip_asn = "/var/lib/logkompass/GeoLite2-ASN.mmdb"
 
 [collect]
-source = "journald"        # journald | authlog
-unit = "ssh"               # Ubuntu calls it ssh.service, not sshd.service
-authlog_path = "/var/log/auth.log"
+source = "journald"        # journald | authlog | cowrie
+# Debian/Ubuntu call the unit ssh.service, RHEL/Oracle Linux call it
+# sshd.service. Listing both is safe: journalctl ignores a unit that does not
+# exist on this host. A plain string still works if you prefer to pin one.
+unit = ["ssh", "sshd"]
+authlog_path = "/var/log/auth.log"   # only used when source = "authlog"
 max_lines_per_run = 50000
 
 [rules]
@@ -29,6 +32,14 @@ protocol_noise_threshold = 5
 # Your own key fingerprints, so R06 does not page you on day one.
 # Get them with: ssh-keygen -lf ~/.ssh/id_ed25519.pub
 known_key_fingerprints = []
+# Your own addresses. Your admin traffic is still stored and still shows in
+# stats, but it is kept out of top talkers and top usernames so the digest
+# cannot call you the loudest attacker. IPs or CIDR blocks.
+# Find yours with: curl -s https://ifconfig.me
+owner_ips = []
+# The digest refuses to quote a "percent above/below average" figure until it
+# has this many days of history. Below the threshold it says so instead.
+baseline_min_days = 5
 
 # Providers form a resilient chain: they are tried in order, and a provider
 # that errors OR whose output fails validation (a reasoning leak, an ungrounded

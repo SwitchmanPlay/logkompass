@@ -18,7 +18,7 @@ def collect_once(
     if cfg.collect.source == "journald":
         cursor = store.get_state("journal_cursor")
         batch = journald.read_journal(
-            unit=cfg.collect.unit,
+            unit=cfg.collect.units,
             cursor=cursor,
             max_lines=cfg.collect.max_lines_per_run,
             runner=runner,

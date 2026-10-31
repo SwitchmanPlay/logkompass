@@ -8,6 +8,7 @@ Two rules worth defending in an interview:
 
 from __future__ import annotations
 
+import ipaddress
 import os
 import socket
 import tomllib
@@ -65,7 +66,10 @@ class Paths:
 @dataclass
 class Collect:
     source: str = "journald"
-    unit: str = "ssh"
+    # Debian family calls it ssh.service, RHEL family (Oracle Linux, Rocky,
+    # Fedora) calls it sshd.service. A list works on both, so one config file
+    # can ship for every distro.
+    unit: str | list[str] = field(default_factory=lambda: ["ssh", "sshd"])
     authlog_path: str = "/var/log/auth.log"
     cowrie_json_path: str = "/home/cowrie/cowrie/var/log/cowrie/cowrie.json"
     max_lines_per_run: int = 50000
@@ -73,6 +77,23 @@ class Collect:
     def __post_init__(self) -> None:
         if self.source not in ("journald", "authlog", "cowrie"):
             raise ConfigError("[collect] source must be journald, authlog or cowrie")
+        if isinstance(self.unit, str):
+            if not self.unit.strip():
+                raise ConfigError("[collect] unit must not be empty")
+        elif isinstance(self.unit, list):
+            if not self.unit or not all(
+                isinstance(item, str) and item.strip() for item in self.unit
+            ):
+                raise ConfigError("[collect] unit list must contain non-empty strings")
+        else:
+            raise ConfigError("[collect] unit must be a string or a list of strings")
+
+    @property
+    def units(self) -> list[str]:
+        """Normalised unit list. journalctl accepts repeated -u arguments."""
+        if isinstance(self.unit, str):
+            return [self.unit.strip()]
+        return [item.strip() for item in self.unit]
 
 
 @dataclass
@@ -87,6 +108,32 @@ class RuleSettings:
     success_lookback_minutes: int = 60
     protocol_noise_threshold: int = 5
     known_key_fingerprints: list[str] = field(default_factory=list)
+    # Your own addresses. Events from these are tagged and kept out of the
+    # top-talker ranking, so the digest never calls you the attacker.
+    # Accepts plain addresses and CIDR blocks.
+    owner_ips: list[str] = field(default_factory=list)
+    # Below this many days of history, the digest refuses to state a comparison
+    # against the 7-day average instead of quoting a meaningless percentage.
+    baseline_min_days: int = 5
+
+    def __post_init__(self) -> None:
+        # Same stance as unknown keys: a typo in an owner address must fail loudly,
+        # not silently rank the owner as the loudest attacker again.
+        if not isinstance(self.owner_ips, list):
+            raise ConfigError("[rules] owner_ips must be a list of IPs or CIDR blocks")
+        for entry in self.owner_ips:
+            try:
+                ipaddress.ip_network(str(entry).strip(), strict=False)
+            except ValueError:
+                raise ConfigError(
+                    f"[rules] owner_ips entry is not an IP or CIDR block: {entry!r}"
+                ) from None
+        if (
+            isinstance(self.baseline_min_days, bool)
+            or not isinstance(self.baseline_min_days, int)
+            or self.baseline_min_days < 0
+        ):
+            raise ConfigError("[rules] baseline_min_days must be a non-negative integer")
 
 
 @dataclass

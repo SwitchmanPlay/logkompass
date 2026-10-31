@@ -1,0 +1,42 @@
+pam_unix(sshd:session): session opened for user opc(uid=1000) by opc(uid=0)
+pam_unix(sshd:session): session closed for user opc
+Starting OpenSSH server daemon...
+Started OpenSSH server daemon.
+Stopping OpenSSH server daemon...
+Stopped OpenSSH server daemon.
+sshd.service: Deactivated successfully.
+Server listening on 0.0.0.0 port 22.
+Server listening on :: port 22.
+Server listening on 0.0.0.0 port 2242.
+Server listening on :: port 2242.
+Received signal 15; terminating.
+Set /proc/self/oom_score_adj to 0
+Disconnected from user opc 203.0.113.0 port 51234
+Received disconnect from 203.0.113.0 port 51234:11: disconnected by user
+Connection reset by authenticating user root 62.60.130.0 port 62114 [preauth]
+Connection reset by authenticating user root 62.60.130.0 port 49582 [preauth]
+Connection reset by authenticating user root 62.60.130.0 port 57442 [preauth]
+Connection reset by authenticating user root 45.148.10.0 port 7478 [preauth]
+Connection reset by authenticating user root 45.148.10.0 port 20602 [preauth]
+Connection reset by authenticating user root 193.47.62.0 port 40498 [preauth]
+Connection reset by authenticating user opc 78.104.125.0 port 49644 [preauth]
+Connection reset by invalid user wronguser 78.104.125.0 port 52162 [preauth]
+Connection reset by 35.203.211.0 port 58552 [preauth]
+Connection reset by 147.185.133.0 port 37834 [preauth]
+Connection closed by authenticating user root 62.60.130.0 port 33112 [preauth]
+Disconnecting authenticating user root 45.148.10.0 port 7480: Too many authentication failures [preauth]
+Invalid user wronguser from 78.104.125.0 port 52160
+Invalid user oracle from 193.47.62.0 port 40500
+Failed password for invalid user admin from 62.60.130.0 port 40001 ssh2
+Failed password for root from 62.60.130.0 port 40002 ssh2
+Accepted publickey for opc from 203.0.113.0 port 51236 ssh2: ED25519 SHA256:9Nost7rEdSO04JmplPGzabcdefghij
+Accepted key ED25519 SHA256:9Nost7rEdSO04JmplPGzabcdefghij found at /home/opc/.ssh/authorized_keys:1
+Postponed publickey for opc from 203.0.113.0 port 51236 ssh2 [preauth]
+userauth_pubkey: key type ssh-rsa not in PubkeyAcceptedAlgorithms [preauth]
+error: kex_exchange_identification: Connection closed by remote host
+error: kex_exchange_identification: client sent invalid protocol identifier
+Timeout before authentication for 147.185.133.0 port 37836
+Unable to negotiate with 35.203.211.0 port 58554: no matching host key type found
+Bad protocol version identification 'GET / HTTP/1.1' from 35.203.211.0 port 58556
+Invalid SSH identification string from 147.185.133.0 port 37838
+banner exchange: Connection from 193.47.62.0 port 40502: invalid format

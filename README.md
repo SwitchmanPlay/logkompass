@@ -1,7 +1,7 @@
 # LogKompass
 
 SSH authentication log triage for a single small server. Deterministic rules find the
-signal, a local LLM writes five lines of English, systemd runs it every 15 minutes,
+signal, an LLM writes five lines of English, systemd runs it every 15 minutes,
 SQLite keeps 90 days of history. No agent, no cloud log pipeline, no dashboard.
 
 ## 🍯 Live SSH honeypot
@@ -18,6 +18,11 @@ it all on a self-refreshing dashboard.
 [![LogKompass honeypot dashboard — loudest attacker IPs by country](docs/findings/chart_ips.png)](https://switchmanplay.github.io/logkompass/)
 
 <sub>Live attacker traffic — click the chart for the full dashboard.</sub>
+
+The model is pluggable and tried in order: a local Qwen3 27B over the LAN or Tailscale
+first, a free hosted model second, a deterministic template third. Whichever one wrote
+the message is recorded in `digests.path` and printed with the digest, so "local" is a
+verifiable claim rather than a README promise.
 
 ```
 journald -> parse -> SQLite -> rules -> 24h aggregate (JSON) -> LLM -> 5 lines -> Telegram
@@ -39,8 +44,18 @@ anything changed.
 
 - Reads sshd events from journald with a saved cursor, or from `auth.log` with byte
   offset and inode tracking. Re-running it inserts nothing new.
-- Parses 9 event kinds. Unmatched lines are kept in an `other` bucket and counted, so
-  the parse rate is a visible metric instead of a silent gap.
+- Parses 9 event kinds across Debian/Ubuntu and RHEL/Oracle Linux wording. Genuinely
+  unmatched lines are kept in an `other` bucket and counted, so the parse rate is a
+  visible metric instead of a silent gap.
+- Classifies systemd and PAM lifecycle chatter (`Started OpenSSH server daemon`,
+  `session opened for user`, `Server listening on`) as `ignored`: understood, stored,
+  but not authentication. Those lines are excluded from the rules and from the digest
+  totals. Without this the parse rate reads as a parser failure when the parser is fine
+  — on the reference Oracle Linux 9 host it was the difference between 0.38 and 1.0.
+- Keeps the operator's own addresses (`rules.owner_ips`) out of top talkers and top
+  usernames, so the digest cannot introduce you as the loudest attacker. Findings from
+  those addresses are kept but tagged `"owner": true`, and the 7-day baseline is
+  filtered the same way.
 - Enriches IPs with country and ASN from local MaxMind GeoLite2 files. Offline, no API.
 - Runs 7 rules, severity `info` to `high`, each with tests for the firing and the
   near-miss case.
@@ -157,7 +172,8 @@ references, and the database is in `.gitignore`.
 .venv/bin/pytest -q
 ```
 
-Covers the parser against a 63 line fixture (>95 percent parse rate), every rule firing
+Covers the parser against two real-world fixtures, Debian/Ubuntu and Oracle Linux 9
+with OpenSSH 9.8 (>95 percent parse rate on both, last octet masked), every rule firing
 and not firing, idempotent inserts, history scoping, config validation including typo
 rejection, the provider fallback chain, the hallucination guard, a golden digest, and
 the CLI end to end. No network, no real log files, no real model: transports, log
@@ -169,6 +185,13 @@ readers and GeoIP readers are injected.
 - No blocking. It watches, it does not firewall. fail2ban would poison the dataset, and
   the point is measurement.
 - GeoIP is country and ASN only, city data is noise at this resolution.
-- The digest is best effort prose. The database is the source of truth.
+- The digest is best effort prose. The database is the source of truth. The fifth line
+  is a model-written recommendation, not a rule result.
+- Trend comparisons are suppressed until `rules.baseline_min_days` days of history
+  exist. A "25 percent below the 7-day average" claim built from three days is noise
+  dressed as a metric.
+- The `ignored` bucket is a curated allowlist of known-benign wording. A new distro or
+  OpenSSH release can move a line back into `other`; that is the intended failure mode,
+  since `other` is visible and silent misclassification would not be.
 
 MIT licensed.

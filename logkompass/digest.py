@@ -30,7 +30,11 @@ Line 4: the highest severity finding and what it means, or "no high-severity fin
 Line 5: one concrete recommendation, or "no action needed".
 
 Rules: use only numbers present in the JSON. Never invent an IP, country or count.
-If a field is missing, say so. Maximum 30 words per line. No greetings, no sign-off.
+If comparison.baseline_ready is false, say the baseline is still building instead of
+quoting a percentage. Events from the server owner are already excluded from the totals
+and rankings, and findings marked "owner": true are the owner's own logins, so never
+describe the owner as an attacker. If a field is missing, say so.
+Maximum 30 words per line. No greetings, no sign-off.
 Output only the five lines and nothing else: no title or header line, no markdown
 headers, no code blocks, no bullet points. Do not restate this task, do not think out
 loud, and do not echo the JSON field names. Begin your answer directly with line 1."""
@@ -114,8 +118,12 @@ def validate(aggregate: dict, lines: list[str]) -> tuple[bool, str]:
     return True, "ok"
 
 
-def _pct(ratio: float | None) -> str:
+def _pct(ratio: float | None, comparison: dict | None = None) -> str:
     if ratio is None:
+        if comparison and not comparison.get("baseline_ready", True):
+            days = comparison.get("days_of_history", 0)
+            need = comparison.get("baseline_min_days", 5)
+            return f"baseline still building, {days} of {need} days"
         return "no baseline yet"
     delta = (ratio - 1.0) * 100
     if abs(delta) < 5:
@@ -134,7 +142,8 @@ def render_template(aggregate: dict) -> list[str]:
 
     line1 = (
         f"{totals.get('events', 0)} auth events from "
-        f"{totals.get('distinct_ips', 0)} IPs, {_pct(comparison.get('events_vs_7day_avg'))}."
+        f"{totals.get('distinct_ips', 0)} IPs, "
+        f"{_pct(comparison.get('events_vs_7day_avg'), comparison)}."
     )
     if top_ips:
         top = top_ips[0]
@@ -163,7 +172,10 @@ def render_template(aggregate: dict) -> list[str]:
             f"High: {top_finding.get('rule_id')} for {top_finding.get('ip') or 'unknown IP'} "
             f"({top_finding.get('detail') or 'see findings'})."
         )
-        line5 = "Check that this login was you; if not, rotate keys and close password auth."
+        if top_finding.get("owner"):
+            line5 = "That address is listed in rules.owner_ips, so this is expected."
+        else:
+            line5 = "Check that this login was you; if not, rotate keys and close password auth."
     elif ranked:
         top_finding = ranked[0]
         line4 = (

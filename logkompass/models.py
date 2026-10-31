@@ -13,11 +13,15 @@ ACCEPTED_KINDS = frozenset(
 NOISE_KINDS = frozenset({"kex_failure", "banner_garbage"})
 # Honeypot (Cowrie) events beyond the login attempts above.
 COWRIE_KINDS = frozenset({"cowrie_connect", "cowrie_command", "cowrie_session"})
+# Understood but not authentication: daemon lifecycle, PAM session bookkeeping.
+# Stored for the audit trail, excluded from rules, aggregates and the parse rate.
+IGNORED_KINDS = frozenset({"ignored"})
 KINDS = frozenset(
     FAILED_KINDS
     | ACCEPTED_KINDS
     | NOISE_KINDS
     | COWRIE_KINDS
+    | IGNORED_KINDS
     | {"preauth_disconnect", "other"}
 )
 SEVERITIES = ("info", "low", "medium", "high")
@@ -49,6 +53,10 @@ class Event:
     @property
     def is_noise(self) -> bool:
         return self.kind in NOISE_KINDS
+
+    @property
+    def is_ignored(self) -> bool:
+        return self.kind in IGNORED_KINDS
 
     def as_row(self) -> tuple:
         return (

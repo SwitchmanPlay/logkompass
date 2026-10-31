@@ -89,3 +89,35 @@ numbers that are not in the JSON. `temperature = 0.0`. Then the output is checke
 A 27B model at IQ4_XS occasionally rounds a number or merges two lines. The guards are why
 that degrades into a boring digest instead of a wrong one. Guard trips and provider errors
 are surfaced in the `digest` command output, so a quiet regression is visible.
+
+
+## Free hosted model IDs drift
+
+OpenRouter renames and retires `:free` models regularly, so a hard-coded id will
+eventually 404. Two habits keep this from breaking the 07:05 digest:
+
+- Keep the local provider first in the chain. A retired hosted id then costs you nothing.
+- List more than one hosted fallback; providers are tried in order until one answers.
+
+```toml
+[[llm.providers]]
+name = "openrouter-free"
+base_url = "https://openrouter.ai/api/v1"
+model = "meta-llama/llama-3.3-70b-instruct:free"
+api_key = "env:OPENROUTER_API_KEY"
+
+[[llm.providers]]
+name = "openrouter-free-2"
+base_url = "https://openrouter.ai/api/v1"
+model = "nvidia/nemotron-3-ultra-550b-a55b:free"   # verified working, ~4 s latency
+api_key = "env:OPENROUTER_API_KEY"
+```
+
+Check the current list at https://openrouter.ai/models?q=free before pinning an id, and
+run `logkompass probe` after changing one: it reports which provider answered.
+
+**What leaves the host when a hosted model is used:** the aggregate only, i.e. counts,
+top talker IPs, countries, ASNs and the top usernames. No raw log lines. That is still
+your server's attack surface data going to a third party under their free-tier terms, so
+set `notify.mask_ips = true` (or keep the local provider primary) if that matters. The
+digest prints which provider wrote it, so this is always auditable after the fact.

@@ -1,7 +1,21 @@
 # Deploying on Oracle Cloud Always Free
 
 Written for an account that already exists. Roughly 30 minutes, including the two things
-that usually waste an afternoon: the Ubuntu host firewall and idle reclamation.
+that usually waste an afternoon: the host firewall and idle reclamation.
+
+Two distro families are covered. Oracle Linux 9 is the Oracle default image and the one
+the reference deployment runs; Ubuntu 24.04 differs in package manager, login user,
+firewall tool and sshd unit name. Differences are called out inline.
+
+| | Oracle Linux 9 | Ubuntu 24.04 |
+| --- | --- | --- |
+| login user | `opc` | `ubuntu` |
+| packages | `sudo dnf install -y python3.11 python3.11-pip sqlite git` | `sudo apt install -y python3-venv python3-pip sqlite3 git` |
+| sshd unit | `sshd` | `ssh` |
+| host firewall | `firewalld` | `iptables` rules preinstalled by the Oracle image |
+
+`collect.unit = ["ssh", "sshd"]` in the shipped config covers both: journalctl silently
+ignores a unit that does not exist on the host.
 
 ## 0. Pick the shape first
 
@@ -29,12 +43,14 @@ gateway and route table in one step.
 Compute > Instances > **Create instance** ([docs](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/launchinginstance.htm)):
 
 1. Name: `canary-01`.
-2. Image: **Canonical Ubuntu 24.04**. Shape: change to `VM.Standard.A1.Flex`,
-   1 OCPU, 6 GB.
+2. Image: **Oracle Linux 9** (the default) or **Canonical Ubuntu 24.04**. Shape: change
+   to `VM.Standard.A1.Flex`, 1 OCPU, 6 GB.
 3. Networking: the VCN and public subnet from step 1, **assign a public IPv4 address**.
 4. SSH keys: paste your public key (`cat ~/.ssh/id_ed25519.pub`). Oracle never creates a
-   password for you, key auth only, user `ubuntu`.
-5. Boot volume: leave at 50 GB. Always Free covers 200 GB total across volumes, so do not
+   password for you, key auth only. The login user is `opc` on Oracle Linux and `ubuntu`
+   on Ubuntu. Upload the **`.pub`** file, never `id_ed25519` itself: if you upload the
+   private key by mistake, treat it as compromised and generate a new pair.
+5. Boot volume: the default (46.6 GB) is fine; LogKompass needs under 1 GB. Always Free covers 200 GB total across volumes, so do not
    create four 50 GB instances and expect them all to be free.
 6. Create. Note the public IP.
 
@@ -163,3 +179,55 @@ Nothing here is Oracle-specific except sections 1 to 3. On Hetzner, Netcup or a 
 Pi at home, skip to step 4, and on distributions that use UFW replace the iptables edit
 with `ufw allow 2242/tcp`. Verify your provider allows running a deliberately exposed SSH
 port before you start.
+
+
+## Appendix: the wizard order that actually works
+
+The current console runs the creation flow as a four-step wizard, and step 1 asks about
+security before networking. Two things trip people up:
+
+1. **Create the VCN first.** Networking > Virtual cloud networks > **Start VCN wizard** >
+   *Create VCN with Internet Connectivity*. If you skip this and use the instance
+   wizard's default network, *Assign a public IPv4 address* stays greyed out with
+   "you must select a public subnet" and there is nothing selectable to fix it. The
+   wizard-created public subnet makes the toggle clickable.
+2. **Shielded instance / Confidential computing / Live migration: leave off.** They are
+   not supported on Always Free A1 shapes and only add failure modes. Everything else on
+   that step can be left at its default.
+
+## Appendix: Oracle Linux 9 specifics
+
+```bash
+# Python 3.11+ is required. OL9 ships 3.9 as /usr/bin/python3.
+sudo dnf install -y python3.11 python3.11-pip sqlite git
+sudo /usr/bin/python3.11 -m venv /opt/logkompass/.venv
+
+# firewalld, not iptables. Only needed if you move sshd off port 22.
+sudo firewall-cmd --permanent --add-port=2242/tcp
+sudo firewall-cmd --reload
+
+# Journal access for the service user.
+sudo usermod -aG systemd-journal logkompass
+```
+
+Install the package **editable**, so a parser fix on disk is the parser that runs:
+
+```bash
+sudo /opt/logkompass/.venv/bin/pip install -e /opt/logkompass
+sudo find /opt/logkompass -name __pycache__ -type d -exec rm -rf {} +
+```
+
+Verify which file the service actually imports before blaming the parser:
+
+```bash
+sudo -u logkompass /opt/logkompass/.venv/bin/python -c \
+  "import logkompass.parse as p; print(p.__file__); print(hasattr(p, 'is_ignored'))"
+```
+
+After a parser change, replay the rows already in SQLite, because the journald cursor
+has moved past them:
+
+```bash
+sudo -u logkompass /opt/logkompass/.venv/bin/python /opt/logkompass/tools/reparse.py --dry-run
+sudo -u logkompass /opt/logkompass/.venv/bin/python /opt/logkompass/tools/reparse.py
+```

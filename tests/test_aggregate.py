@@ -39,6 +39,8 @@ def test_totals_and_top_talkers():
         "accepted": 1,
         "distinct_ips": 3,
         "unparsed": 0,
+        "ignored_lifecycle": 0,
+        "owner_events_excluded": 0,
     }
     assert aggregate["top_ips"][0]["ip"] == "198.51.100.7"
     assert aggregate["top_ips"][0]["count"] == 10
@@ -87,7 +89,9 @@ def test_baseline_uses_only_days_with_data():
     store = memory_store()
     store.insert_events(minutes("2026-09-19T10:00:00Z", 10, step=1))
     store.insert_events(minutes("2026-09-20T10:00:00Z", 20, step=1))
-    aggregate = build_aggregate(store, "2026-09-20")
+    # baseline_min_days=1 so this test exercises the averaging itself, not the
+    # confidence gate (which is tested in test_owner_and_units.py).
+    aggregate = build_aggregate(store, "2026-09-20", baseline_min_days=1)
     assert aggregate["comparison"]["seven_day_avg_events"] == 10.0
     assert aggregate["comparison"]["events_vs_7day_avg"] == 2.0
     assert aggregate["comparison"]["days_of_history"] == 1
