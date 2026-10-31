@@ -12,6 +12,8 @@ from datetime import timedelta
 from .models import ACCEPTED_KINDS, FAILED_KINDS, Event
 from .util import day_bounds, iso, mask_ip, parse_iso
 
+SEVERITY_ORDER = {"high": 0, "medium": 1, "low": 2, "info": 3}
+
 
 def _previous_day_counts(store, day: str, days: int = 7) -> list[int]:
     start = parse_iso(day_bounds(day)[0])
@@ -31,6 +33,8 @@ def build_aggregate(
     top_n: int = 5,
     mask: bool = False,
     events: list[Event] | None = None,
+    max_findings: int = 20,
+    max_per_rule: int = 5,
 ) -> dict:
     start, end = day_bounds(day)
     events = events if events is not None else store.events_on_day(day)
@@ -77,8 +81,48 @@ def build_aggregate(
     average = sum(known_days) / len(known_days) if known_days else 0.0
     total = len(events)
 
+    # A busy honeypot fires tens of thousands of findings a day. Sending them all
+    # overflowed every model's context window, so the model gets the most severe
+    # examples plus exact per-rule totals instead.
+    all_findings = store.findings_between(start, end)
+    by_rule: dict[str, dict] = {}
+    rule_ips: dict[str, set[str]] = defaultdict(set)
+    for finding in all_findings:
+        entry = by_rule.setdefault(
+            finding.rule_id, {"severity": finding.severity, "findings": 0, "distinct_ips": 0}
+        )
+        entry["findings"] += 1
+        if finding.ip:
+            rule_ips[finding.rule_id].add(finding.ip)
+    for rule_id, ips in rule_ips.items():
+        by_rule[rule_id]["distinct_ips"] = len(ips)
+    findings_by_rule = dict(
+        sorted(
+            by_rule.items(),
+            key=lambda kv: (SEVERITY_ORDER.get(kv[1]["severity"], 9), -kv[1]["findings"], kv[0]),
+        )
+    )
+
+    ranked = sorted(
+        all_findings,
+        key=lambda f: (SEVERITY_ORDER.get(f.severity, 9), -(f.count or 0), f.ts),
+    )
+    # One example per (rule, ip) and a few per rule, so one noisy rule cannot
+    # crowd out a rarer high-severity one.
+    seen: set[tuple[str, str | None]] = set()
+    per_rule: Counter[str] = Counter()
+    picked = []
+    for finding in ranked:
+        key = (finding.rule_id, finding.ip)
+        if key in seen or per_rule[finding.rule_id] >= max_per_rule:
+            continue
+        seen.add(key)
+        per_rule[finding.rule_id] += 1
+        picked.append(finding)
+        if len(picked) >= max_findings:
+            break
     findings = []
-    for finding in store.findings_between(start, end):
+    for finding in picked:
         item = finding.to_dict()
         if item.get("ip"):
             item["ip"] = show(item["ip"])
@@ -101,6 +145,7 @@ def build_aggregate(
         ],
         "countries": dict(country_counts.most_common(10)),
         "findings": findings,
+        "findings_summary": {"total": len(all_findings), "by_rule": findings_by_rule},
         "comparison": {
             "events_vs_7day_avg": round(total / average, 2) if average else None,
             "seven_day_avg_events": round(average, 1) if average else None,

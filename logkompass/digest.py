@@ -19,9 +19,11 @@ from .util import IPV4_RE, iso, mask_text, now_utc
 
 SYSTEM_PROMPT = """You are a security analyst writing a daily SSH briefing for one server owner.
 Input is a JSON summary of one day of sshd authentication events.
+"findings" holds only a few of the most severe examples; "findings_summary" has the
+full count per detection rule. Findings are alerts, not events.
 
 Write exactly five lines, plain text, no markdown, no bullets.
-Line 1: volume and whether it is normal compared to the 7-day average.
+Line 1: event volume (totals.events) and whether it is normal compared to the 7-day average.
 Line 2: the single most active source, with country and network.
 Line 3: what the attackers were trying, in terms of usernames and method.
 Line 4: the highest severity finding and what it means, or "no high-severity findings".
