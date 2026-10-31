@@ -281,6 +281,20 @@ class Store:
         ).fetchone()
         return int(row["n"])
 
+    def ip_counts_between(
+        self, start: str, end: str, exclude_kinds: Iterable[str] = ()
+    ) -> dict[str | None, int]:
+        """Event counts per source IP (None for events without one) in a window."""
+        kinds = tuple(exclude_kinds)
+        clause = f" AND kind NOT IN ({', '.join('?' for _ in kinds)})" if kinds else ""
+        rows = self.conn.execute(
+            "SELECT ip, COUNT(*) AS n FROM events WHERE ts >= ? AND ts < ?"
+            + clause
+            + " GROUP BY ip",
+            (start, end, *kinds),
+        ).fetchall()
+        return {row["ip"]: int(row["n"]) for row in rows}
+
     def actor(self, ip: str) -> Actor | None:
         row = self.conn.execute("SELECT * FROM actors WHERE ip = ?", (ip,)).fetchone()
         if row is None:

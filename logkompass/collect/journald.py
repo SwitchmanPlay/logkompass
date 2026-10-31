@@ -23,8 +23,20 @@ class JournalBatch:
     skipped: int = 0
 
 
-def build_command(unit: str, cursor: str | None, max_lines: int) -> list[str]:
-    cmd = ["journalctl", "-u", unit, "-o", "json", "--no-pager", "-n", str(max_lines)]
+def build_command(
+    unit: str | list[str], cursor: str | None, max_lines: int
+) -> list[str]:
+    """journalctl accepts repeated -u, so one command covers ssh and sshd.
+
+    Debian family names the unit ssh.service, RHEL family sshd.service. Passing
+    both means the same config file works on Ubuntu and Oracle Linux; a unit
+    that does not exist contributes no records rather than failing.
+    """
+    units = [unit] if isinstance(unit, str) else list(unit)
+    cmd = ["journalctl"]
+    for name in units:
+        cmd += ["-u", name]
+    cmd += ["-o", "json", "--no-pager", "-n", str(max_lines)]
     if cursor:
         cmd += ["--after-cursor", cursor]
     return cmd
@@ -75,7 +87,7 @@ def events_from_json(text: str, host_default: str = "localhost") -> JournalBatch
 
 
 def read_journal(
-    unit: str = "ssh",
+    unit: str | list[str] = ("ssh", "sshd"),
     cursor: str | None = None,
     max_lines: int = 50000,
     runner=None,

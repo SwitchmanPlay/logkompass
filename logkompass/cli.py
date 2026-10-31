@@ -115,7 +115,14 @@ def cmd_aggregate(args) -> int:
     cfg, store = load(args)
     try:
         day = resolve_day(store, args.day)
-        aggregate = build_aggregate(store, day, host=cfg.host, mask=args.mask)
+        aggregate = build_aggregate(
+            store,
+            day,
+            host=cfg.host,
+            mask=args.mask,
+            owner_ips=cfg.rules.owner_ips,
+            baseline_min_days=cfg.rules.baseline_min_days,
+        )
     finally:
         store.close()
     text = json.dumps(aggregate, indent=2, sort_keys=True, ensure_ascii=False)
@@ -136,7 +143,12 @@ def cmd_digest(args) -> int:
     else:
         store = Store.open(cfg.paths.db)
         aggregate = build_aggregate(
-            store, resolve_day(store, args.day), host=cfg.host, mask=args.mask
+            store,
+            resolve_day(store, args.day),
+            host=cfg.host,
+            mask=args.mask,
+            owner_ips=cfg.rules.owner_ips,
+            baseline_min_days=cfg.rules.baseline_min_days,
         )
     client = None if args.no_model else make_client(cfg)
     result = make_digest(aggregate, client=client)
