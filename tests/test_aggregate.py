@@ -98,3 +98,58 @@ def test_mask_hides_the_last_octet_everywhere():
     aggregate = build_aggregate(store, "2026-09-20", mask=True)
     assert aggregate["top_ips"][0]["ip"] == "198.51.100.x"
     assert aggregate["privacy"]["ips_masked"] is True
+
+
+def _finding(rule_id, severity, ip, count, minute):
+    return Finding(
+        rule_id=rule_id,
+        severity=severity,
+        ts=f"2026-09-20T10:{minute:02d}:00Z",
+        window_from=f"2026-09-20T09:{minute:02d}:00Z",
+        window_to=f"2026-09-20T10:{minute:02d}:00Z",
+        ip=ip,
+        count=count,
+    )
+
+
+def test_findings_are_capped_with_a_per_rule_summary():
+    # A busy honeypot produces tens of thousands of findings a day. Sending all
+    # of them blew past every model's context window (HTTP 400 on every provider).
+    store = seeded_store()
+    noise = [
+        _finding("R07_protocol_noise", "info", f"10.0.{n // 250}.{n % 250}", 5, n % 60)
+        for n in range(500)
+    ]
+    bursts = [_finding("R01_burst", "medium", f"10.1.0.{n}", 20 + n, n) for n in range(30)]
+    # one noisy high rule from a single IP, plus a rarer high rule
+    repeats = [_finding("R04_success_after_failures", "high", "203.0.113.9", 50, n) for n in range(40)]
+    rare = [_finding("R05_new_country_success", "high", "198.51.100.7", 1, 59)]
+    store.insert_findings(noise + bursts + repeats + rare)
+
+    aggregate = build_aggregate(store, "2026-09-20")
+
+    findings = aggregate["findings"]
+    assert len(findings) == 12  # 5 per rule cap, R04 and R05 deduped to one IP each
+    rules = [f["rule_id"] for f in findings]
+    assert rules[:2] == ["R04_success_after_failures", "R05_new_country_success"]
+    assert rules.count("R01_burst") == 5 and rules.count("R07_protocol_noise") == 5
+    assert findings[2]["ip"] == "10.1.0.29"  # biggest burst first
+    summary = aggregate["findings_summary"]
+    assert summary["total"] == 571
+    assert summary["by_rule"]["R04_success_after_failures"] == {
+        "severity": "high", "findings": 40, "distinct_ips": 1
+    }
+    assert summary["by_rule"]["R07_protocol_noise"]["distinct_ips"] == 500
+
+
+def test_prompt_stays_small_on_a_very_busy_day():
+    from logkompass.digest import build_user_prompt
+
+    store = seeded_store()
+    store.insert_findings(
+        _finding("R03_high_value_user", "low", f"10.{n // 62500}.{n // 250 % 250}.{n % 250}", 9, n % 60)
+        for n in range(20000)
+    )
+    aggregate = build_aggregate(store, "2026-09-20", mask=True)
+    assert len(build_user_prompt(aggregate)) < 20_000
+    assert all(f["ip"].endswith(".x") for f in aggregate["findings"])
