@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 758366,
-  "distinct_ips": 6175
+  "events": 767912,
+  "distinct_ips": 6199
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 216393
+   "n": 219123
   },
   {
    "kind": "cowrie_session",
-   "n": 183616
+   "n": 185906
   },
   {
    "kind": "cowrie_connect",
-   "n": 183604
+   "n": 185894
   },
   {
    "kind": "cowrie_login_success",
-   "n": 173883
+   "n": 176114
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 870
+   "n": 875
   }
  ],
  "top_ips": [
@@ -89,7 +89,7 @@
   },
   {
    "ip": "195.178.110.217",
-   "n": 11108,
+   "n": 11325,
    "country": "BG",
    "as_org": "Techoff Srv Limited"
   },
@@ -103,19 +103,19 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 519205
+   "n": 527407
   },
   {
    "country": "US",
-   "n": 90281
+   "n": 90591
   },
   {
    "country": "RO",
-   "n": 41254
+   "n": 41627
   },
   {
    "country": "CH",
-   "n": 19487
+   "n": 19579
   },
   {
    "country": "DE",
@@ -123,145 +123,145 @@
   },
   {
    "country": "CN",
-   "n": 8817
+   "n": 8850
   },
   {
    "country": "FR",
-   "n": 5363
-  },
-  {
-   "country": "PH",
-   "n": 5039
+   "n": 5367
   },
   {
    "country": "MY",
-   "n": 4788
+   "n": 5046
+  },
+  {
+   "country": "PH",
+   "n": 5043
   },
   {
    "country": "SE",
-   "n": 4399
+   "n": 4477
   }
  ],
  "top_credentials": [
   {
    "cred": "0/0",
-   "n": 3955
+   "n": 4011
   },
   {
    "cred": "345gs5662d34/345gs5662d34",
-   "n": 1289
+   "n": 1293
   },
   {
    "cred": "support/support",
-   "n": 920
+   "n": 930
   },
   {
    "cred": "root/3245gs5662d34",
-   "n": 680
+   "n": 681
   },
   {
    "cred": "root/123456",
-   "n": 328
+   "n": 330
   },
   {
    "cred": "root/1234",
-   "n": 311
+   "n": 313
   },
   {
    "cred": "root/111111",
-   "n": 303
+   "n": 307
   },
   {
    "cred": "root/12345",
-   "n": 300
+   "n": 302
   },
   {
    "cred": "root/123123",
-   "n": 272
+   "n": 276
   },
   {
    "cred": "root/12345678",
-   "n": 269
+   "n": 272
   },
   {
    "cred": "admin/admin",
-   "n": 265
+   "n": 271
   },
   {
    "cred": "root/123",
-   "n": 252
+   "n": 254
   },
   {
    "cred": "root/123456789",
-   "n": 245
+   "n": 249
   },
   {
    "cred": "root/admin",
-   "n": 198
+   "n": 201
   },
   {
    "cred": "root/LeitboGi0ro",
-   "n": 175
+   "n": 177
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 41098
+   "n": 41788
   },
   {
    "username": "ubuntu",
-   "n": 5043
+   "n": 5176
   },
   {
    "username": "admin",
-   "n": 4806
+   "n": 4876
   },
   {
    "username": "0",
-   "n": 3955
+   "n": 4011
   },
   {
    "username": "user",
-   "n": 2198
+   "n": 2236
   },
   {
    "username": "deploy",
-   "n": 1711
+   "n": 1748
   },
   {
    "username": "support",
-   "n": 1603
+   "n": 1620
   },
   {
    "username": "test",
-   "n": 1517
+   "n": 1545
   },
   {
    "username": "345gs5662d34",
-   "n": 1289
+   "n": 1293
   },
   {
    "username": "user1",
-   "n": 886
+   "n": 905
   },
   {
    "username": "debian",
-   "n": 825
+   "n": 838
   },
   {
    "username": "claude",
-   "n": 769
+   "n": 789
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 137425
+   "n": 139418
   },
   {
    "cmd": "echo xsec",
-   "n": 7905
+   "n": 7969
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
@@ -273,7 +273,7 @@
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
-   "n": 4966
+   "n": 5001
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
@@ -281,15 +281,15 @@
   },
   {
    "cmd": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-   "n": 1477
+   "n": 1485
   },
   {
    "cmd": "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAr",
-   "n": 1420
+   "n": 1428
   },
   {
    "cmd": "chmod +x '/root/.16'",
-   "n": 821
+   "n": 834
   },
   {
    "cmd": "chmod +x '/dev/shm/.16'",
@@ -297,7 +297,7 @@
   },
   {
    "cmd": "uname -a",
-   "n": 131
+   "n": 132
   },
   {
    "cmd": "\nuname -a 2>/dev/null\necho \"___NPROC___\"\nnproc 2>/dev/null || grep -c ^processor",
@@ -3991,12 +3991,48 @@
   },
   {
    "hour": "2026-11-05T04",
-   "n": 356
+   "n": 498
+  },
+  {
+   "hour": "2026-11-05T05",
+   "n": 82
+  },
+  {
+   "hour": "2026-11-05T06",
+   "n": 282
+  },
+  {
+   "hour": "2026-11-05T07",
+   "n": 2859
+  },
+  {
+   "hour": "2026-11-05T08",
+   "n": 2233
+  },
+  {
+   "hour": "2026-11-05T09",
+   "n": 63
+  },
+  {
+   "hour": "2026-11-05T10",
+   "n": 380
+  },
+  {
+   "hour": "2026-11-05T11",
+   "n": 237
+  },
+  {
+   "hour": "2026-11-05T12",
+   "n": 1640
+  },
+  {
+   "hour": "2026-11-05T13",
+   "n": 1628
   }
  ],
  "latest_digest": {
-  "day": "2026-11-03",
-  "text": "LogKompass honeypot-01, 2026-11-03\n\n[template fallback, model output failed validation]\n12600 auth events from 243 IPs, 52 percent below the 7-day average.\nLoudest source 109.160.32.179, BG, TechTies Inc., 4788 attempts, first seen 2026-11-03.\n11 failed attempts, most targeted usernames root, ubuntu, 0; 2234 accepted.\nHigh: R05_new_country_success for 179.43.153.2 (CH, first successful login from this country).\nCheck that this login was you; if not, rotate keys and close password auth.\n\nmodel: none, deterministic template, 2026-11-04T07:07:11Z",
-  "created_at": "2026-11-04T07:07:11Z"
+  "day": "2026-11-04",
+  "text": "LogKompass honeypot-01, 2026-11-04\n\n[template fallback, model output failed validation]\n21835 auth events from 180 IPs, 11 percent below the 7-day average.\nLoudest source 77.239.124.149, US, Banatsync Srl, 4788 attempts, first seen 2026-10-04.\n13 failed attempts, most targeted usernames root, ubuntu, 0; 4167 accepted.\nHigh: R05_new_country_success for 109.160.32.180 (BG, first successful login from this country).\nCheck that this login was you; if not, rotate keys and close password auth.\n\nmodel: none, deterministic template, 2026-11-05T07:07:10Z",
+  "created_at": "2026-11-05T07:07:10Z"
  }
 }
