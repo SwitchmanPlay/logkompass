@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 806158,
-  "distinct_ips": 6485
+  "events": 812596,
+  "distinct_ips": 6513
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 234264
+   "n": 235926
   },
   {
    "kind": "cowrie_session",
-   "n": 193890
+   "n": 195497
   },
   {
    "kind": "cowrie_connect",
-   "n": 193880
+   "n": 195487
   },
   {
    "kind": "cowrie_login_success",
-   "n": 183216
+   "n": 184774
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 908
+   "n": 912
   }
  ],
  "top_ips": [
@@ -103,31 +103,31 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 545175
+   "n": 549963
   },
   {
    "country": "US",
-   "n": 94407
+   "n": 94496
   },
   {
    "country": "RO",
-   "n": 49254
+   "n": 49713
   },
   {
    "country": "CH",
-   "n": 20220
+   "n": 20313
   },
   {
    "country": "DE",
-   "n": 16050
+   "n": 16052
   },
   {
    "country": "CN",
-   "n": 10478
+   "n": 10607
   },
   {
    "country": "MY",
-   "n": 6903
+   "n": 7172
   },
   {
    "country": "FR",
@@ -135,133 +135,133 @@
   },
   {
    "country": "SE",
-   "n": 5258
+   "n": 5360
   },
   {
    "country": "PH",
-   "n": 5064
+   "n": 5069
   }
  ],
  "top_credentials": [
   {
    "cred": "0/0",
-   "n": 4399
+   "n": 4452
   },
   {
    "cred": "345gs5662d34/345gs5662d34",
-   "n": 1312
+   "n": 1316
   },
   {
    "cred": "support/support",
-   "n": 991
+   "n": 1000
   },
   {
    "cred": "root/3245gs5662d34",
-   "n": 693
+   "n": 697
   },
   {
    "cred": "root/123456",
-   "n": 351
+   "n": 354
   },
   {
    "cred": "root/1234",
-   "n": 331
+   "n": 333
   },
   {
    "cred": "root/12345",
-   "n": 322
+   "n": 325
   },
   {
    "cred": "root/111111",
-   "n": 322
+   "n": 324
   },
   {
    "cred": "admin/admin",
-   "n": 295
+   "n": 297
   },
   {
    "cred": "root/12345678",
-   "n": 290
+   "n": 292
   },
   {
    "cred": "root/123123",
-   "n": 289
+   "n": 291
   },
   {
    "cred": "root/123",
-   "n": 267
+   "n": 269
   },
   {
    "cred": "root/123456789",
-   "n": 264
+   "n": 266
   },
   {
    "cred": "root/admin",
-   "n": 224
+   "n": 227
   },
   {
    "cred": "root/123321",
-   "n": 186
+   "n": 187
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 43689
+   "n": 44141
   },
   {
    "username": "ubuntu",
-   "n": 5775
+   "n": 5879
   },
   {
    "username": "admin",
-   "n": 5182
+   "n": 5228
   },
   {
    "username": "0",
-   "n": 4399
+   "n": 4452
   },
   {
    "username": "user",
-   "n": 2457
+   "n": 2499
   },
   {
    "username": "deploy",
-   "n": 1827
+   "n": 1854
   },
   {
    "username": "support",
-   "n": 1777
+   "n": 1798
   },
   {
    "username": "test",
-   "n": 1689
+   "n": 1721
   },
   {
    "username": "345gs5662d34",
-   "n": 1312
-  },
-  {
-   "username": "user1",
-   "n": 952
+   "n": 1316
   },
   {
    "username": "debian",
-   "n": 937
+   "n": 966
+  },
+  {
+   "username": "user1",
+   "n": 964
   },
   {
    "username": "claude",
-   "n": 826
+   "n": 837
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 143417
+   "n": 144614
   },
   {
    "cmd": "echo xsec",
-   "n": 8422
+   "n": 8488
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
@@ -281,15 +281,15 @@
   },
   {
    "cmd": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-   "n": 1596
+   "n": 1615
   },
   {
    "cmd": "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAr",
-   "n": 1538
+   "n": 1557
   },
   {
    "cmd": "chmod +x '/root/.16'",
-   "n": 1053
+   "n": 1062
   },
   {
    "cmd": "chmod +x '/dev/shm/.16'",
@@ -4275,12 +4275,48 @@
   },
   {
    "hour": "2026-11-08T03",
-   "n": 633
+   "n": 638
+  },
+  {
+   "hour": "2026-11-08T04",
+   "n": 842
+  },
+  {
+   "hour": "2026-11-08T05",
+   "n": 1822
+  },
+  {
+   "hour": "2026-11-08T06",
+   "n": 1845
+  },
+  {
+   "hour": "2026-11-08T07",
+   "n": 1211
+  },
+  {
+   "hour": "2026-11-08T08",
+   "n": 119
+  },
+  {
+   "hour": "2026-11-08T09",
+   "n": 151
+  },
+  {
+   "hour": "2026-11-08T10",
+   "n": 178
+  },
+  {
+   "hour": "2026-11-08T11",
+   "n": 156
+  },
+  {
+   "hour": "2026-11-08T12",
+   "n": 109
   }
  ],
  "latest_digest": {
-  "day": "2026-11-06",
-  "text": "LogKompass honeypot-01, 2026-11-06\n\n[template fallback, model output failed validation]\n11532 auth events from 481 IPs, 56 percent below the 7-day average.\nLoudest source 109.160.32.178, BG, TechTies Inc., 4788 attempts, first seen 2026-11-06.\n10 failed attempts, most targeted usernames root, ubuntu, 0; 2219 accepted.\nHigh: R05_new_country_success for 202.165.25.8 (MY, first successful login from this country).\nCheck that this login was you; if not, rotate keys and close password auth.\n\nmodel: none, deterministic template, 2026-11-07T07:07:10Z",
-  "created_at": "2026-11-07T07:07:10Z"
+  "day": "2026-11-07",
+  "text": "LogKompass honeypot-01, 2026-11-07\n\n[template fallback, model output failed validation]\n14077 auth events from 486 IPs, 40 percent below the 7-day average.\nLoudest source 109.160.32.167, BG, TechTies Inc., 4788 attempts, first seen 2026-10-05.\n12 failed attempts, most targeted usernames root, ubuntu, 0; 2419 accepted.\nHigh: R05_new_country_success for 39.153.168.211 (CN, first successful login from this country).\nCheck that this login was you; if not, rotate keys and close password auth.\n\nmodel: none, deterministic template, 2026-11-08T07:07:12Z",
+  "created_at": "2026-11-08T07:07:12Z"
  }
 }
