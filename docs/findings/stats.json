@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 900392,
-  "distinct_ips": 6809
+  "events": 907167,
+  "distinct_ips": 6864
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 271460
+   "n": 276034
   },
   {
    "kind": "cowrie_session",
-   "n": 213135
+   "n": 213902
   },
   {
    "kind": "cowrie_connect",
-   "n": 213127
+   "n": 213894
   },
   {
    "kind": "cowrie_login_success",
-   "n": 201597
+   "n": 202237
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 1073
+   "n": 1100
   }
  ],
  "top_ips": [
@@ -103,147 +103,147 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 602464
+   "n": 602480
   },
   {
    "country": "US",
-   "n": 110995
+   "n": 111294
   },
   {
    "country": "RO",
-   "n": 56250
+   "n": 60766
   },
   {
    "country": "CH",
-   "n": 23159
+   "n": 23294
   },
   {
    "country": "DE",
-   "n": 16369
+   "n": 16451
   },
   {
    "country": "CN",
-   "n": 11697
+   "n": 12065
   },
   {
    "country": "MY",
-   "n": 9464
+   "n": 9467
   },
   {
    "country": "SE",
-   "n": 6315
+   "n": 6443
   },
   {
    "country": "FR",
-   "n": 5499
+   "n": 5501
   },
   {
-   "country": "PH",
-   "n": 5090
+   "country": "KR",
+   "n": 5249
   }
  ],
  "top_credentials": [
   {
    "cred": "0/0",
-   "n": 5652
+   "n": 5738
   },
   {
    "cred": "345gs5662d34/345gs5662d34",
-   "n": 1348
+   "n": 1354
   },
   {
    "cred": "support/support",
-   "n": 1086
+   "n": 1100
   },
   {
    "cred": "root/3245gs5662d34",
-   "n": 722
+   "n": 725
   },
   {
    "cred": "root/123456",
-   "n": 393
+   "n": 397
   },
   {
    "cred": "root/1234",
-   "n": 373
+   "n": 377
   },
   {
    "cred": "root/12345",
-   "n": 362
+   "n": 366
   },
   {
    "cred": "root/111111",
-   "n": 361
+   "n": 365
   },
   {
    "cred": "root/123123",
-   "n": 328
+   "n": 332
   },
   {
    "cred": "admin/admin",
-   "n": 327
+   "n": 329
   },
   {
    "cred": "root/12345678",
-   "n": 324
+   "n": 327
   },
   {
    "cred": "root/123",
-   "n": 302
+   "n": 304
   },
   {
    "cred": "root/123456789",
-   "n": 298
+   "n": 301
   },
   {
    "cred": "root/admin",
-   "n": 279
+   "n": 286
   },
   {
    "cred": "rootssssss23424123123/rootssssss23424123123",
-   "n": 226
+   "n": 250
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 52480
+   "n": 52794
   },
   {
    "username": "ubuntu",
-   "n": 6786
-  },
-  {
-   "username": "admin",
-   "n": 5687
+   "n": 6875
   },
   {
    "username": "0",
-   "n": 5652
+   "n": 5738
+  },
+  {
+   "username": "admin",
+   "n": 5735
   },
   {
    "username": "user",
-   "n": 2788
+   "n": 2796
+  },
+  {
+   "username": "support",
+   "n": 1989
   },
   {
    "username": "deploy",
    "n": 1989
   },
   {
-   "username": "support",
-   "n": 1971
-  },
-  {
    "username": "test",
-   "n": 1958
+   "n": 1959
   },
   {
    "username": "345gs5662d34",
-   "n": 1348
+   "n": 1354
   },
   {
    "username": "debian",
-   "n": 1088
+   "n": 1090
   },
   {
    "username": "user1",
@@ -257,11 +257,11 @@
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 157048
+   "n": 157052
   },
   {
    "cmd": "echo xsec",
-   "n": 9313
+   "n": 9540
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
@@ -273,7 +273,7 @@
   },
   {
    "cmd": "/bin/./uname -s -v -n -r -m",
-   "n": 5425
+   "n": 5427
   },
   {
    "cmd": "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH\nu",
@@ -281,11 +281,11 @@
   },
   {
    "cmd": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-   "n": 1725
+   "n": 1756
   },
   {
    "cmd": "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAr",
-   "n": 1664
+   "n": 1695
   },
   {
    "cmd": "chmod +x '/root/.16'",
@@ -297,7 +297,7 @@
   },
   {
    "cmd": "uname -a",
-   "n": 144
+   "n": 146
   },
   {
    "cmd": "\nuname -a 2>/dev/null\necho \"___NPROC___\"\nnproc 2>/dev/null || grep -c ^processor",
@@ -4671,12 +4671,64 @@
   },
   {
    "hour": "2026-11-12T06",
-   "n": 16
+   "n": 148
+  },
+  {
+   "hour": "2026-11-12T07",
+   "n": 216
+  },
+  {
+   "hour": "2026-11-12T08",
+   "n": 239
+  },
+  {
+   "hour": "2026-11-12T09",
+   "n": 674
+  },
+  {
+   "hour": "2026-11-12T10",
+   "n": 205
+  },
+  {
+   "hour": "2026-11-12T11",
+   "n": 133
+  },
+  {
+   "hour": "2026-11-12T12",
+   "n": 337
+  },
+  {
+   "hour": "2026-11-12T13",
+   "n": 119
+  },
+  {
+   "hour": "2026-11-12T14",
+   "n": 116
+  },
+  {
+   "hour": "2026-11-12T15",
+   "n": 873
+  },
+  {
+   "hour": "2026-11-12T16",
+   "n": 1617
+  },
+  {
+   "hour": "2026-11-12T17",
+   "n": 759
+  },
+  {
+   "hour": "2026-11-12T18",
+   "n": 1237
+  },
+  {
+   "hour": "2026-11-12T19",
+   "n": 118
   }
  ],
  "latest_digest": {
-  "day": "2026-11-10",
-  "text": "LogKompass honeypot-01, 2026-11-10\n\n[template fallback, model output failed validation]\n26031 auth events from 427 IPs, 49 percent above the 7-day average.\nLoudest source 109.160.32.158, BG, TechTies Inc., 4788 attempts, first seen 2026-10-11.\n59 failed attempts, most targeted usernames root, ubuntu, admin; 5994 accepted.\nHigh: R04_success_after_failures for 109.160.32.102 (accepted ssh after 3 failures in the previous 60 minutes).\nCheck that this login was you; if not, rotate keys and close password auth.\n\nmodel: none, deterministic template, 2026-11-11T07:07:11Z",
-  "created_at": "2026-11-11T07:07:11Z"
+  "day": "2026-11-11",
+  "text": "LogKompass honeypot-01, 2026-11-11\n\n[template fallback, model output failed validation]\n20019 auth events from 144 IPs, in line with the 7-day average.\nLoudest source 195.178.110.228, BG, Techoff Srv Limited, 5346 attempts, first seen 2026-09-29.\n40 failed attempts, most targeted usernames root, ubuntu, 0; 2999 accepted.\nHigh: R04_success_after_failures for 109.160.32.125 (accepted ssh after 3 failures in the previous 60 minutes).\nCheck that this login was you; if not, rotate keys and close password auth.\n\nmodel: none, deterministic template, 2026-11-12T07:07:14Z",
+  "created_at": "2026-11-12T07:07:14Z"
  }
 }
