@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 1003066,
-  "distinct_ips": 7248
+  "events": 1008889,
+  "distinct_ips": 7279
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 316977
+   "n": 319587
   },
   {
    "kind": "cowrie_session",
-   "n": 232472
+   "n": 233556
   },
   {
    "kind": "cowrie_connect",
-   "n": 232463
+   "n": 233548
   },
   {
    "kind": "cowrie_login_success",
-   "n": 219983
+   "n": 221022
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 1171
+   "n": 1176
   }
  ],
  "top_ips": [
@@ -103,39 +103,39 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 667477
+   "n": 670347
   },
   {
    "country": "US",
-   "n": 123080
+   "n": 123535
   },
   {
    "country": "RO",
-   "n": 68784
+   "n": 70327
   },
   {
    "country": "CH",
-   "n": 24069
+   "n": 24126
   },
   {
    "country": "DE",
-   "n": 16953
+   "n": 16983
   },
   {
    "country": "CN",
-   "n": 14180
-  },
-  {
-   "country": "MY",
-   "n": 9519
+   "n": 14364
   },
   {
    "country": "KR",
-   "n": 9319
+   "n": 9657
+  },
+  {
+   "country": "MY",
+   "n": 9545
   },
   {
    "country": "SE",
-   "n": 7190
+   "n": 7249
   },
   {
    "country": "FR",
@@ -145,123 +145,123 @@
  "top_credentials": [
   {
    "cred": "0/0",
-   "n": 6215
+   "n": 6251
   },
   {
    "cred": "345gs5662d34/345gs5662d34",
-   "n": 1371
+   "n": 1373
   },
   {
    "cred": "support/support",
-   "n": 1179
+   "n": 1185
   },
   {
    "cred": "root/3245gs5662d34",
-   "n": 742
+   "n": 743
   },
   {
    "cred": "root/123456",
-   "n": 441
+   "n": 444
   },
   {
    "cred": "root/1234",
-   "n": 416
+   "n": 419
   },
   {
    "cred": "root/12345",
-   "n": 405
+   "n": 407
   },
   {
    "cred": "root/111111",
-   "n": 401
+   "n": 402
   },
   {
    "cred": "root/123123",
-   "n": 367
+   "n": 368
   },
   {
    "cred": "root/12345678",
-   "n": 362
+   "n": 364
   },
   {
    "cred": "admin/admin",
-   "n": 356
+   "n": 359
   },
   {
    "cred": "root/123456789",
-   "n": 334
+   "n": 336
   },
   {
    "cred": "root/123",
-   "n": 330
+   "n": 332
   },
   {
    "cred": "root/admin",
-   "n": 324
+   "n": 326
   },
   {
    "cred": "rootssssss23424123123/rootssssss23424123123",
-   "n": 313
+   "n": 325
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 59781
+   "n": 60190
   },
   {
    "username": "ubuntu",
-   "n": 7787
+   "n": 7846
   },
   {
    "username": "admin",
-   "n": 6373
+   "n": 6425
   },
   {
    "username": "0",
-   "n": 6215
+   "n": 6251
   },
   {
    "username": "user",
-   "n": 3113
+   "n": 3130
   },
   {
    "username": "deploy",
-   "n": 2243
-  },
-  {
-   "username": "test",
-   "n": 2147
+   "n": 2256
   },
   {
    "username": "support",
-   "n": 2146
+   "n": 2162
+  },
+  {
+   "username": "test",
+   "n": 2159
   },
   {
    "username": "345gs5662d34",
-   "n": 1371
+   "n": 1373
   },
   {
    "username": "debian",
-   "n": 1203
+   "n": 1208
   },
   {
    "username": "user1",
-   "n": 1189
+   "n": 1197
   },
   {
    "username": "claude",
-   "n": 1017
+   "n": 1019
   }
  ],
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 170935
+   "n": 171651
   },
   {
    "cmd": "echo xsec",
-   "n": 10952
+   "n": 11066
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
@@ -281,11 +281,11 @@
   },
   {
    "cmd": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-   "n": 1837
+   "n": 1852
   },
   {
    "cmd": "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAr",
-   "n": 1776
+   "n": 1791
   },
   {
    "cmd": "chmod +x '/root/.16'",
@@ -5023,7 +5023,31 @@
   },
   {
    "hour": "2026-11-15T22",
-   "n": 842
+   "n": 2909
+  },
+  {
+   "hour": "2026-11-15T23",
+   "n": 1439
+  },
+  {
+   "hour": "2026-11-16T00",
+   "n": 1294
+  },
+  {
+   "hour": "2026-11-16T01",
+   "n": 157
+  },
+  {
+   "hour": "2026-11-16T02",
+   "n": 284
+  },
+  {
+   "hour": "2026-11-16T03",
+   "n": 523
+  },
+  {
+   "hour": "2026-11-16T04",
+   "n": 59
   }
  ],
  "latest_digest": {
