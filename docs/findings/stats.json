@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 1088790,
-  "distinct_ips": 7605
+  "events": 1092053,
+  "distinct_ips": 7620
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 355139
+   "n": 357548
   },
   {
    "kind": "cowrie_session",
-   "n": 248509
+   "n": 248806
   },
   {
    "kind": "cowrie_connect",
-   "n": 248501
+   "n": 248800
   },
   {
    "kind": "cowrie_login_success",
-   "n": 235421
+   "n": 235676
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 1220
+   "n": 1223
   }
  ],
  "top_ips": [
@@ -53,7 +53,7 @@
   },
   {
    "ip": "2.57.122.150",
-   "n": 16627,
+   "n": 17288,
    "country": "RO",
    "as_org": "Unmanaged Ltd"
   },
@@ -103,31 +103,31 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 700517
+   "n": 700521
   },
   {
    "country": "US",
-   "n": 153153
+   "n": 153959
   },
   {
    "country": "RO",
-   "n": 80114
+   "n": 82038
   },
   {
    "country": "CH",
-   "n": 24861
+   "n": 24921
   },
   {
    "country": "DE",
-   "n": 17158
+   "n": 17161
   },
   {
    "country": "CN",
-   "n": 16529
+   "n": 16704
   },
   {
    "country": "KR",
-   "n": 12582
+   "n": 12584
   },
   {
    "country": "MY",
@@ -135,95 +135,95 @@
   },
   {
    "country": "SE",
-   "n": 7990
+   "n": 8040
   },
   {
    "country": "FR",
-   "n": 5716
+   "n": 5760
   }
  ],
  "top_credentials": [
   {
    "cred": "0/0",
-   "n": 6686
+   "n": 6722
   },
   {
    "cred": "345gs5662d34/345gs5662d34",
-   "n": 1407
+   "n": 1408
   },
   {
    "cred": "support/support",
-   "n": 1254
+   "n": 1258
   },
   {
    "cred": "root/3245gs5662d34",
-   "n": 770
+   "n": 771
   },
   {
    "cred": "rootssssss23424123123/rootssssss23424123123",
-   "n": 555
+   "n": 577
   },
   {
    "cred": "root/123456",
-   "n": 468
+   "n": 471
   },
   {
    "cred": "root/1234",
-   "n": 447
+   "n": 450
   },
   {
    "cred": "root/12345",
-   "n": 434
+   "n": 436
   },
   {
    "cred": "root/111111",
-   "n": 424
+   "n": 426
   },
   {
    "cred": "root/root3245gs5662d34111111111",
-   "n": 408
+   "n": 424
   },
   {
    "cred": "root/123123",
-   "n": 388
+   "n": 390
   },
   {
    "cred": "root/12345678",
-   "n": 386
+   "n": 388
   },
   {
    "cred": "admin/admin",
-   "n": 379
+   "n": 380
   },
   {
    "cred": "root/admin",
-   "n": 359
+   "n": 362
   },
   {
    "cred": "root/123456789",
-   "n": 357
+   "n": 361
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 65683
+   "n": 65786
   },
   {
    "username": "ubuntu",
-   "n": 8592
+   "n": 8635
   },
   {
    "username": "admin",
-   "n": 6977
+   "n": 7001
   },
   {
    "username": "0",
-   "n": 6686
+   "n": 6722
   },
   {
    "username": "user",
-   "n": 3373
+   "n": 3374
   },
   {
    "username": "deploy",
@@ -231,15 +231,15 @@
   },
   {
    "username": "support",
-   "n": 2337
+   "n": 2344
   },
   {
    "username": "test",
-   "n": 2311
+   "n": 2312
   },
   {
    "username": "345gs5662d34",
-   "n": 1407
+   "n": 1408
   },
   {
    "username": "user1",
@@ -257,11 +257,11 @@
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 182298
+   "n": 182299
   },
   {
    "cmd": "echo xsec",
-   "n": 12094
+   "n": 12133
   },
   {
    "cmd": "printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter ",
@@ -281,11 +281,11 @@
   },
   {
    "cmd": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-   "n": 2126
+   "n": 2151
   },
   {
    "cmd": "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAr",
-   "n": 2061
+   "n": 2085
   },
   {
    "cmd": "chmod +x '/root/.16'",
@@ -5315,7 +5315,31 @@
   },
   {
    "hour": "2026-11-18T23",
-   "n": 251
+   "n": 558
+  },
+  {
+   "hour": "2026-11-19T00",
+   "n": 414
+  },
+  {
+   "hour": "2026-11-19T01",
+   "n": 774
+  },
+  {
+   "hour": "2026-11-19T02",
+   "n": 689
+  },
+  {
+   "hour": "2026-11-19T03",
+   "n": 174
+  },
+  {
+   "hour": "2026-11-19T04",
+   "n": 185
+  },
+  {
+   "hour": "2026-11-19T05",
+   "n": 720
   }
  ],
  "latest_digest": {
