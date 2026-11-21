@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 1181082,
-  "distinct_ips": 7808
+  "events": 1190250,
+  "distinct_ips": 7831
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 404423
+   "n": 408562
   },
   {
    "kind": "cowrie_session",
-   "n": 263130
+   "n": 264829
   },
   {
    "kind": "cowrie_connect",
-   "n": 263124
+   "n": 264823
   },
   {
    "kind": "cowrie_login_success",
-   "n": 249127
+   "n": 250753
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 1278
+   "n": 1283
   }
  ],
  "top_ips": [
@@ -41,7 +41,7 @@
   },
   {
    "ip": "92.118.39.71",
-   "n": 24450,
+   "n": 26057,
    "country": "US",
    "as_org": "Unmanaged Ltd"
   },
@@ -70,16 +70,16 @@
    "as_org": "TechTies Inc."
   },
   {
+   "ip": "193.32.162.84",
+   "n": 18791,
+   "country": "RO",
+   "as_org": "Unmanaged Ltd"
+  },
+  {
    "ip": "109.160.32.106",
    "n": 18724,
    "country": "BG",
    "as_org": "TechTies Inc."
-  },
-  {
-   "ip": "193.32.162.84",
-   "n": 17433,
-   "country": "RO",
-   "as_org": "Unmanaged Ltd"
   },
   {
    "ip": "109.160.32.149",
@@ -103,31 +103,31 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 752436
+   "n": 753928
   },
   {
    "country": "US",
-   "n": 168492
+   "n": 170150
   },
   {
    "country": "RO",
-   "n": 97495
+   "n": 98947
   },
   {
    "country": "CH",
-   "n": 27153
+   "n": 31365
   },
   {
    "country": "CN",
-   "n": 18095
+   "n": 18107
   },
   {
    "country": "DE",
-   "n": 17296
+   "n": 17327
   },
   {
    "country": "KR",
-   "n": 12786
+   "n": 12793
   },
   {
    "country": "MY",
@@ -135,25 +135,25 @@
   },
   {
    "country": "SE",
-   "n": 8648
+   "n": 8743
   },
   {
    "country": "FR",
-   "n": 5828
+   "n": 5830
   }
  ],
  "top_credentials": [
   {
    "cred": "0/0",
-   "n": 7655
+   "n": 9090
   },
   {
    "cred": "345gs5662d34/345gs5662d34",
-   "n": 1423
+   "n": 1424
   },
   {
    "cred": "support/support",
-   "n": 1319
+   "n": 1326
   },
   {
    "cred": "root/3245gs5662d34",
@@ -161,65 +161,65 @@
   },
   {
    "cred": "rootssssss23424123123/rootssssss23424123123",
-   "n": 738
+   "n": 742
   },
   {
    "cred": "root/root3245gs5662d34111111111",
-   "n": 554
+   "n": 556
   },
   {
    "cred": "root/123456",
-   "n": 500
+   "n": 503
   },
   {
    "cred": "root/1234",
-   "n": 474
+   "n": 477
   },
   {
    "cred": "root/12345",
-   "n": 461
+   "n": 464
   },
   {
    "cred": "root/111111",
-   "n": 450
+   "n": 453
   },
   {
    "cred": "root/123123",
-   "n": 418
+   "n": 421
   },
   {
    "cred": "root/12345678",
-   "n": 411
+   "n": 414
   },
   {
    "cred": "admin/admin",
-   "n": 408
+   "n": 410
   },
   {
    "cred": "root/admin",
-   "n": 402
+   "n": 407
   },
   {
    "cred": "root/123456789",
-   "n": 383
+   "n": 386
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 70493
+   "n": 70588
+  },
+  {
+   "username": "0",
+   "n": 9090
   },
   {
    "username": "ubuntu",
    "n": 9064
   },
   {
-   "username": "0",
-   "n": 7655
-  },
-  {
    "username": "admin",
-   "n": 7618
+   "n": 7669
   },
   {
    "username": "user",
@@ -231,7 +231,7 @@
   },
   {
    "username": "support",
-   "n": 2460
+   "n": 2470
   },
   {
    "username": "test",
@@ -239,11 +239,11 @@
   },
   {
    "username": "345gs5662d34",
-   "n": 1423
+   "n": 1424
   },
   {
    "username": "user1",
-   "n": 1411
+   "n": 1413
   },
   {
    "username": "debian",
@@ -257,7 +257,7 @@
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 192615
+   "n": 192616
   },
   {
    "cmd": "echo xsec",
@@ -281,11 +281,11 @@
   },
   {
    "cmd": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-   "n": 2337
+   "n": 2343
   },
   {
    "cmd": "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAr",
-   "n": 2268
+   "n": 2274
   },
   {
    "cmd": "chmod +x '/root/.16'",
@@ -5563,7 +5563,43 @@
   },
   {
    "hour": "2026-11-21T13",
-   "n": 192
+   "n": 206
+  },
+  {
+   "hour": "2026-11-21T14",
+   "n": 112
+  },
+  {
+   "hour": "2026-11-21T15",
+   "n": 308
+  },
+  {
+   "hour": "2026-11-21T16",
+   "n": 1092
+  },
+  {
+   "hour": "2026-11-21T17",
+   "n": 423
+  },
+  {
+   "hour": "2026-11-21T18",
+   "n": 46
+  },
+  {
+   "hour": "2026-11-21T19",
+   "n": 2423
+  },
+  {
+   "hour": "2026-11-21T20",
+   "n": 1820
+  },
+  {
+   "hour": "2026-11-21T21",
+   "n": 1419
+  },
+  {
+   "hour": "2026-11-21T22",
+   "n": 1511
   }
  ],
  "latest_digest": {
