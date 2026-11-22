@@ -1,29 +1,29 @@
 {
  "generated_from": "LogKompass Cowrie sensor",
  "totals": {
-  "events": 1200050,
-  "distinct_ips": 7848
+  "events": 1202079,
+  "distinct_ips": 7867
  },
  "by_kind": [
   {
    "kind": "cowrie_command",
-   "n": 413589
+   "n": 414710
   },
   {
    "kind": "cowrie_session",
-   "n": 266432
+   "n": 266754
   },
   {
    "kind": "cowrie_connect",
-   "n": 266426
+   "n": 266748
   },
   {
    "kind": "cowrie_login_success",
-   "n": 252313
+   "n": 252555
   },
   {
    "kind": "cowrie_login_failed",
-   "n": 1290
+   "n": 1312
   }
  ],
  "top_ips": [
@@ -103,27 +103,27 @@
  "top_countries": [
   {
    "country": "BG",
-   "n": 762197
+   "n": 762566
   },
   {
    "country": "US",
-   "n": 170260
+   "n": 171082
   },
   {
    "country": "RO",
-   "n": 100122
+   "n": 100599
   },
   {
    "country": "CH",
-   "n": 31440
+   "n": 31554
   },
   {
    "country": "CN",
-   "n": 18111
+   "n": 18117
   },
   {
    "country": "DE",
-   "n": 17360
+   "n": 17395
   },
   {
    "country": "KR",
@@ -135,7 +135,7 @@
   },
   {
    "country": "SE",
-   "n": 8806
+   "n": 8903
   },
   {
    "country": "FR",
@@ -145,7 +145,7 @@
  "top_credentials": [
   {
    "cred": "0/0",
-   "n": 9134
+   "n": 9203
   },
   {
    "cred": "345gs5662d34/345gs5662d34",
@@ -153,7 +153,7 @@
   },
   {
    "cred": "support/support",
-   "n": 1333
+   "n": 1342
   },
   {
    "cred": "root/3245gs5662d34",
@@ -169,27 +169,27 @@
   },
   {
    "cred": "root/123456",
-   "n": 507
+   "n": 511
   },
   {
    "cred": "root/1234",
-   "n": 480
+   "n": 481
   },
   {
    "cred": "root/12345",
-   "n": 467
+   "n": 469
   },
   {
    "cred": "root/111111",
-   "n": 456
+   "n": 458
   },
   {
    "cred": "root/123123",
-   "n": 424
+   "n": 426
   },
   {
    "cred": "root/12345678",
-   "n": 417
+   "n": 418
   },
   {
    "cred": "admin/admin",
@@ -197,33 +197,33 @@
   },
   {
    "cred": "root/admin",
-   "n": 410
+   "n": 414
   },
   {
    "cred": "root/123456789",
-   "n": 389
+   "n": 391
   }
  ],
  "top_usernames": [
   {
    "username": "root",
-   "n": 71140
+   "n": 71218
   },
   {
    "username": "0",
-   "n": 9134
+   "n": 9203
   },
   {
    "username": "ubuntu",
-   "n": 9112
+   "n": 9116
   },
   {
    "username": "admin",
-   "n": 7741
+   "n": 7775
   },
   {
    "username": "user",
-   "n": 3619
+   "n": 3624
   },
   {
    "username": "deploy",
@@ -231,15 +231,15 @@
   },
   {
    "username": "support",
-   "n": 2482
+   "n": 2491
   },
   {
    "username": "test",
-   "n": 2466
+   "n": 2469
   },
   {
    "username": "user1",
-   "n": 1427
+   "n": 1430
   },
   {
    "username": "345gs5662d34",
@@ -257,7 +257,7 @@
  "top_commands": [
   {
    "cmd": "uname -s -v -n -r -m",
-   "n": 193993
+   "n": 194083
   },
   {
    "cmd": "echo xsec",
@@ -301,7 +301,7 @@
   },
   {
    "cmd": "uname -a",
-   "n": 156
+   "n": 159
   }
  ],
  "by_hour": [
@@ -5623,12 +5623,48 @@
   },
   {
    "hour": "2026-11-22T04",
-   "n": 442
+   "n": 679
+  },
+  {
+   "hour": "2026-11-22T05",
+   "n": 224
+  },
+  {
+   "hour": "2026-11-22T06",
+   "n": 229
+  },
+  {
+   "hour": "2026-11-22T07",
+   "n": 477
+  },
+  {
+   "hour": "2026-11-22T08",
+   "n": 165
+  },
+  {
+   "hour": "2026-11-22T09",
+   "n": 468
+  },
+  {
+   "hour": "2026-11-22T10",
+   "n": 51
+  },
+  {
+   "hour": "2026-11-22T11",
+   "n": 70
+  },
+  {
+   "hour": "2026-11-22T12",
+   "n": 62
+  },
+  {
+   "hour": "2026-11-22T13",
+   "n": 46
   }
  ],
  "latest_digest": {
-  "day": "2026-11-20",
-  "text": "LogKompass honeypot-01, 2026-11-20\n\n[template fallback, model output failed validation]\n26616 auth events from 147 IPs, 17 percent below the 7-day average.\nLoudest source 195.178.110.228, BG, Techoff Srv Limited, 5961 attempts, first seen 2026-09-29.\n23 failed attempts, most targeted usernames root, 0, admin; 3935 accepted.\nHigh: R05_new_country_success for 109.160.32.39 (BG, first successful login from this country).\nCheck that this login was you; if not, rotate keys and close password auth.\n\nmodel: none, deterministic template, 2026-11-21T07:07:11Z",
-  "created_at": "2026-11-21T07:07:11Z"
+  "day": "2026-11-21",
+  "text": "LogKompass honeypot-01, 2026-11-21\n\n[template fallback, model output failed validation]\n30066 auth events from 184 IPs, 7 percent below the 7-day average.\nLoudest source 92.118.39.71, US, Unmanaged Ltd, 7442 attempts, first seen 2026-09-29.\n17 failed attempts, most targeted usernames 0, root, admin; 3831 accepted.\nHigh: R05_new_country_success for 179.43.133.154 (CH, first successful login from this country).\nCheck that this login was you; if not, rotate keys and close password auth.\n\nmodel: none, deterministic template, 2026-11-22T07:07:13Z",
+  "created_at": "2026-11-22T07:07:13Z"
  }
 }
